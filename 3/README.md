@@ -15,7 +15,7 @@ contributors:
 
 This document describes an interoperable technical data specification tailored for the **worldwide legal cannabis market**. As legal markets to buy, sell, cultivate and manufacture cannabis products come online, a need is emerging for a universal way of connecting data systems and components that work with cannabis or cannabis-related data.
 
-Extensions for each market stakeholder (from seed to smoke, as it were). The hope is that this work can begin a conversation amongst cannabis software providers about a universal spec and integration suite.
+Extensions should be proposed for each market stakeholder (from seed to smoke, as it were). The hope is that this work can begin a conversation amongst cannabis software providers about a universal spec and integration suite.
 
 This specification is based on the [2/COSS](../2/README.md) (*Consensus-Oriented Specification System*) process, and before it, the original [Digistan 1/COSS](http://www.digistan.org/spec:1/COSS), which are designed to be a lightweight editorial process that seeks to engage the widest possible range of interested parties and move rapidly to consensus through working code.
 
