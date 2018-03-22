@@ -11,18 +11,6 @@ contributors:
   - Scott Robinson <srobinson@abatinsacramento.com>
 ---
 
-# OpenCannabis Specification ![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
-
-### Table of Contents
-1. [Introduction](#Introduction)
-    - [Why write a spec?](#Why-write-a-spec?)
-    - [Process and Licensing](#Process-and-licensing)
-    - [Language](#Language)
-3. [Vision](#Vision-and-Principles)
-    - [Project Goals](#Project-Goals)
-4. [Architecture](#Architecture)
-5. [Conventions](#Conventions)
-
 ## Introduction
 
 This document describes an interoperable technical data specification tailored for the **worldwide legal cannabis
@@ -169,7 +157,7 @@ Where possible editors and contributors are encouraged to:
 * Contribute to existing specifications rather than reinvent their own.
 * Use collaborative branching and merging as a tool for experimentation.
 
-## License
+## License  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 
 Copyright (c) 2018, the OpenCannabis Editor and Contributors.
 
@@ -182,3 +170,4 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gen
 
 You should have received a copy of the GNU General Public License along with this program; if not, see
 http://www.gnu.org/licenses.
+
