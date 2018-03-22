@@ -4,7 +4,7 @@ module.exports = {
     author: 'OpenCannabis Editor and Contributors',
     gitbook: '>=3.0.0',
     plugins: [
-      'coss',
+      'coss-ocs',
       'code',
       'sitemap',
       'insert-logo',
