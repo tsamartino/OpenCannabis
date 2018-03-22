@@ -9,7 +9,6 @@ module.exports = {
       'sitemap',
       'insert-logo',
       'nomnoml',
-      'swagger',
       'colors',
       'terminal',
       'rss',
@@ -24,6 +23,7 @@ module.exports = {
         site_url: 'https://rfc.opencannabis.info',
         author: 'Bloombox (info+opencannabis@bloombox.io)',
         managingEditor: 'Sam Gammon (sam@bloombox.io)',
+        feed_url: 'https://medium.com/feed/opencannabis',
         categories: [
           'cannabis',
           'technology',
