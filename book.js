@@ -18,6 +18,9 @@ module.exports = {
       sitemap: {
         hostname: 'https://rfc.opencannabis.info/'
       },
+      "insert-logo": {
+        "url": "https://rfc.opencannabis.info/logo.png"
+      },
       rss: {
         title: 'OpenCannabis Revision Feed',
         site_url: 'https://rfc.opencannabis.info',
