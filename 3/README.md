@@ -14,9 +14,9 @@ contributors:
 
 ### Table of Contents
 1. **[Datamodel](./1-Datamodel.md): Information at rest**
-    1. [Toolchain](./1-Datamodel.md#(i)-Toolchain)
-    1. [General Guidelines](./1-Datamodel.md#(ii)-General-Guidelines)
-    1. [Message Categories](./1-Datamodel.md#(iii)-Message-Categories)
+    1. [Toolchain](./1-Datamodel.md#Toolchain)
+    1. [General Guidelines](./1-Datamodel.md#General-Guidelines)
+    1. [Message Categories](./1-Datamodel.md#Message-Categories)
         1. [Core Categories]()
             - `base`: Foundational structures used across the spec.
             - `temporal`: Dates, times, and so on.
@@ -37,12 +37,12 @@ contributors:
             - `commerce`: Commercial ordering and fulfillment structures.
             - `accounting`: Bookkeeping, accounting, taxes, and so on.
 1. **[Services](./2-Services.md): Information in motion**
-    1. [Toolchain](./2-Services.md#(i)-Toolchain)
-    1. [RPC](./2-Services.md#(ii)-RPC)
-    1. [REST](./2-Services.md#(iii)-REST)
-    1. [Open Services](./2-Services.md#(iv)-Open-Services)
-    1. [Vendored Services](./2-Services.md#(v)-Vendored-Services)
-    1. [Service Verticals](./2-Services.md#(vi)-Service-Verticals)
+    1. [Toolchain](./2-Services.md#Toolchain)
+    1. [RPC](./2-Services.md#RPC)
+    1. [REST](./2-Services.md#REST)
+    1. [Open Services](./2-Services.md#Open-Services)
+    1. [Vendored Services](./2-Services.md#Vendored-Services)
+    1. [Service Verticals](./2-Services.md#Service-Verticals)
         1. Cultivation
         1. Transport
         1. Manufacturing
@@ -51,8 +51,8 @@ contributors:
         1. Retail
         1. Consumer
 1. **[Tables](./3-Tables.md): Information into insights**
-    1. [Toolchain](./3-Tables.md#(i)-Toolchain)
-    1. [Data Concerns](./3-Tables.md#(ii)-Data-Concerns)
+    1. [Toolchain](./3-Tables.md#Toolchain)
+    1. [Data Concerns](./3-Tables.md#Data-Concerns)
         1. Telemetry
         1. Laboratory Testing
         1. Commercial Ordering
