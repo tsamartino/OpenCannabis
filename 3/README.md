@@ -8,6 +8,7 @@ contributors:
   - Tyler Porras <tyler@bloombox.io>
   - Tim Samartino <tim@bloombox.io>
   - Matt McLean <matt@gocaliva.com>
+  - Andrew Martin <andrew.martin@gocaliva.com>
   - Scott Robinson <srobinson@abatinsacramento.com>
 ---
 
