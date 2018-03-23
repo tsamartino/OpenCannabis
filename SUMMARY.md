@@ -9,10 +9,10 @@
     * [1: Datamodel](3/1-Datamodel.md)
         * [1.1: Core Structures](3/2-Core-Structures.md)
         * [1.2: Extensions Structures](3/3-Extension-Structures.md)
-    * [Services](3/4-Services.md)
-    * [Tables](3/5-Tables.md)
+    * [2: Services](3/4-Services.md)
+    * [3: Tables](3/5-Tables.md)
     * [Appendix A: Message Categories](3/XA-Message-Categories.md)
-    * [Appendix A: Scalar Value Types](3/XB-Scalar-Value-Types.md)
+    * [Appendix B: Scalar Value Types](3/XB-Scalar-Value-Types.md)
 * Draft
   * [2/COSS](2/README.md)
 * Stable
