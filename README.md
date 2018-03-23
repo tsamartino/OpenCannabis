@@ -1,4 +1,4 @@
-# OpenCannabis Specification
+# OpenCannabis Specification  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 
 _OpenCannabis_ is a multilateral industrial effort to create an interoperable technical data specification tailored for
 the **worldwide legal cannabis market**.
@@ -11,6 +11,20 @@ universal way of connecting data systems and components that work with cannabis 
 OpenCannabis was conceived at [Bloombox](https://bloombox.io), but it's open and free to the world (under the GNU GPLv3
 license). Early adopters and collaborators include [Caliva](https://caliva.menu) and
 [Abatin Sacramento](https://abatinsacramento.com).
+
+
+| Contributor       | Website                                             | Category                                |
+|-------------------|-----------------------------------------------------|:---------------------------------------:|
+| Bloombox          | [bloombox.io](https://bloombox.io)                  | Software Provider                       |
+| Caliva            | [caliva.menu](https://caliva.menu)                  | Cultivator, Retailer, Manufacturer, Lab |
+| Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                |
+
+| Bloombox | Caliva | Abatin |
+|:----------:|:--------:|:--------:|
+| [![Bloombox](./3/media/bloombox.png)](https://bloombox.io) | [![Caliva](./3/media/caliva.png)](https://caliva.menu) | [![Abatin](./3/media/abatin.png)](https://abatinsacramento.com) |
+
+
+If you'd like to adopt the spec, or list yourself as a backer, file a pull request and we'll get you added!
 
 
 ### On the shoulders of giants
