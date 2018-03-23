@@ -4,7 +4,7 @@
 Coming soon.
 
 
-### Part (i): Toolchain
+### (i) Toolchain
 
 
-### Part (ii): Data Concerns
+### (ii) Data Concerns

@@ -4,19 +4,19 @@
 Coming soon.
 
 
-### Part (i): Toolchain
+### (i) Toolchain
 
 
-### Part (ii): RPC
+### (ii) RPC
 
 
-### Part (iii): REST
+### (iii) REST
 
 
-### Part (iv): Open Services
+### (iv) Open Services
 
 
-### Part (v): Vendored Services
+### (v) Vendored Services
 
 
-### Part (vi): Service Verticals
+### (vi) Service Verticals

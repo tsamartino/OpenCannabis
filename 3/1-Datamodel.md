@@ -5,7 +5,7 @@ Central to the OpenCannabis project's goals is a *unified datamodel* for use acr
 cultivators talk about *flowers* with labs, and labs talk about *test results* with retailers, and so on, they are all
 talking about the same thing - but in today's legal cannabis industry, they aren't speaking the same language.
 
-### Part (i): Toolchain
+### (i) Toolchain
 
 The model put forth by OpenCannabis is specified in a programming language called
 [Protocol Buffers](https://developers.google.com/protocol-buffers/) that originated inside Google. *Protobuf*, as it is
@@ -26,7 +26,7 @@ support to spec adopters:
 Models implemented in Protobuf are referred to as *Messages*. *Services*, which specify *Methods*, make use of
 *Messages* as input and output structures. 
 
-#### Part (ii): General Guidelines 
+#### (ii) General Guidelines
 
 These guidelines govern how OpenCannabis specifications make use of Protobuf.
 
@@ -87,7 +87,7 @@ These guidelines govern inline source comments on *Messages*, *Properties*, *Ser
 1. Comments **SHOULD** be complete sentences, in present-imperative form *(i.e., 'Specifies xyz, in abc
   circumstances.')*.
 
-### Part (iii): Message Categories
+### (iii) Message Categories
 
 Messages may be grouped or placed adjacently according to their functional purpose. Message categories may either be
 included in the core specification, (in which case, they are considered _Core Message Categories_) or they are proposed
