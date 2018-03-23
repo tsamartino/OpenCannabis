@@ -6,6 +6,31 @@ Central to the OpenCannabis project's goals is a *unified datamodel* for use acr
 cultivators talk about *flowers* with labs, and labs talk about *test results* with retailers, and so on, they are all
 talking about the same thing - but in today's legal cannabis industry, they aren't speaking the same language.
 
+### Table of Contents
+1. [Toolchain](#Toolchain)
+1. [General Guidelines](#General-Guidelines)
+    - [Nomenclature](#Nomenclature)
+1. [Message Categories](#Message-Categories)
+    - [Part 1.1: Core Structures](2-Core-Structures.md)
+        - `base`: Foundational structures used across the spec.
+        - `temporal`: Dates, times, and so on.
+        - `crypto`: Cryptographic primitives and containers.
+        - `geo`: Structures relating to geography.
+        - `device`: Managed and anonymous, operating systems, browsers.
+        - `content`: Narrative and marketing content.
+        - `person`: People, names, birth dates, and so on.
+        - `contact`: Email, phone, and postal addresses.
+        - `media`: Images, video, documents, etc.
+        - `structs`: Utility structures used across the spec.
+    - [Part 1.2: Extension Structures](3-Extension-Structures.md)
+        - `labtesting`: Laboratory testing and QA.
+        - `pricing`: Pricing schemes and structures.
+        - `proximity`: Bluetooth and GPS-related structures.
+        - `oauth`: OAuth2 implementation structures.
+        - `products`: High-level product structures.
+        - `commerce`: Commercial ordering and fulfillment structures.
+        - `accounting`: Bookkeeping, accounting, taxes, and so on.
+
 <a name="Toolchain"/>
 
 ### i. Toolchain
