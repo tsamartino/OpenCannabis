@@ -1,4 +1,4 @@
-# OpenCannabis Specification  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
+# OpenCannabis  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 
 _OpenCannabis_ is a multilateral industrial effort to create an interoperable technical data specification tailored for
 the **worldwide legal cannabis market**.
