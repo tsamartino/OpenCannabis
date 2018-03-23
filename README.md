@@ -6,7 +6,19 @@ the **worldwide legal cannabis market**.
 As legal markets to buy, sell, cultivate and manufacture cannabis products come online, a need is emerging for a
 universal way of connecting data systems and components that work with cannabis or cannabis-related data.
 
-### On the shoulders of giants
+#### Why write a spec?
+Currently, the state of the art in cannabis technology is one of two options: Massive, sweeping ecosystems of
+proprietary code (that frequently break), and isolated, SaaS-style startups that provide great tools but without the
+ecosystem around them for maximal value.
+
+Some business operators opt for the big players, and feel the pain when they go down. Others spread that pain out over
+many smaller providers but both are still unhappy. What's the answer to fixing these problems?
+
+An open specification, for cannabis data. For your menu, your transactions, your customers, and so on - so that when one
+provider isn't enough, or it's time to switch, or you want to write your own code - your data and your business aren't
+locked away.
+
+#### On the shoulders of giants
 
 The OpenCannabis Specification and related materials are written with modern, cutting-edge tools. The project structure
 is inspired by [Unprotocols RFC](https://github.com/unprotocols/rfc), which is a repository for universal, cross-project

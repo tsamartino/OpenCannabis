@@ -18,19 +18,7 @@ This document describes an interoperable technical data specification tailored f
 market**. As legal markets to buy, sell, cultivate and manufacture cannabis products come online, a need is emerging for
 a universal way of connecting data systems and components that work with cannabis or cannabis-related data.
 
-#### Why write a spec?
-Currently, the state of the art in cannabis technology is one of two options: Massive, sweeping ecosystems of
-proprietary code (that frequently break), and isolated, SaaS-style startups that provide great tools but without the
-ecosystem around them for maximal value.
-
-Some business operators opt for the big players, and feel the pain when they go down. Others spread that pain out over
-many smaller providers but both are still unhappy. What's the answer to fixing these problems?
-
-An open specification, for cannabis data. For your menu, your transactions, your customers, and so on - so that when one
-provider isn't enough, or it's time to switch, or you want to write your own code - your data and your business aren't
-locked away.
-
-#### Process and licensing
+### Process and licensing
 
 This specification is based on the [2/COSS](../2/README.md) (*Consensus-Oriented Specification System*) process, and
 before it, the original [Digistan 1/COSS](http://www.digistan.org/spec:1/COSS), which are designed to be a lightweight
