@@ -36,6 +36,8 @@ OpenCannabis was conceived at [Bloombox](https://bloombox.io), but it's open and
 license). Early adopters and collaborators include [Caliva](https://caliva.menu) and
 [Abatin Sacramento](https://abatinsacramento.com).
 
+If you'd like to adopt the spec, or list yourself as a backer, file a pull request and we'll get you added!
+
 
 | Contributor       | Website                                             | Category                                |
 |-------------------|-----------------------------------------------------|:----------------------------------------|
@@ -43,8 +45,7 @@ license). Early adopters and collaborators include [Caliva](https://caliva.menu)
 | Caliva            | [caliva.menu](https://caliva.menu)                  | Cultivator, Retailer, Manufacturer, Lab |
 | Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                |
 
-
-If you'd like to adopt the spec, or list yourself as a backer, file a pull request and we'll get you added!
+![Spec Adopters](https://storage.googleapis.com/ocs-media/backers-v1.png)
 
 
 ### Contributing
@@ -54,11 +55,12 @@ GitHub.
 
 ### Guidelines
 
-* A specification **SHOULD** be created and modified by pull requests according to [RFC 1/C4](1/README.md)
-* Specification lifecycle **SHOULD** follow the lifecycle defined in [RFC 2/COSS](2/README.md)
-* Specification **SHOULD** use GPL v3 or a later version of the license
-* Specification **SHOULD** use [RFC 2119](http://tools.ietf.org/html/rfc2119) key words.
-* Non-cosmetic changes **MUST** only be performed on Raw and Draft specifications.
+* Specifications **MUST** be created and modified by pull requests according to [RFC 1/C4](1/README.md)
+* Specifications **MUST** follow the lifecycle defined in [RFC 2/COSS](2/README.md)
+* Specifications **MUST** use a share-alike compatible license.
+* Specifications **SHOULD** use GPL v3 or a later version of the license
+* Specifications **SHOULD** use [RFC 2119](http://tools.ietf.org/html/rfc2119) key words.
+* Specifications **MUST** be considered immutable, except for cosmetic changes, after exiting *Draft* status.
 
 ## Table of Contents
 
