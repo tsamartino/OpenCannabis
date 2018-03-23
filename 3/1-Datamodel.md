@@ -1,20 +1,19 @@
 
 ## Section 1: Datamodel
-##### OpenCannabis Specification 
 
 Central to the OpenCannabis project's goals is a *unified datamodel* for use across functional boundaries. When
 cultivators talk about *flowers* with labs, and labs talk about *test results* with retailers, and so on, they are all
 talking about the same thing - but in today's legal cannabis industry, they aren't speaking the same language.
 
-### A. Protocol Buffers
+### Part (i): Toolchain
 
 The model put forth by OpenCannabis is specified in a programming language called
 [Protocol Buffers](https://developers.google.com/protocol-buffers/) that originated inside Google. *Protobuf*, as it is
 referred to colloquially, has numerous strengths that this project leverages to deliver better compatibility and
 support to spec adopters:
 
-* Protobuf is an [easy language to learn](https://developers.google.com/protocol-buffers/docs/proto3), potentially even
-  for non-technical contributors
+* Protobuf is an [easy language to learn](https://developers.google.com/protocol-buffers/docs/proto3), even for
+  non-technical contributors
 * Models written in Protobuf can be compiled into a _ton_ of languages: all popular ones and quite a few others, too.
   This means: **complete language agnosticism** if you are adopting OpenCannabis! 🚀
     * Language support includes, but is not limited to: C/C++, Java, C#, Python Go, Objective-C, Swift, PHP, and R
@@ -27,16 +26,16 @@ support to spec adopters:
 Models implemented in Protobuf are referred to as *Messages*. *Services*, which specify *Methods*, make use of
 *Messages* as input and output structures. 
 
-### B. Guidelines
+#### Part (ii): General Guidelines 
 
 These guidelines govern how OpenCannabis specifications make use of Protobuf.
 
 1. Models accompanying a specification **MUST** provide an implementation written in Protobuf.
 1. Source files **MUST** use the syntax mode `proto3`.
 1. Source files **MUST** use the package prefix with `opencannabis`.
-1. Source files **MUST** adhere to the policies in *Section 1B(ii-v)*.
+1. Source files **MUST** adhere to the policies in *3/OCS- 1.2(A-D)*.
 
-#### ii) Source file guidelines
+#### A) Source file guidelines
 
 These guidelines govern how OpenCannabis protobuf source files must be formatted and specified.
 
@@ -55,27 +54,28 @@ These guidelines govern how OpenCannabis protobuf source files must be formatted
 1. Source files **SHOULD** place `service` specifications at the end of the file.
 1. Source files **MAY** break up many imports into groups, each separated by exactly one newline.
 
-#### iii) Messages
+#### B) Messages
 
 These guidelines govern how OpenCannabis protobuf messages are structured and specified.
 
 1. Messages **MUST** begin with a capital letter.
 1. Messages **MUST** adhere to *CamelCase* when including multiple words in their name.
-1. Messages **MUST** include a comment describing their use and purpose, in compliance with *Section 1B(v)*.
+1. Messages **MUST** include a comment describing their use and purpose, according to *3/OCS-1.2(D)*.
+1. Messages **MUST** select or allocate a _Message Category_ according to *3/OCS-1.3*.
 1. Messages **MUST** include exactly one newline between each other.
 1. Messages **MUST** immediately begin properties without an initial newline.
 1. Messages **MUST NOT** include a terminal newline before the closing curly bracket.
 1. Messages **SHOULD** specify required or notable properties first.
 
-#### iv) Properties
+#### C) Properties
 
 These guidelines govern individual message properties.
 
 1. Properties **MUST** be specified in all-lowercase, underscored form *(i.e., `example_property_name`)*.
 1. Properties **MUST** include exactly one newline after their definition, unless they are the last property specified.
-1. Properties **MUST** include a comment describing their use and purpose, in compliance with *Section 1B(v)*.
+1. Properties **MUST** include a comment describing their use and purpose, according to *3/OCS-1.2(D)*.
 
-#### iv) Commenting
+#### D) Commenting
 
 These guidelines govern inline source comments on *Messages*, *Properties*, *Services* and *Methods*.
 
@@ -86,3 +86,25 @@ These guidelines govern inline source comments on *Messages*, *Properties*, *Ser
 1. Comments **SHOULD** describe their subject in simple, easy-to-understand terms.
 1. Comments **SHOULD** be complete sentences, in present-imperative form *(i.e., 'Specifies xyz, in abc
   circumstances.')*.
+
+### Part (iii): Message Categories
+
+Messages may be grouped or placed adjacently according to their functional purpose. Message categories may either be
+included in the core specification, (in which case, they are considered _Core Message Categories_) or they are proposed
+by an _Extension_ to the OpenCannabis specification, the process for which is specified below in _Subsection B_. Each
+_Core Message Category_ and _Extension Message Category_ must include the models and procedures associated with that
+category.
+
+All categories are to be registered, and listed accordingly in the main specification, in
+[_Appendix A: Model Categories_](XA-Message-Categories.md), along with their type and maturity status.
+
+These guidelines govern the taxonomic process and interpretation of message categories:
+
+1. Message categories **MUST** follow the [1/C4](../1/README.md) and [2/COSS](../2/README.md) guidelines and lifecycle.
+1. Message categories **MUST** be addressed by a one-word name in all-lowercase.
+1. Message categories **MUST** align folder structure with Protocol Buffer package structure.
+1. Message categories **MUST NOT** be coupled to stakeholder boundaries *(i.e., `cultivation` or `manufacturing`).*
+1. Contributors **MUST** provide a strong rationale for creating a new message category.
+1. Contributors **SHOULD** make an attempt to use an existing category rather than create one.
+1. Message categories **SHOULD** be allocated according to functional boundaries *(i.e., `media` or `analytics`)*
+1. Message categories **MAY** be nested in other message categories.

@@ -1,11 +1,15 @@
 # Summary
 
+* [Introduction](README.md)
+
 ## RFC Reference
 
-* [Introduction](README.md)
 * Raw
-  * [3/OCS](3/README.md)
-    * [Datamodel](3/0-Datamodel.md)
+  * [3/OCS](3/README.md) - OpenCannabis
+    1. [Datamodel](3/1-Datamodel.md)
+    1. [Services](3/2-Services.md)
+    1. [Tables](3/2-Services.md)
+    2. [Appendix A: Message Categories](3/XA-Message-Categories.md)
 * Draft
   * [2/COSS](2/README.md)
 * Stable
