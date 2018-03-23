@@ -37,7 +37,7 @@ contributors:
             - `commerce`: Commercial ordering and fulfillment structures.
             - `accounting`: Bookkeeping, accounting, taxes, and so on.
 1. **[Services](./2-Services.md): Information in motion**
-    1. [Toolchain](./2-Services.md#Part-(i):-RPC)
+    1. [Toolchain](./2-Services.md#Part-(i):-Toolchain)
     1. [RPC](./2-Services.md#Part-(ii):-RPC)
     1. [REST](./2-Services.md#Part-(iii):-REST)
     1. [Open Services](./2-Services.md#Part-(iv):-Open-Services)
