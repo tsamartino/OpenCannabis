@@ -67,10 +67,10 @@ The key words "**MUST**", "**MUST NOT**", "**REQUIRED**", "**SHALL**", "**SHALL 
 
 ## Vision and Principles
 
-The OpenCannabis Data Specification's mission statement is to **facilitate the implementation, and agreement upon, an
-open information structure for legal cannabis operations**. The hope is that a point of agreement such as this one
-amongst industry practitioners and stakeholders can bring about easier development of integrations between major
-systems.
+The OpenCannabis Data Specification's mission statement is to **facilitate the design and implementation of an open
+information structure for legal cannabis operations**, built around industry consensus. The hope is that a point of
+agreement such as this one amongst industry practitioners and stakeholders can bring about easier development of
+integrations between major systems.
 
 From [2/COSS](../2/README.md):
 *A "technical specification" defines a protocol, a process, an API, a use of language, a methodology, or any other
@@ -133,7 +133,7 @@ Accordingly, major spec extensions to the main _OCS_ spec:
 * **SHOULD NOT** be designed around functional or stakeholder boundaries.
 
 Individuals can become members of the domain by completing the necessary legal clearance.  The copyright, patent, and 
-rademark policies of the domain must be clarified in an Intellectual Property policy that applies to the domain.
+trademark policies of the domain must be clarified in an Intellectual Property policy that applies to the domain.
 
 Specifications exist as multiple pages, one page per version of the specification (see "_Branching and Merging_",
 below), which may be assigned URIs that include an incremental number.  Thus, we refer to a specification by specifying
