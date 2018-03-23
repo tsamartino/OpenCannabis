@@ -17,7 +17,7 @@ contributors:
     1. [Toolchain](./1-Datamodel.md#Toolchain)
     1. [General Guidelines](./1-Datamodel.md#General-Guidelines)
     1. [Message Categories](./1-Datamodel.md#Message-Categories)
-        1. [Core Categories]()
+        - [Part 1.1: Core Structures](./1.1-Core-Structures.md)
             - `base`: Foundational structures used across the spec.
             - `temporal`: Dates, times, and so on.
             - `crypto`: Cryptographic primitives and containers.
@@ -28,7 +28,7 @@ contributors:
             - `contact`: Email, phone, and postal addresses.
             - `media`: Images, video, documents, etc.
             - `structs`: Utility structures used across the spec.
-        1. [Extension Categories]()
+        - [Part 1.2: Extension Structures](./1.2-Extension-Structures.md)
             - `labtesting`: Laboratory testing and QA.
             - `pricing`: Pricing schemes and structures.
             - `proximity`: Bluetooth and GPS-related structures.
