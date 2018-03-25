@@ -27,10 +27,19 @@ separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
         - [Instant](#opencannabis.temporal.Instant)
     - [temporal/Time.proto](#temporal/Time.proto)
         - [Time](#opencannabis.temporal.Time)
+- `crypto`: Cryptographic primitives and containers.
+- `geo`: Structures relating to geography.
+- `device`: Managed and anonymous, operating systems, browsers.
+- `content`: Narrative and marketing content.
+- `person`: People, names, birth dates, and so on.
+- `contact`: Email, phone, and postal addresses.
+- `media`: Images, video, documents, etc.
+- `products`: High-level product structures.
+- `structs`: Utility structures used across the spec.
 
 ----
 
-## `base`
+## `opencannabis.base`
 
 Foundational structures used across the spec.
 
@@ -144,7 +153,7 @@ Specifies a reference to a product.
 
 ----
 
-## `temporal`
+## `opencannabis.temporal`
 
 Dates, times, and so on.
 
@@ -164,7 +173,7 @@ Specifies a particular calendar date.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| iso8601 | [string](#string) |  | ISO8601-formatted calendar date value, like YYYY-MM-DD. |
+| iso8601 | [string](./XB-Scalar-Value-Types.md#string) |  | ISO8601-formatted calendar date value, like YYYY-MM-DD. |
 
 
 
@@ -183,8 +192,8 @@ Specifies a particular moment in time.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| iso8601 | [string](#string) |  | ISO8601-formatted timestamp. |
-| timestamp | [uint64](#uint64) |  | Unix epoch timestamp, at millisecond resolution. |
+| iso8601 | [string](./XB-Scalar-Value-Types.md#string) |  | ISO8601-formatted timestamp. |
+| timestamp | [uint64](./XB-Scalar-Value-Types.md#uint64) |  | Unix epoch timestamp, at millisecond resolution. |
 
 
 
@@ -203,4 +212,4 @@ Specifies a particular time of day.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| iso8601 | [string](#string) |  | ISO8601 time format. |
+| iso8601 | [string](./XB-Scalar-Value-Types.md#string) |  | ISO8601 time format. |
