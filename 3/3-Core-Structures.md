@@ -260,8 +260,23 @@ Cryptographic primitives, including hashing tools, encrypted data containers, an
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
-[Date
-  |iso8601: string]
+[Hash
+  |algorithm: HashAlgorithm
+  |raw: bytes
+  |hex: string
+  |b64: string]
+
+[HashedData
+  |data: bytes
+  |hash: Hash]
+
+[HashAlgorithm
+  |SHA1: 0
+  |MD5: 1
+  |SHA256: 2
+  |SHA384: 3
+  |SHA512: 4
+  |MURMUR: 6]
 
 {% endnomnoml %}
 
