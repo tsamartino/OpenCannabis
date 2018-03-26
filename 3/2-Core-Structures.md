@@ -39,10 +39,13 @@ separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
 
 ----
 
+## `opencannabis.base`
+
+Foundational structures used across the spec.
+
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
-
 [Language
   |ENGLISH: 0|SPANISH: 1|FRENCH: 2]
 
@@ -51,22 +54,14 @@ separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
 
 [ProductKind
   |FLOWERS: 0|EDIBLES: 1|EXTRACTS: 2|PREROLLS: 3|APOTHECARY: 4|CARTRIDGES: 5|PLANTS: 6|MERCHANDISE: 7]
-
+  
 [ProductKey
   |id: string|type: ProductKind]->[ProductKind]
-
-[<abstract>opencannabis.content.Name]<:--[ProductReference]
 
 [ProductReference
   |name: string|key: ProductKey]->[ProductKey]
 
 {% endnomnoml %}
-
-----
-
-## `opencannabis.base`
-
-Foundational structures used across the spec.
 
 
 <a name="base/Compression.proto"/>
@@ -181,6 +176,20 @@ Specifies a reference to a product.
 ## `opencannabis.temporal`
 
 Dates, times, and so on.
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Date
+  |iso8601: string]
+
+[Instant
+  |iso8601: string|timestamp: uint64]
+
+[Time
+  |iso8601: string]
+
+{% endnomnoml %}
 
 
 <a name="temporal/Date.proto"/>
