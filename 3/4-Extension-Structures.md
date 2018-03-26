@@ -6,7 +6,7 @@ _"Extension structures"_ refer to messages and definitions that are _not_ includ
 are instead proposed via a _Specification Extension_.
 
 Definitions considered core to the main specification are enumerated separately in
-[Part 1.1, Core Structures](2-Core-Structures.md).
+[Part 1.1, Core Structures](3-Core-Structures.md).
 
 ## Table of Contents
 

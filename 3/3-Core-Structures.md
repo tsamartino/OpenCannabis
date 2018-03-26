@@ -5,7 +5,7 @@ _"Core structures"_ refer to messages and definitions that are included in the m
 than a _Specification Extension_, and are defined herein, as part of _Part 1.1_.
 
 Definitions provided by _Extensions_ to the main specification are enumerated
-separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
+separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
 
 ## Table of Contents
 

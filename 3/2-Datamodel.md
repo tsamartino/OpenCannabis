@@ -11,7 +11,7 @@ talking about the same thing - but in today's legal cannabis industry, they aren
 1. [General Guidelines](#General-Guidelines)
     - [Nomenclature](#Nomenclature)
 1. [Message Categories](#Message-Categories)
-    - [Part 1.1: Core Structures](2-Core-Structures.md)
+    - [Part 1.1: Core Structures](3-Core-Structures.md)
         - `base`: Foundational structures used across the spec.
         - `temporal`: Dates, times, and so on.
         - `crypto`: Cryptographic primitives and containers.
@@ -22,7 +22,7 @@ talking about the same thing - but in today's legal cannabis industry, they aren
         - `contact`: Email, phone, and postal addresses.
         - `media`: Images, video, documents, etc.
         - `structs`: Utility structures used across the spec.
-    - [Part 1.2: Extension Structures](3-Extension-Structures.md)
+    - [Part 1.2: Extension Structures](4-Extension-Structures.md)
         - `labtesting`: Laboratory testing and QA.
         - `pricing`: Pricing schemes and structures.
         - `proximity`: Bluetooth and GPS-related structures.

@@ -1,12 +1,12 @@
 # Summary
 
 * [Introduction](README.md)
-* [OpenCannabis Spec](3/README.md)
-    * [1: Datamodel](3/1-Datamodel.md)
-        * [1.1: Core Structures](3/2-Core-Structures.md)
-        * [1.2: Extension Structures](3/3-Extension-Structures.md)
-    * [2: Services](3/4-Services.md)
-    * [3: Tables](3/5-Tables.md)
+* [OpenCannabis Spec](3/1-Introduction.md)
+    * [1: Datamodel](3/2-Datamodel.md)
+        * [1.1: Core Structures](3/3-Core-Structures.md)
+        * [1.2: Extension Structures](3/4-Extension-Structures.md)
+    * [2: Services](3/5-Services.md)
+    * [3: Tables](3/6-Tables.md)
     * [Appendix A: Message Categories](3/XA-Message-Categories.md)
     * [Appendix B: Scalar Value Types](3/XB-Scalar-Value-Types.md)
     * [Appendix C: Datamodel Map](3/XC-Datamodel-Map.md)
