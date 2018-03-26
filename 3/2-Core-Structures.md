@@ -39,6 +39,26 @@ separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
 
 ----
 
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+
+[Language
+  |ENGLISH: 0|SPANISH: 1|FRENCH: 2]
+
+[Compression|enabled: bool|type: Compression.Type|
+  [Type|NONE: 0|GZIP: 1|BROTLI: 2|SNAPPY: 3]]
+
+[ProductKind
+  |FLOWERS: 0|EDIBLES: 1|EXTRACTS: 2|PREROLLS: 3|APOTHECARY: 4|CARTRIDGES: 5|PLANTS: 6|MERCHANDISE: 7]
+
+[ProductKey
+  |id: string|type: ProductKind]->[ProductKind]
+
+{% endnomnoml %}
+
+----
+
 ## `opencannabis.base`
 
 Foundational structures used across the spec.

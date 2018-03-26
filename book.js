@@ -12,8 +12,7 @@ module.exports = {
       'nomnoml',
       'colors',
       'terminal',
-      'rss',
-      'plantuml-cloud-languages'
+      'rss'
     ],
     pluginsConfig: {
       sitemap: {
