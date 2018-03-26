@@ -12,10 +12,16 @@ contributors:
   - Scott Robinson <srobinson@abatinsacramento.com>
 ---
 
+# OpenCannabis Specification
+- Version `1.0`
+- Status: `RAW`
+
 ### Status of this Memo
 
 This memo defines a protocol and model for the legal cannabis community: _OpenCannabis, version 1.0_. Distribution of
 this memo is unlimited.
+
+This specification's current status is considered `RAW`, i.e. pre-`DRAFT`.
 
 ### Abstract
 
