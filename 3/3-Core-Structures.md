@@ -350,17 +350,62 @@ Location data, distance, addresses, and so on.
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
-[Date
-  |iso8601: string]
-
-
+[Country
+  |code: string]
+[Point
+  |latitude: double
+  |longitude: double
+  |elevation: double
+  |accuracy: double]
+[Point
+  |state: usa.USState
+  |province: string]
+[Distance
+  |estimate: bool
+  |accuracy: LocationAccuracy
+  |unit: DistanceUnit
+  |start: Location
+  |end: Location]
+[DistanceValue
+  |unit: DistanceUnit
+  |value: double]
+[Location
+  |name: opencannabis.content.Name
+  |address: Address
+  |point: Point
+  |accuracy: LocationAccuracy]
+[LocationAccuracy
+  |estimate: bool
+  |value: DistanceValue]
+[METERS	0
+  |INCHES: 1
+  |FEET: 2
+  |MILLIMETERS:3	
+  |CENTIMETERS: 4	
+  |KILOMETERS: 5
+  |MILES: 6]
+[Address
+  |first_line: string
+  |second_line: string
+  |city: string
+  |state: string
+  |zipcode: string
+  |country: string]
+[USState
+  |UNSPECIFIED: 0
+  |AL / Alabama: 1
+  |AK / Alaska: 2
+  |AZ / Arizona: 3
+  |AR / Arkansas: 4
+  |CA / California: 5
+  |...
+  |WY / Wyoming: 51]
 {% endnomnoml %}
 
 <a name="geo/Country.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
 ## geo/Country.proto
-
 
 
 <a name="opencannabis.geo.Country"/>
