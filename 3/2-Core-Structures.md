@@ -55,6 +55,11 @@ separately in [Part 1.2, Extension Structures](3-Extension-Structures.md).
 [ProductKey
   |id: string|type: ProductKind]->[ProductKind]
 
+[<abstract>opencannabis.content.Name]<:--[ProductReference]
+
+[ProductReference
+  |name: string|key: ProductKey]->[ProductKey]
+
 {% endnomnoml %}
 
 ----
