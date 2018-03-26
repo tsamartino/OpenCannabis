@@ -13,7 +13,7 @@ module.exports = {
       'colors',
       'terminal',
       'rss',
-      'plantuml-cloud-languages',
+      'plantuml-cloud-languages'
     ],
     pluginsConfig: {
       sitemap: {
