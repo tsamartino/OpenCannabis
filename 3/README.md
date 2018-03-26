@@ -4,7 +4,6 @@ shortname: 3/OCS
 name: OpenCannabis Specification
 status: raw
 editor: Sam Gammon <sam@bloombox.io>
-version: 1.0
 contributors:
   - Tyler Porras <tyler@bloombox.io>
   - Tim Samartino <tim@bloombox.io>
