@@ -28,6 +28,10 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
     - [temporal/Time.proto](#temporal/Time.proto)
         - [Time](#opencannabis.temporal.Time)
 - `crypto`: Cryptographic primitives and containers.
+    - [crypto/primitives/Integrity.proto](#crypto/primitives/Integrity.proto)
+        - [Hash](#opencannabis.crypto.primitives.integrity.Hash)
+        - [HashedData](#opencannabis.crypto.primitives.integrity.HashedData)
+        - [HashAlgorithm](#opencannabis.crypto.primitives.integrity.HashAlgorithm)
 - `geo`: Structures relating to geography.
 - `device`: Managed and anonymous, operating systems, browsers.
 - `content`: Narrative and marketing content.
@@ -118,8 +122,6 @@ Enumerates types of products known to the spec.
 | CARTRIDGES | 5 | Vaporizor cartridges, batteries, and kits. |
 | PLANTS | 6 | Plants sold direct, in various forms such as pre-grown (clones) or raw seeds. |
 | MERCHANDISE | 7 | Merchandise, usually branded in-house. Also covers glassware and miscellaneous items. |
-
-
 
 
 <a name="base/Language.proto"/>
@@ -247,3 +249,64 @@ Specifies a particular time of day.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | iso8601 | [string](./XB-Scalar-Value-Types.md#string) |  | ISO8601 time format. |
+
+
+----
+
+## `opencannabis.crypto`
+
+Cryptographic primitives, including hashing tools, encrypted data containers, and so on.
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Date
+  |iso8601: string]
+
+{% endnomnoml %}
+
+
+<a name="crypto/primitives/Integrity.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## crypto/primitives/Integrity.proto
+
+<a name="opencannabis.crypto.primitives.integrity.Hash"/>
+
+### Hash
+Specifies the hash portion of hashed data, along with the algorithm used to calculate the digest enclosed. This
+particular container does not specify or otherwise contain the original referenced data.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| algorithm | [HashAlgorithm](#opencannabis.crypto.primitives.integrity.HashAlgorithm) |  | Specifies the algorithm in use. |
+| raw | [bytes](./XB-Scalar-Value-Types.md#bytes) |  | Raw binary output of the hash algorithm. |
+| hex | [string](./XB-Scalar-Value-Types.md#string) |  | Hex-encoded digest value. |
+| b64 | [string](./XB-Scalar-Value-Types.md#string) |  | Base64-encoded digest value. |
+
+<a name="opencannabis.crypto.primitives.integrity.HashedData"/>
+
+### HashedData
+Specifies a set of raw data, of some kind, and an attached digest/hash value, along with the algorithm used to
+calculate the digest.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| data | [bytes](./XB-Scalar-Value-Types.md#bytes) |  | Raw data that we are transmitting. |
+| hash | [Hash](#opencannabis.crypto.primitives.integrity.Hash) |  | Hash for the raw data in this payload. |
+
+<a name="opencannabis.crypto.primitives.integrity.HashAlgorithm"/>
+
+### HashAlgorithm
+Enumerates hash algorithms supported or known by the runtime for shared use.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| SHA1 | 0 | Secure Hash Algorithm v2. |
+| MD5 | 1 | Message Digest v5. |
+| SHA256 | 2 | Secure Hash Algorithm, with 256-bit width. |
+| SHA384 | 3 | Secure Hash Algorithm, with 384-bit width. |
+| SHA512 | 4 | Secure Hash Algorithm, with 512-bit width. |
+| MURMUR | 6 | Specifies hashing with MurmurHash. |
