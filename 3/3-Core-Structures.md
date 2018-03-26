@@ -33,6 +33,22 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
         - [HashedData](#opencannabis.crypto.primitives.integrity.HashedData)
         - [HashAlgorithm](#opencannabis.crypto.primitives.integrity.HashAlgorithm)
 - `geo`: Structures relating to geography.
+  - [geo/Country.proto](#geo/Country.proto)
+      - [Country](#opencannabis.geo.Country)
+  - [geo/Point.proto](#geo/Point.proto)
+      - [Point](#opencannabis.geo.Point)
+  - [geo/Province.proto](#geo/Province.proto)
+      - [Province](#opencannabis.geo.Province)
+    - [geo/Location.proto](#geo/Location.proto)
+      - [Distance](#opencannabis.geo.Distance)
+      - [DistanceValue](#opencannabis.geo.DistanceValue)
+      - [Location](#opencannabis.geo.Location)
+      - [LocationAccuracy](#opencannabis.geo.LocationAccuracy)
+      - [DistanceUnit](#opencannabis.geo.DistanceUnit)
+  - [geo/Address.proto](#geo/Address.proto)
+      - [Address](#opencannabis.geo.Address)
+  - [geo/USState.proto](#geo/USState.proto)
+      - [USState](#opencannabis.geo.usa.USState)
 - `device`: Managed and anonymous, operating systems, browsers.
 - `content`: Narrative and marketing content.
 - `person`: People, names, birth dates, and so on.
@@ -325,3 +341,289 @@ Enumerates hash algorithms supported or known by the runtime for shared use.
 | SHA384 | 3 | Secure Hash Algorithm, with 384-bit width. |
 | SHA512 | 4 | Secure Hash Algorithm, with 512-bit width. |
 | MURMUR | 6 | Specifies hashing with MurmurHash. |
+
+
+## `opencannabis.geo`
+
+Location data, distance, addresses, and so on.
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Date
+  |iso8601: string]
+
+
+{% endnomnoml %}
+
+<a name="geo/Country.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/Country.proto
+
+
+
+<a name="opencannabis.geo.Country"/>
+
+### Country
+Specifies an independent nation state.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| code | [string](#string) |  | ISO country code. |
+
+
+<a name="geo/Point.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/Point.proto
+
+
+<a name="opencannabis.geo.Point"/>
+
+### Point
+Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
+optionally an accuracy rating. Accuracy and elevation are interpreted in &#39;feet&#39; by default.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| latitude | [double](#double) |  | Latitude value of this point. |
+| longitude | [double](#double) |  | Longitude value of this point. |
+| elevation | [double](#double) |  | Elevation of this point, if any. |
+| accuracy | [double](#double) |  | Accuracy rating attached to this point, if any. |
+
+
+<a name="geo/Province.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/Province.proto
+
+
+<a name="opencannabis.geo.Province"/>
+
+### Province
+Specifies a US or non-US province.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| state | [usa.USState](#opencannabis.geo.usa.USState) |  | US state, specified by enumerated ID. |
+| province | [string](#string) |  | Generic province reference, by name. |
+
+
+<a name="geo/Location.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/Location.proto
+
+
+<a name="opencannabis.geo.Distance"/>
+
+### Distance
+Specifies a distance between two locations.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| estimate | [bool](#bool) |  | Specifies whether this distance is an estimate. |
+| accuracy | [LocationAccuracy](#opencannabis.geo.LocationAccuracy) |  | Specifies the accuracy estimate for the distance values, if known. |
+| unit | [DistanceUnit](#opencannabis.geo.DistanceUnit) |  | Specifies the unit of measurement for a location accuracy estimate. |
+| start | [Location](#opencannabis.geo.Location) |  | Specifies the starting location for a distance span. |
+| end | [Location](#opencannabis.geo.Location) |  | Specifies the terminating location for a distance span. |
+
+
+<a name="opencannabis.geo.DistanceValue"/>
+
+### DistanceValue
+Specifies a single distance value.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| unit | [DistanceUnit](#opencannabis.geo.DistanceUnit) |  | Specifies the unit of measurement employed for this distance. |
+| value | [double](#double) |  | Actual value. |
+
+
+<a name="opencannabis.geo.Location"/>
+
+### Location
+Represents a physically addressable location in the real world.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [opencannabis.content.Name](#opencannabis.content.Name) |  | Name for this location, if applicable. |
+| address | [Address](#opencannabis.geo.Address) |  | Address for this location, if applicable. |
+| point | [Point](#opencannabis.geo.Point) |  | Geopoint (latitude/longitude) for this location. |
+| accuracy | [LocationAccuracy](#opencannabis.geo.LocationAccuracy) |  | Specifies the accuracy estimate, if known. |
+
+
+<a name="opencannabis.geo.LocationAccuracy"/>
+
+### LocationAccuracy
+Represents an estimate of location accuracy.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| estimate | [bool](#bool) |  | Specifies whether this accuracy rating is an estimate. |
+| value | [DistanceValue](#opencannabis.geo.DistanceValue) |  | Distance value for the accuracy specified. |
+
+
+<a name="opencannabis.geo.DistanceUnit"/>
+
+### DistanceUnit
+Enumeration of recognized units of distance.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| METERS | 0 | Distance in meters. |
+| INCHES | 1 | Distance in inches. |
+| FEET | 2 | Distance in feet. |
+| MILLIMETERS | 3 | Distance in millimeters. |
+| CENTIMETERS | 4 | Distance in centimeters. |
+| KILOMETERS | 5 | Distance in kilometers. |
+| MILES | 6 | Distance in miles. |
+
+
+<a name="geo/Address.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/Address.proto
+
+
+<a name="opencannabis.geo.Address"/>
+
+### Address
+Specifies a standard postal address, with two address lines, and space for a municipality (&#39;city&#39;), provincial
+authority (&#39;state&#39;), and national authority (&#39;country&#39;).
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| first_line | [string](#string) |  | First line of the address. |
+| second_line | [string](#string) |  | Second line of the address, if applicable. |
+| city | [string](#string) |  | City or municipality name for the address. |
+| state | [string](#string) |  | State that contains the city or municipality for this address. |
+| zipcode | [string](#string) |  | USPS zipcode associated with this address. |
+| country | [string](#string) |  | Country code associated with this address (&#39;US&#39; or &#39;USA&#39; for United States, for instance). |
+
+
+<a name="geo/USState.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## geo/USState.proto
+
+
+<a name="opencannabis.geo.usa.USState"/>
+
+### USState
+Enumerates United States member states and territories by their full name and abbreviation.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED | 0 | Default: Unspecified. |
+| AL | 1 | State of Alabama. |
+| ALABAMA | 1 |  |
+| AK | 2 | State of Alaska. |
+| ALASKA | 2 |  |
+| AZ | 3 | State of Arizona. |
+| ARIZONA | 3 |  |
+| AR | 4 | State of Arkansas. |
+| ARKANSAS | 4 |  |
+| CA | 5 | State of California. |
+| CALIFORNIA | 5 |  |
+| CO | 6 | State of Colorado. |
+| COLORADO | 6 |  |
+| CT | 7 | State of Connecticut. |
+| CONNECTICUT | 7 |  |
+| DE | 8 | State of Delaware. |
+| Delaware | 8 |  |
+| DC | 9 | Washington, District of Columbia (DC). |
+| DISTRICT_OF_COLUMBIA | 9 |  |
+| FL | 10 | State of Florida. |
+| FLORIDA | 10 |  |
+| GA | 11 | State of Georgia. |
+| GEORGIA | 11 |  |
+| HI | 12 | State of Hawaii. |
+| HAWAII | 12 |  |
+| ID | 13 | State of Idaho. |
+| IDAHO | 13 |  |
+| IL | 14 | State of Illinois. |
+| ILLINOIS | 14 |  |
+| IN | 15 | State of Indiana. |
+| INDIANA | 15 |  |
+| IA | 16 | State of Iowa. |
+| IOWA | 16 |  |
+| KS | 17 | State of Kansas. |
+| KANSAS | 17 |  |
+| KY | 18 | State of Kentucky. |
+| KENTUCKY | 18 |  |
+| LA | 19 | State of Loisiana. |
+| LOISIANA | 19 |  |
+| ME | 20 | State of Maine. |
+| MAINE | 20 |  |
+| MD | 21 | State of Maryland. |
+| MARYLAND | 21 |  |
+| MA | 22 | State of Massachusetts. |
+| MASSACHUSETTS | 22 |  |
+| MI | 23 | State of Michigan. |
+| MICHIGAN | 23 |  |
+| MN | 24 | State of Minnesota. |
+| MINNESOTA | 24 |  |
+| MS | 25 | State of Mississippi. |
+| MISSISSIPPI | 25 |  |
+| MO | 26 | State of Missouri. |
+| MISSOURI | 26 |  |
+| MT | 27 | State of Montana. |
+| MONTANA | 27 |  |
+| NE | 28 | State of Nebraska. |
+| NEBRASKA | 28 |  |
+| NV | 29 | State of Nevada. |
+| NEVADA | 29 |  |
+| NH | 30 | State of New Hampshire. |
+| NEW_HAMPSHIRE | 30 |  |
+| NJ | 31 | State of New Jersey. |
+| NEW_JERSEY | 31 |  |
+| NM | 32 | State of New Mexico. |
+| NEW_MEXICO | 32 |  |
+| NY | 33 | State of New York. |
+| NEW_YORK | 33 |  |
+| NC | 34 | State of North Carolina. |
+| NORTH_CAROLINA | 34 |  |
+| ND | 35 | State of North Dakota. |
+| NORTH_DAKOTA | 35 |  |
+| OH | 36 | State of Ohio. |
+| OHIO | 36 |  |
+| OK | 37 | State of Oklahoma. |
+| OKLAHOMA | 37 |  |
+| OR | 38 | State of Oregon. |
+| OREGON | 38 |  |
+| PA | 39 | State of Pennsylvania. |
+| PENNSYLVANIA | 39 |  |
+| RI | 40 | State of Rhode Island. |
+| RHODE_ISLAND | 40 |  |
+| SC | 41 | State of South Carolina. |
+| SOUTH_CAROLINA | 41 |  |
+| SD | 42 | State of South Dakota. |
+| SOUTH_DAKOTA | 42 |  |
+| TN | 43 | State of Tennessee. |
+| TENNESSEE | 43 |  |
+| TX | 44 | State of Texas. |
+| TEXAS | 44 |  |
+| UT | 45 | State of Utah. |
+| UTAH | 45 |  |
+| VT | 46 | State of Vermont. |
+| VERMONT | 46 |  |
+| VA | 47 | State of Virginia. |
+| VIRGINIA | 47 |  |
+| WA | 48 | State of Washington. |
+| WASHINGTON | 48 |  |
+| WV | 49 | State of West Virginia. |
+| WEST_VIRGINIA | 49 |  |
+| WI | 50 | State of Wisconsin. |
+| WISCONSIN | 50 |  |
+| WYOMING | 51 | State of Wyoming. |
+| WY | 51 |  |
