@@ -5,7 +5,7 @@ module.exports = {
     gitbook: '>=3.0.0',
     plugins: [
       'theme-ocs',
-      'coss-ocs',
+      //'coss-ocs',
       'code',
       'sitemap',
       'insert-logo',
