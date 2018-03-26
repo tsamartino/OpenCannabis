@@ -9,6 +9,7 @@
     * [3: Tables](3/5-Tables.md)
     * [Appendix A: Message Categories](3/XA-Message-Categories.md)
     * [Appendix B: Scalar Value Types](3/XB-Scalar-Value-Types.md)
+    * [Appendix C: Datamodel Map](3/XC-Datamodel-Map.md)
 
 ## Languages
 
