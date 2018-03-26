@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [OpenCannabis Spec](3/README.md)
+* [OpenCannabis Spec](https://rfc.opencannabis.info/3/)
     * [1: Datamodel](3/1-Datamodel.md)
         * [1.1: Core Structures](3/2-Core-Structures.md)
         * [1.2: Extension Structures](3/3-Extension-Structures.md)
