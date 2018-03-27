@@ -70,6 +70,10 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
       - [ProductContent](#opencannabis.content.ProductContent)
       - [ProductTimestamps](#opencannabis.content.ProductTimestamps)
 - `person`: People, names, birth dates, and so on.
+  - [person/PersonName.proto](#person/PersonName.proto)
+      - [Name](#opencannabis.person.Name)
+  - [person/Person.proto](#person/Person.proto)
+      - [Person](#opencannabis.person.Person)
 - `contact`: Email, phone, and postal addresses.
 - `media`: Images, video, documents, etc.
 - `products`: High-level product structures.
@@ -731,6 +735,7 @@ Specifies a variety of devices, device flags, device types, and so on.
  | PHONE:2
  | TABLET:3
  | TV:4]
+
 {% endnomnoml %}
 
 
@@ -992,3 +997,69 @@ date, or last modification date.
 | created | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was created. |
 | modified | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last modified. |
 | published | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last or first published. |
+
+## `opencannabis.person`
+
+Specifies a person, their name, any middle or alternate name, date of birth, prefix, postfix, and their contact
+information
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[PersonName
+ | full_name: string
+ | first_name: string
+ | last_name: string
+ | middle_name: string
+ | prefix: string
+ | postfix: string]
+
+[Person
+ | name: Name
+ | legal_name: Name
+ | alternate_name: Name
+ | contact: opencannabis.contact.ContactInfo
+ | date_of_birth: opencannabis.temporal.Date]
+
+{% endnomnoml %}
+
+<a name="person/PersonName.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## person/PersonName.proto
+
+
+<a name="opencannabis.person.Name"/>
+
+### Name
+Represents a human being&#39;s name, in the style of &#34;given&#34; name (first) and &#34;family&#34; name (last) being concatenated to
+form a full person&#39;s name. Additional names, like middle names, etc, are also specified here.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| full_name | [string](#string) |  | Person&#39;s full name, if a fulltext value should override. |
+| first_name | [string](#string) |  | Person&#39;s given, or first, name. |
+| last_name | [string](#string) |  | Person&#39;s family, or last, name. |
+| middle_name | [string](#string) |  | Person&#39;s middle name. |
+| prefix | [string](#string) |  | Prefix for a person&#39;s name. |
+| postfix | [string](#string) |  | Postfix for a person&#39;s name. |
+
+
+<a name="person/Person.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## person/Person.proto
+
+
+<a name="opencannabis.person.Person"/>
+
+### Person
+A person/patient and their name, legal name, nickname, etc.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [Name](#opencannabis.person.Name) |  | Person&#39;s primary name information. |
+| legal_name | [Name](#opencannabis.person.Name) |  | Person&#39;s legal name, if it differs from their primary name. |
+| alternate_name | [Name](#opencannabis.person.Name) |  | Person&#39;s optional alternate name. |
+| contact | [opencannabis.contact.ContactInfo](#opencannabis.contact.ContactInfo) |  | Person&#39;s contact information. |
+| date_of_birth | [opencannabis.temporal.Date](#opencannabis.temporal.Date) |  | Date of birth. |
