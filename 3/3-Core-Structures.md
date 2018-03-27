@@ -50,6 +50,11 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
   - [geo/USState.proto](#geo/USState.proto)
       - [USState](#opencannabis.geo.usa.USState)
 - `device`: Managed and anonymous, operating systems, browsers.
+  - [device/Device.proto](#device/Device.proto)
+      - [Device](#opencannabis.device.Device)
+      - [DeviceCredentials](#opencannabis.device.DeviceCredentials)
+      - [DeviceFlags](#opencannabis.device.DeviceFlags)
+      - [DeviceType](#opencannabis.device.DeviceType)
 - `content`: Narrative and marketing content.
 - `person`: People, names, birth dates, and so on.
 - `contact`: Email, phone, and postal addresses.
@@ -352,38 +357,46 @@ Location data, distance, addresses, and so on.
 #fill: #d5e7ee; #8ebff2
 [Country
   |code: string]
+  
 [Point
   |latitude: double
   |longitude: double
   |elevation: double
   |accuracy: double]
+  
 [Point
   |state: usa.USState
   |province: string]
+  
 [Distance
   |estimate: bool
   |accuracy: LocationAccuracy
   |unit: DistanceUnit
   |start: Location
   |end: Location]
+  
 [DistanceValue
   |unit: DistanceUnit
   |value: double]
+  
 [Location
   |name: opencannabis.content.Name
   |address: Address
   |point: Point
   |accuracy: LocationAccuracy]
+  
 [LocationAccuracy
   |estimate: bool
   |value: DistanceValue]
+  
 [METERS	0
   |INCHES: 1
   |FEET: 2
-  |MILLIMETERS:3	
-  |CENTIMETERS: 4	
+  |MILLIMETERS:3
+  |CENTIMETERS: 4
   |KILOMETERS: 5
   |MILES: 6]
+  
 [Address
   |first_line: string
   |second_line: string
@@ -391,6 +404,7 @@ Location data, distance, addresses, and so on.
   |state: string
   |zipcode: string
   |country: string]
+  
 [USState
   |UNSPECIFIED: 0
   |AL / Alabama: 1
@@ -672,3 +686,93 @@ Enumerates United States member states and territories by their full name and ab
 | WISCONSIN | 50 |  |
 | WYOMING | 51 | State of Wyoming. |
 | WY | 51 |  |
+
+## `opencannabis.device`
+
+Specifies a variety of devices, device flags, device types, and so on.
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Device
+ | uuid: string
+ | type: DeviceType
+ | flags: DeviceFlags
+ | key: DeviceCredentials]
+
+[DeviceCredentials
+ | public_key: bytes
+ | private_key: bytes
+ | sha256: string
+ | identity: string
+ | authorities: bytes: repeated]
+
+[DeviceFlags
+ | ephemeral: bool
+ | managed: bool]
+ 
+[DeviceType
+ | UNKNOWN_DEVICE_TYPE:0
+ | DESKTOP:1
+ | PHONE:2
+ | TABLET:3
+ | TV:4]
+{% endnomnoml %}
+
+
+<a name="device/Device.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## device/Device.proto
+
+
+<a name="opencannabis.device.Device"/>
+
+### Device
+Specifies a structure that describes a known device.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  | Universally unique identifier for this device. |
+| type | [DeviceType](#opencannabis.device.DeviceType) |  | Type of this device. |
+| flags | [DeviceFlags](#opencannabis.device.DeviceFlags) |  | Flags for this device. |
+| key | [DeviceCredentials](#opencannabis.device.DeviceCredentials) |  | Credentials for this device. |
+
+
+<a name="opencannabis.device.DeviceCredentials"/>
+
+### DeviceCredentials
+Credentials that assert a device&#39;s identity or authorization.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| public_key | [bytes](#bytes) |  | Raw bytes for a device&#39;s public key. |
+| private_key | [bytes](#bytes) |  | Raw bytes for the device&#39;s private key. |
+| sha256 | [string](#string) |  | SHA256 hash of this device&#39;s public key. |
+| identity | [string](#string) |  | A device&#39;s raw identity payload. |
+| authorities | [bytes](#bytes) | repeated | Repeated PEM authority payloads, asserted as trusted by the server. |
+
+
+<a name="opencannabis.device.DeviceFlags"/>
+
+### DeviceFlags
+Stateful flags that may be set on a device.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| ephemeral | [bool](#bool) |  | Flag to mark a device as ephemeral, i.e. attached to a disposable identity. |
+| managed | [bool](#bool) |  | Flag to mark a device as managed by EMM systems. |
+
+
+<a name="opencannabis.device.DeviceType"/>
+
+### DeviceType
+Enumerates major types of devices that might be encountered, including desktops, phones, tablets, TVs, and browsers.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN_DEVICE_TYPE | 0 | The end-device type is not known. |
+| DESKTOP | 1 | The end-device is a desktop of some kind. |
+| PHONE | 2 | The end-device is a phone. |
+| TABLET | 3 | The end-device is a tablet. |
+| TV | 4 | The end-device is a TV of some kind. |
