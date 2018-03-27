@@ -100,6 +100,63 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
   - [media/MediaItem.proto](#media/MediaItem.proto)
       - [MediaItem](#opencannabis.media.MediaItem)
 - `products`: High-level product structures.
+  - [products/Merchandise.proto](#products/Merchandise.proto)
+      - [Merchandise](#opencannabis.products.Merchandise)
+      - [MerchandiseFlag](#opencannabis.products.MerchandiseFlag)
+      - [MerchandiseType](#opencannabis.products.MerchandiseType)
+  - [products/Apothecary.proto](#products/Apothecary.proto)
+      - [Apothecary](#opencannabis.products.Apothecary)
+      - [ApothecaryType](#opencannabis.products.ApothecaryType)
+  - [products/Flower.proto](#products/Flower.proto)
+      - [Flower](#opencannabis.products.Flower)
+  - [products/Edible.proto](#products/Edible.proto)
+      - [Edible](#opencannabis.products.Edible)
+      - [EdibleIngredient](#opencannabis.products.EdibleIngredient)
+      - [EdibleFlag](#opencannabis.products.EdibleFlag)
+      - [EdibleType](#opencannabis.products.EdibleType)
+  - [products/Extract.proto](#products/Extract.proto)
+      - [Extract](#opencannabis.products.Extract)
+      - [ExtractFlag](#opencannabis.products.ExtractFlag)
+      - [ExtractType](#opencannabis.products.ExtractType)
+  - [products/distribution/DistributionChannel.proto](#products/distribution/DistributionChannel.proto)
+      - [DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy)
+      - [Channel](#opencannabis.products.distribution.Channel)
+      - [ChannelType](#opencannabis.products.distribution.ChannelType)
+  - [products/Cartridge.proto](#products/Cartridge.proto)
+      - [Cartridge](#opencannabis.products.Cartridge)
+      - [CartridgeType](#opencannabis.products.CartridgeType)
+  - [products/Plant.proto](#products/Plant.proto)
+      - [Plant](#opencannabis.products.Plant)
+      - [PlantType](#opencannabis.products.PlantType)
+  - [products/Preroll.proto](#products/Preroll.proto)
+      - [Preroll](#opencannabis.products.Preroll)
+      - [PrerollFlag](#opencannabis.products.PrerollFlag)
+  - [products/menu/Section.proto](#products/menu/Section.proto)
+      - [CustomSection](#opencannabis.products.menu.section.CustomSection)
+      - [SectionMedia](#opencannabis.products.menu.section.SectionMedia)
+      - [SectionSettings](#opencannabis.products.menu.section.SectionSettings)
+      - [SectionSpec](#opencannabis.products.menu.section.SectionSpec)
+      - [FilteredSection](#opencannabis.products.menu.section.FilteredSection)
+      - [Section](#opencannabis.products.menu.section.Section)
+      - [SectionFlag](#opencannabis.products.menu.section.SectionFlag)
+  - [products/menu/Menu.proto](#products/menu/Menu.proto)
+      - [Menu](#opencannabis.products.menu.Menu)
+      - [MenuProduct](#opencannabis.products.menu.MenuProduct)
+      - [MenuSettings](#opencannabis.products.menu.MenuSettings)
+      - [Metadata](#opencannabis.products.menu.Metadata)
+      - [SectionData](#opencannabis.products.menu.SectionData)
+      - [SectionedMenu](#opencannabis.products.menu.SectionedMenu)
+      - [StaticMenu](#opencannabis.products.menu.StaticMenu)
+      - [StaticMenu.ApothecaryEntry](#opencannabis.products.menu.StaticMenu.ApothecaryEntry)
+      - [StaticMenu.CartridgesEntry](#opencannabis.products.menu.StaticMenu.CartridgesEntry)
+      - [StaticMenu.EdiblesEntry](#opencannabis.products.menu.StaticMenu.EdiblesEntry)
+      - [StaticMenu.ExtractsEntry](#opencannabis.products.menu.StaticMenu.ExtractsEntry)
+      - [StaticMenu.FlowersEntry](#opencannabis.products.menu.StaticMenu.FlowersEntry)
+      - [StaticMenu.MerchandiseEntry](#opencannabis.products.menu.StaticMenu.MerchandiseEntry)
+      - [StaticMenu.PlantsEntry](#opencannabis.products.menu.StaticMenu.PlantsEntry)
+      - [StaticMenu.PrerollsEntry](#opencannabis.products.menu.StaticMenu.PrerollsEntry)
+      - [Flag](#opencannabis.products.menu.Flag)
+      - [Status](#opencannabis.products.menu.Status)
 - `structs`: Utility structures used across the spec.
 
 ----
@@ -388,6 +445,7 @@ Enumerates hash algorithms supported or known by the runtime for shared use.
 | SHA512 | 4 | Secure Hash Algorithm, with 512-bit width. |
 | MURMUR | 6 | Specifies hashing with MurmurHash. |
 
+----
 
 ## `opencannabis.geo`
 
@@ -430,7 +488,8 @@ Location data, distance, addresses, and so on.
   |estimate: bool
   |value: DistanceValue]
   
-[METERS	0
+[DistanceUnit
+  |METERS: 0
   |INCHES: 1
   |FEET: 2
   |MILLIMETERS:3
@@ -728,6 +787,8 @@ Enumerates United States member states and territories by their full name and ab
 | WYOMING | 51 | State of Wyoming. |
 | WY | 51 |  |
 
+----
+
 ## `opencannabis.device`
 
 Specifies a variety of devices, device flags, device types, and so on.
@@ -746,7 +807,7 @@ Specifies a variety of devices, device flags, device types, and so on.
  | private_key: bytes
  | sha256: string
  | identity: string
- | authorities: bytes: repeated]
+ | authorities: repeated bytes]
 
 [DeviceFlags
  | ephemeral: bool
@@ -819,6 +880,8 @@ Enumerates major types of devices that might be encountered, including desktops,
 | TABLET | 3 | The end-device is a tablet. |
 | TV | 4 | The end-device is a TV of some kind. |
 
+----
+
 ## `opencannabis.content`
 
 Specifies Timestamps, Products, Brands, formats, encoding, and so on
@@ -853,13 +916,13 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
  | grow: opencannabis.structs.Grow
  | shelf: opencannabis.structs.Shelf
  | tests: opencannabis.structs.labtesting.TestResults
- | channel: opencannabis.products.distribution.DistributionPolicy: repeated]
+ | channel: repeated opencannabis.products.distribution.DistributionPolicy]
 
 [Brand
  | name: Name
  | parent: Brand
  | summary: Content
- | media: opencannabis.media.MediaItem: repeated]
+ | media: repeated opencannabis.media.MediaItem]
 
 [ProductContent
  | name: Name
@@ -867,7 +930,7 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
  | summary: Content
  | usage: Content
  | dosage: Content
- | media: opencannabis.media.MediaItem: repeated
+ | media: repeated opencannabis.media.MediaItem
  | pricing: opencannabis.structs.pricing.ProductPricing
  | flags: opencannabis.structs.ProductFlag
  | ts: ProductTimestamps]
@@ -1021,6 +1084,8 @@ date, or last modification date.
 | modified | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last modified. |
 | published | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last or first published. |
 
+----
+
 ## `opencannabis.person`
 
 Specifies a person, their name, any middle or alternate name, date of birth, prefix, postfix, and their contact
@@ -1086,6 +1151,8 @@ A person&#39;s and their name, legal name, nickname, etc.
 | alternate_name | [Name](#opencannabis.person.Name) |  | Person&#39;s optional alternate name. |
 | contact | [opencannabis.contact.ContactInfo](#opencannabis.contact.ContactInfo) |  | Person&#39;s contact information. |
 | date_of_birth | [opencannabis.temporal.Date](#opencannabis.temporal.Date) |  | Date of birth. |
+
+----
 
 ## `opencannabis.contact`
 
@@ -1189,6 +1256,8 @@ Specifies a structure that describes a URI/website, and related information.
 | title | [string](#string) |  | Title from the HTML page at URI. |
 | icon | [bytes](#bytes) |  | Favicon raw bytes from the HTML page at URI. |
 
+----
+
 ## `opencannabis.media`
 
 Specifies a type of media, device orientation, file-type and so on
@@ -1290,8 +1359,8 @@ in some cases, and also stored along with media sometimes.
 <a name="opencannabis.media.MediaKey"/>
 
 ### MediaKey
-Key uniquely describing an item of media known to the system. An &#34;item of media&#34; can be anything from an image or a
-video, to a PDF document, or larger data.
+Key uniquely describing an item of media known to the system. An &#34;item of media&#34; can be anything from an image
+or a video, to a PDF document, or larger data.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -1417,3 +1486,946 @@ Describes an individual media item, which can be an image, video, etc.
 | type | [MediaType](#opencannabis.media.MediaType) |  | Type of media this is describing. |
 | name | [string](#string) |  | Friendly name for this media. |
 | uri | [string](#string) |  | Absolute URI to this media. |
+
+----
+
+## `opencannabis.products`
+
+Specifies and enumerates products in the menu; flowers, extracts, edibles, apothecary, merch, plants and pre-rolls
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Merchandise
+ | key: opencannabis.base.ProductKey
+ | type: MerchandiseType
+ | flags: MerchandiseFlag
+ | product: opencannabis.content.ProductContent]
+
+[MerchandiseFlag
+ | NO_MERCHANDISE_FLAGS: 0
+ | MEDICAL_ONLY: 1
+ | BRAND_SWAG: 2]
+
+[MerchandiseType
+ | UNSPECIFIED_MERCHANDISE: 0
+ | CLOTHING: 1
+ | GLASSWARE: 2
+ | CONTAINER: 3
+ | LIGHTER: 4]
+
+[Apothecary
+ | key: opencannabis.base.ProductKey
+ | type: ApothecaryType
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData]
+
+[ApothecaryType
+ | UNSPECIFIED_APOTHECARY: 0
+ | TOPICAL: 1
+ | TINCTURE: 2
+ | CAPSULE: 3
+ | INJECTOR: 4
+ | SUBLINGUAL: 5]
+
+[Flower
+ | key: opencannabis.base.ProductKey
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData]
+
+[Edible
+ | key: opencannabis.base.ProductKey
+ | type: EdibleType
+ | flags: repeated EdibleFlag
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData
+ | ingredients: repeated EdibleIngredient]
+
+[EdibleIngredient
+ | label: string
+ | amount: string]
+
+[EdibleFlag
+ | NO_EDIBLE_FLAG: 0
+ | VEGAN: 1
+ | GLUTEN_FREE: 2
+ | SUGAR_FREE: 3
+ | FAIR_TRADE: 4
+ | ORGANIC: 5
+ | LOCAL: 6]
+
+[EdibleType
+ | UNSPECIFIED_EDIBLE: 0
+ | CHOCOLATE: 1
+ | BAKED_GOOD: 2
+ | CANDY: 3
+ | DRINK: 4]
+
+[Extract
+| key: opencannabis.base.ProductKey
+| type: ExtractType
+| flag: ExtractFlag
+| flower: opencannabis.base.ProductReference
+| product: opencannabis.content.ProductContent
+| material: opencannabis.content.MaterialsData]
+
+[ExtractFlag
+ | NO_EXTRACT_FLAGS:0
+ | SOLVENTLESS:1]
+
+[ExractType
+ | UNSPECIFIED_EXTRACT: 0
+ | OIL: 1
+ | WAX: 2
+ | SHATTER: 3
+ | KIEF: 4
+ | HASH: 5
+ | LIVE_RESIN: 6
+ | ROSIN: 7]
+
+[DistributionPolicy
+ | enabled: bool
+ | channel: Channel
+ | type: ChannelType
+ | suppress: bool]
+
+[Channel
+ | UNSPECIFIED_CHANNEL_TYPE: 0
+ | DIRECT: 1
+ | MARKETPLACE: 2]
+
+[Cartridge
+ | key: opencannabis.base.ProductKey
+ | type: CartridgeType
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData]
+
+[CartridgeType
+ | UNSPECIFIED_CARTRIDGE: 0
+ | CARTRIDGE: 1
+ | BATTERY: 2
+ | KIT: 3]
+
+[Plant
+ | key: opencannabis.base.ProductKey
+ | type: PlantType
+ | origin: repeated opencannabis.base.ProductReference
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData]
+
+[PlantType
+ | UNSPECIFIED_PLANT: 0
+ | SEED: 1
+ | CLONE: 2]
+
+[Preroll
+ | key: opencannabis.base.ProductKey
+ | flower: opencannabis.base.ProductReference
+ | length: double
+ | thickness: double
+ | flags: repeated PrerollFlag
+ | product: opencannabis.content.ProductContent
+ | material: opencannabis.content.MaterialsData]
+
+[CustomSection
+ | id: string
+ | filter: FilteredSection]
+
+[SectionMedia
+ | tablet_homescreen_media: opencannabis.media.MediaItem]
+
+[SectionSettings
+ | name: opencannabis.content.Name
+ | media: SectionMedia]
+
+[SectionSpec
+ | section: Section
+ | custom_section: CustomSection
+ | name: string
+ | settings: SectionSettings
+ | flags: SectionFlag]
+
+[FilteredSection
+ | ON_SALE: 0
+ | HOUSE: 1
+ | CBD: 2]
+
+[Section
+ | UNSPECIFIED: 0
+ | FLOWERS: 1
+ | EXTRACTS: 2
+ | EDIBLES: 3
+ | CARTRIDGES: 4
+ | APOTHECARY: 5
+ | PREROLLS: 6
+ | PLANTS: 7
+ | MERCHANDISE: 8]
+
+[Menu
+ | metadata: Metadata
+ | payload: SectionedMenu
+ | menu: StaticMenu]
+
+[MenuProduct
+ | key: opencannabis.base.ProductKey
+ | apothecary: opencannabis.products.Apothecary
+ | cartridge: opencannabis.products.Cartridge
+ | edible: opencannabis.products.Edible
+ | extract: opencannabis.products.Extract
+ | flower: opencannabis.products.Flower
+ | merchandise: opencannabis.products.Merchandise
+ | plant: opencannabis.products.Plant
+ | preroll: opencannabis.products.Preroll]
+
+[MenuSettings
+ | full: bool
+ | keys_only: bool
+ | snapshot: opencannabis.crypto.primitives.integrity.Hash
+ | fingerprint: opencannabis.crypto.primitives.integrity.Hash
+ | section: section.Section]
+
+[MetaData
+ | scope: string
+ | version: uint64
+ | status: Status
+ | flags: Flag
+ | published: opencannabis.temporal.Instant
+ | settings: MenuSettings]
+
+[SectionData
+ | count: int32
+ | section: section.SectionSpec
+ | product: repeated MenuProduct]
+
+[SectionMenu
+ | count: int32
+ | payload: repeated SectionData]
+
+[StaticMenu
+ | apothecary: repeated StaticMenu.ApothecaryEntry
+ | cartridges: repeated StaticMenu.CartridgesEntry
+ | edibles: repeated StaticMenu.EdiblesEntry
+ | extracts: repeated StaticMenu.ExtractsEntry
+ | flowers: repeated StaticMenu.FlowersEntry
+ | merchandise: repeated StaticMenu.MerchandiseEntry
+ | plants: repeated StaticMenu.PlantsEntry
+ | prerolls: repeated StaticMenu.PrerollsEntry]
+
+[StaticMenu.ApothacaryEntry
+ | key: string
+ | value: opencannabis.products.Apothecary]
+
+[StaticMenu.CartridgesEntry
+ | key: string
+ | value: opencannabis.products.Cartridge]
+
+[StaticMenu.EdiblesEntry
+ | key: string
+ | value: opencannabis.products.Edible]
+
+[StaticMenu.ExtractsEntry
+ | key: string
+ | value: opencannabis.products.Extract]
+
+[StaticMenu.FlowersEntry
+ | key: string
+ | value: opencannabis.products.Flower]
+
+[StaticMenu.MerchandiseEntry
+ | key: string
+ | value: opencannabis.products.Merchandise]
+
+[StaticMenu.PlantsEntry
+ | key: string
+ | value: opencannabis.products.Plant]
+
+[StaicMenu.PrerollsEntry
+ | key: string
+ | value: opencannabis.products.Preroll]
+
+[Flag
+ | DRAFT: 0
+ | PRIVATE: 1
+ | OUT_OF_DATE: 2]
+
+[Status
+ | UNPUBLISHED: 0
+ | LIVE: 1]
+
+{% endnomnoml %}
+
+
+<a name="products/Merchandise.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Merchandise.proto
+
+
+<a name="opencannabis.products.Merchandise"/>
+
+### Merchandise
+Specifies an item of merchandise, that does not contain cannabis, but is sold anyway by a dispensary, such as branded
+clothing, containers, lighters, and other random stuff.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key uniquely identifying this merchandise item. |
+| type | [MerchandiseType](#opencannabis.products.MerchandiseType) |  | Sub-category for this merchandise item, if known. |
+| flags | [MerchandiseFlag](#opencannabis.products.MerchandiseFlag) | repeated | Flags for this merchandise item. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Content about this merchandise item. |
+
+
+<a name="opencannabis.products.MerchandiseFlag"/>
+
+### MerchandiseFlag
+Flags that may be applied specifically to merchandise items.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NO_MERCHANDISE_FLAGS | 0 | No flags specified. |
+| MEDICAL_ONLY | 1 | This item requires that a user have a valid medical recommendation for cannabis. |
+| BRAND_SWAG | 2 | This item is branded for the partner and should be promoted as such. |
+
+
+<a name="opencannabis.products.MerchandiseType"/>
+
+### MerchandiseType
+Specifies types of generic merchandise that may be carried on a dispensary menu.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_MERCHANDISE | 0 | Unknown, unrecognized, or otherwise unspecified merchandise subcategory. |
+| CLOTHING | 1 | Clothing - i.e. shirts, pants, hoodies, and other wearable textiles. |
+| GLASSWARE | 2 | Cups, mugs, on up to pipes and bongs. |
+| CONTAINER | 3 | Containers for cannabis. |
+| LIGHTER | 4 | Tools to produce fire to consume cannabis. |
+
+
+<a name="products/Apothecary.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Apothecary.proto
+
+
+<a name="opencannabis.products.Apothecary"/>
+
+### Apothecary
+Specifies an apothecary item for sale. Apothecary items are described as drugstore-style items, like capsules, oils,
+injectors, and other edge-case applications.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key uniquely identifying this apothecary item. |
+| type | [ApothecaryType](#opencannabis.products.ApothecaryType) |  | Specific type of apothecary item being described. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Product content about this apothecary item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this apothecary item. |
+
+
+<a name="opencannabis.products.ApothecaryType"/>
+
+### ApothecaryType
+Specifies types of apothecary items that may be expressed.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_APOTHECARY | 0 | Specifies an unidentified, or unspecified, apothecary item. |
+| TOPICAL | 1 | Specifies a topical material, such as an ointment or oil, meant for application to the skin. |
+| TINCTURE | 2 | Specifies a liquid that may be added to other liquids or foods. Often used with tea. |
+| CAPSULE | 3 | Specifies a capsule containing cannabinoids, similar to a dietary supplement. |
+| INJECTOR | 4 | Specifies an injector or injection style system. |
+| SUBLINGUAL | 5 | Specifies a sublingual-applied product, i.e., under-the-tongue. |
+
+
+<a name="products/Flower.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Flower.proto
+
+
+<a name="opencannabis.products.Flower"/>
+
+### Flower
+Specifies the model for a traditional &#39;flower&#39;-style product, which involves the sale or consumption of the flower
+or &#39;bud,&#39; of a cannabis plant.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Key that uniquely identifies this flower product. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Content about this product. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this product. |
+
+
+<a name="products/Edible.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Edible.proto
+
+
+<a name="opencannabis.products.Edible"/>
+
+### Edible
+Specifies an edible product that may be consumed as a food or beverage, that contains cannabis or cannabinoids in
+some quantity.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key that uniquely identifies this edible item. |
+| type | [EdibleType](#opencannabis.products.EdibleType) |  | Specifies the subcategory of this edible product, if known and applicable. |
+| flags | [EdibleFlag](#opencannabis.products.EdibleFlag) | repeated | Specifies flags attached to this edible product. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Product content related to/about this edible item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this cartridge product. |
+| ingredients | [EdibleIngredient](#opencannabis.products.EdibleIngredient) | repeated | Specifies the ingredients for a product, when/if it is composed of ingredients (i.e. edibles). |
+
+
+<a name="opencannabis.products.EdibleIngredient"/>
+
+### EdibleIngredient
+Specifies an ingredient included in an edible.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| label | [string](#string) |  | Human-friendly label for the ingredient. |
+| amount | [string](#string) |  | Human-friendly label describing the amount for this ingredient. |
+
+
+<a name="opencannabis.products.EdibleFlag"/>
+
+### EdibleFlag
+Flags that may be applied specifically to an edible product.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NO_EDIBLE_FLAG | 0 | Special default flag indicating no flags. |
+| VEGAN | 1 | Flag indicating this edible product is vegan. |
+| GLUTEN_FREE | 2 | Flag indicating this edible product is gluten free. |
+| SUGAR_FREE | 3 | Flag indicating this edible product is sugar free. |
+| FAIR_TRADE | 4 | Flag indicating this edible product is compliant with fair trade practices. |
+| ORGANIC | 5 | Flag indicating this edible product is considered organic. |
+| LOCAL | 6 | Flag indicating this edible product was grown or cultivated or prepared locally. |
+
+
+<a name="opencannabis.products.EdibleType"/>
+
+### EdibleType
+Specifies types of edible products that are known and considered sub-categories of the full &#39;edibles&#39; menu section.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_EDIBLE | 0 | Unknown, unrecognized, or otherwise unspecified edible type. |
+| CHOCOLATE | 1 | Specifies chocolate products, including truffles, chocolate bars, and so on. |
+| BAKED_GOOD | 2 | Specifies a baked good, such as a cookie, doughnut, brownie, pie, and so on. |
+| CANDY | 3 | Specifies candy items like lollipops, lozenges, gummies, etc. |
+| DRINK | 4 | Specifies beverage products. |
+
+
+<a name="products/Extract.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Extract.proto
+
+
+<a name="opencannabis.products.Extract"/>
+
+### Extract
+Specifies an extracted cannabis product, whereby cannabis plant material has been reduced to a more potent and
+concentrated form by some process.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key that uniquely identifies this cannabis extract item. |
+| type | [ExtractType](#opencannabis.products.ExtractType) |  | Specific type of extract being described. |
+| flag | [ExtractFlag](#opencannabis.products.ExtractFlag) | repeated | Specifies flags that may specifically be applied to this extracted cannabis item. |
+| flower | [opencannabis.base.ProductReference](#opencannabis.base.ProductReference) |  | Flower that was used to produce this extract. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Product content about this extracted cannabis item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling data attached to this extracted cannabis item. |
+
+
+<a name="opencannabis.products.ExtractFlag"/>
+
+### ExtractFlag
+Specifies flags that may specifically be applied to an extracted cannabis product.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NO_EXTRACT_FLAGS | 0 | Specifies that no flags are set. |
+| SOLVENTLESS | 1 | Specifies that this extract was made with a solventless process. |
+
+
+<a name="opencannabis.products.ExtractType"/>
+
+### ExtractType
+Enumerates types of extracted oleoresin cannabis products that have known/specified subcategories.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_EXTRACT | 0 | Uknown, unrecognized, or otherwise unspecified extract type. |
+| OIL | 1 | Cannabis oil, usually in liquid form. |
+| WAX | 2 | Cannabis wax - viscous semisolid forms of cannabis oil. |
+| SHATTER | 3 | Clear, amber solid cannabis wax. |
+| KIEF | 4 | Particulate discharge from cannabis flowers that contains THC or other cannabinoids. |
+| HASH | 5 | Fully extracted and concentrated cannabis resin. |
+| LIVE_RESIN | 6 | Extracted cannabis that is kept at freezing temperatures, rather than dried. |
+| ROSIN | 7 | Heated and terpene-vaporized live resin. |
+
+
+<a name="products/distribution/DistributionChannel.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/distribution/DistributionChannel.proto
+
+
+<a name="opencannabis.products.distribution.DistributionPolicy"/>
+
+### DistributionPolicy
+Specifies information required to note a channel and its settings for a given datapoint. Presence of this record
+indicates an affirmative setting to distribute it to the specified channel, unless `suppress` is set.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| enabled | [bool](#bool) |  | Whether this policy is enabled. |
+| channel | [Channel](#opencannabis.products.distribution.Channel) |  | Channel setting. |
+| type | [ChannelType](#opencannabis.products.distribution.ChannelType) |  | Channel distribution type. |
+| suppress | [bool](#bool) |  | The mere presence of a DistributionPolicy on a particular datapoint makes it eligible for distribution. This flag may be set to suppress distribution of the datapoint temporarily or explicitly. |
+
+
+<a name="opencannabis.products.distribution.Channel"/>
+
+### Channel
+Specifies kinds of channels that may be used or specified for product distribution policies.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_CHANNEL | 0 | Unknown, unrecognized, or otherwise unspecified distribution channel. |
+| RETAIL | 1 | Retail distribution channel, with direct sales to consumers. |
+| WHOLESALE | 2 | Wholesale distribution channel, with sales to entities that re-sell. |
+| BULK | 3 | Bulk distribution channel, with large-quantity sales to wholesalers, distributors or manufacturers. |
+
+
+<a name="opencannabis.products.distribution.ChannelType"/>
+
+### ChannelType
+Specifies the supertypes of channels that may be used to categorize channels applied to product distribution
+policies.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_CHANNEL_TYPE | 0 | Unknown, unrecognized, or otherwise unspecified channel type. |
+| DIRECT | 1 | Direct consumption of channel data, i.e., &#34;direct retail&#34; would be the standard retail dispensary. |
+| MARKETPLACE | 2 | Distribution through a second-party partner marketplace system. &#34;Marketplace retail&#34; would refer to digital or physical aggregators or clearinghouses that work directly with consumers. |
+
+
+<a name="products/Cartridge.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Cartridge.proto
+
+
+<a name="opencannabis.products.Cartridge"/>
+
+### Cartridge
+Specifies a vaporizor or cartridge-style product, for instance, vaporizor pens and table units. Vaporizors are
+composed of two elements: a battery, or the bottom power unit, and a cartridge, or the top fuel unit, that contains
+cannabinoids and is disposable or refillable.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key uniquely identifying this cartridge-style product. |
+| type | [CartridgeType](#opencannabis.products.CartridgeType) |  | Type of cartridge product being described. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Product content about this cartridge item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this cartridge product. |
+
+
+<a name="opencannabis.products.CartridgeType"/>
+
+### CartridgeType
+Specifies types of cartridge products that may be expressed.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_CARTRIDGE | 0 | Unknown, unrecognized, or otherwise unspecified cartridge type. |
+| CARTRIDGE | 1 | Specifies a lone cartridge product with no battery or other accompanying items. |
+| BATTERY | 2 | Specifies a battery unit with no cartridge. |
+| KIT | 3 | Specifies a full kit with a battery and cartridge unit. |
+
+
+<a name="products/Plant.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Plant.proto
+
+
+<a name="opencannabis.products.Plant"/>
+
+### Plant
+Specifies a plant product, such as seeds, or clones, that are designed to be cultivated by the end user.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key uniquely identifying this cannabis plant item. |
+| type | [PlantType](#opencannabis.products.PlantType) |  | Specific subcategory for this plant item. |
+| origin | [opencannabis.base.ProductReference](#opencannabis.base.ProductReference) | repeated | Menu products made from this raw plant product. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Product content attached to this cannabis plant item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Handling and materials data regarding this cannabis plant item. |
+
+
+<a name="opencannabis.products.PlantType"/>
+
+### PlantType
+Enumerates types or subcategories of plants that may be sold.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_PLANT | 0 | Unknown, unrecognized, or otherwise unspecified plant type. |
+| SEED | 1 | Specifies a pack of seeds, or an individual seed. |
+| CLONE | 2 | Specifies a cloned plant that is grown to some point and then sold. |
+
+
+<a name="products/Preroll.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/Preroll.proto
+
+
+<a name="opencannabis.products.Preroll"/>
+
+### Preroll
+Specifies a pre-rolled cannabis product, where a production process consumes cannabis plant material and produces
+end-products that are already rolled into joints, marijuana cigarettes, blunts, and so on.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Product key that uniquely identifies this pre-rolled cannabis product. |
+| flower | [opencannabis.base.ProductReference](#opencannabis.base.ProductReference) |  | Specifies the flowers used to produce this product, if known. |
+| length | [double](#double) |  | Specifies the measured length of this prerolled item, if known. |
+| thickness | [double](#double) |  | Specifies the measured thickness of this prerolled item, if known. |
+| flags | [PrerollFlag](#opencannabis.products.PrerollFlag) | repeated | Specifies flags that may be applied specifically to this prerolled item. |
+| product | [opencannabis.content.ProductContent](#opencannabis.content.ProductContent) |  | Specifies product content attached to this prerolled item. |
+| material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Specifies handling and materials data associated with this prerolled item. |
+
+
+
+
+
+ 
+
+
+<a name="opencannabis.products.PrerollFlag"/>
+
+### PrerollFlag
+Specifies flags that may be specifically applied to pre-rolled cannabis products.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| NO_PREROLL_FLAGS | 0 | Specifies that no flags are set. |
+| HASH_INFUSED | 1 | Specifies that this pre-rolled item is hash-infused. |
+| KIEF_INFUSED | 2 | Specifies that this pre-rolled item is kief-infused. |
+| FORTIFIED | 3 | Specifies that this pre-rolled item is fortified with extracted cannabis products in some manner. |
+| FULL_FLOWER | 4 | Specifies that this pre-rolled item is rolled with &#34;full flower&#34; buds, rather than trimmings, or other discarded cannabis from other production processes. |
+| CONTAINS_TOBACCO | 5 | Specifies that this product contains tobacco. |
+
+
+<a name="products/menu/Section.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/menu/Section.proto
+
+
+<a name="opencannabis.products.menu.section.CustomSection"/>
+
+### CustomSection
+Custom configuration-based menu sections, usually via `FilteredSection`.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) |  | String ID for a custom section. |
+| filter | [FilteredSection](#opencannabis.products.menu.section.FilteredSection) |  | Filtered section specification. |
+
+
+<a name="opencannabis.products.menu.section.SectionMedia"/>
+
+### SectionMedia
+Specifies media for a section.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| tablet_homescreen_media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) |  | Specifies a media item to use as a tablet homescreen tile for this section. |
+
+
+<a name="opencannabis.products.menu.section.SectionSettings"/>
+
+### SectionSettings
+Specifies settings that a menu section may consider.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [opencannabis.content.Name](#opencannabis.content.Name) |  | Presentable name for this section. |
+| media | [SectionMedia](#opencannabis.products.menu.section.SectionMedia) |  | Media to use when presenting this section. |
+
+
+<a name="opencannabis.products.menu.section.SectionSpec"/>
+
+### SectionSpec
+Specifies a menu section, along with section configuration (settings and flags).
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| section | [Section](#opencannabis.products.menu.section.Section) |  | Known and enumerated menu section. |
+| custom_section | [CustomSection](#opencannabis.products.menu.section.CustomSection) |  | Custom, filter-based menu section. |
+| name | [string](#string) |  | Arbitrary name for other types of sections. |
+| settings | [SectionSettings](#opencannabis.products.menu.section.SectionSettings) |  | Settings to apply to the subject section. |
+| flags | [SectionFlag](#opencannabis.products.menu.section.SectionFlag) | repeated | Current set of flags to apply to the subject section. |
+
+
+<a name="opencannabis.products.menu.section.FilteredSection"/>
+
+### FilteredSection
+Special filtered sections - commonly used sections based on filters builtin to apps/sites.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ON_SALE | 0 | Only presents products that are on sale. |
+| HOUSE | 1 | Only presents products that are cultivated, manufactured, or otherwise produced in-house. |
+| CBD | 2 | Only presents products containing CBD. |
+
+
+<a name="opencannabis.products.menu.section.Section"/>
+
+### Section
+Known sections, that are expected to be included with nearly every menu.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED | 0 | Unspecified or unknown section. |
+| FLOWERS | 1 | Traditional &#34;buds&#34; or &#34;flowers&#34; section. |
+| EXTRACTS | 2 | Concentrated cannabis products such as oils, waxes and hashes. |
+| EDIBLES | 3 | Edible cannabis products, such as brownies, candy bars, etc. |
+| CARTRIDGES | 4 | Cartridge and pen battery products. |
+| APOTHECARY | 5 | Tinctures, teas, and other miscellaneous products. |
+| PREROLLS | 6 | Pre-rolled flower-based joints, potentially fortified. |
+| PLANTS | 7 | Plant clones, seeds, and other cultivation products. |
+| MERCHANDISE | 8 | General merchandise. |
+
+
+<a name="opencannabis.products.menu.section.SectionFlag"/>
+
+### SectionFlag
+Flags that may be applied to a section&#39;s configuration.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| HIDDEN | 0 | This section should not be displayed. |
+| FEATURED | 1 | This section should be promoted and/or presented with high priority. |
+
+
+<a name="products/menu/Menu.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## products/menu/Menu.proto
+
+
+<a name="opencannabis.products.menu.Menu"/>
+
+### Menu
+Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
+are filed in. Categories are enumerated in `menu.Section`.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| metadata | [Metadata](#opencannabis.products.menu.Metadata) |  | Metadata for the menu. |
+| payload | [SectionedMenu](#opencannabis.products.menu.SectionedMenu) |  | Data payloads attached to this menu. |
+| menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
+
+
+<a name="opencannabis.products.menu.MenuProduct"/>
+
+### MenuProduct
+Menu product payload stanza. Specifies a single product as a member of a menu section.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Section that this data is attached to. |
+| apothecary | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  | Apothecary product. |
+| cartridge | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  | Cartridge product. |
+| edible | [opencannabis.products.Edible](#opencannabis.products.Edible) |  | Edible product. |
+| extract | [opencannabis.products.Extract](#opencannabis.products.Extract) |  | Extract product. |
+| flower | [opencannabis.products.Flower](#opencannabis.products.Flower) |  | Flower product. |
+| merchandise | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  | Merchandise product. |
+| plant | [opencannabis.products.Plant](#opencannabis.products.Plant) |  | Plant product. |
+| preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
+
+
+<a name="opencannabis.products.menu.MenuSettings"/>
+
+### MenuSettings
+Specifies settings used to generate a menu, or used as input when generating menus.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| full | [bool](#bool) |  | Flag indicating a full menu, including hidden/out-of-stock items. |
+| keys_only | [bool](#bool) |  | Only include menu keys, no detail data. |
+| snapshot | [opencannabis.crypto.primitives.integrity.Hash](#opencannabis.crypto.primitives.integrity.Hash) |  | Don&#39;t return the menu if it&#39;s identical to this fingerprint. |
+| fingerprint | [opencannabis.crypto.primitives.integrity.Hash](#opencannabis.crypto.primitives.integrity.Hash) |  | Bloom filter to consider when returning or processing menu items. |
+| section | [section.Section](#opencannabis.products.menu.section.Section) | repeated | Sections to include in the menu. If unspecified, include all sections. |
+
+
+<a name="opencannabis.products.menu.Metadata"/>
+
+### Metadata
+Specifies metadata for a package of menu data.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| scope | [string](#string) |  | Partner location that owns this menu data. |
+| version | [uint64](#uint64) |  | Version number, or publish timestamp, of this data. |
+| status | [Status](#opencannabis.products.menu.Status) |  | Status of this menu data. |
+| flags | [Flag](#opencannabis.products.menu.Flag) | repeated | Flags attached to this menu data. |
+| published | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When this menu data was published. |
+| settings | [MenuSettings](#opencannabis.products.menu.MenuSettings) |  | Settings that produced this menu data. |
+
+
+<a name="opencannabis.products.menu.SectionData"/>
+
+### SectionData
+Specifies an inner menu payload which contains menu data for a given menu section.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| count | [int32](#int32) |  | Count of products included in this menu section data. |
+| section | [section.SectionSpec](#opencannabis.products.menu.section.SectionSpec) |  | Section that this data is attached to. |
+| product | [MenuProduct](#opencannabis.products.menu.MenuProduct) | repeated | Menu products attached to this section. |
+
+
+<a name="opencannabis.products.menu.SectionedMenu"/>
+
+### SectionedMenu
+Specifies a menu split into section-level chunks.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| count | [int32](#int32) |  | Count of all products included in this menu, all sections considered. |
+| payload | [SectionData](#opencannabis.products.menu.SectionData) | repeated | Specifies a payload of sectioned menu data. |
+
+
+<a name="opencannabis.products.menu.StaticMenu"/>
+
+### StaticMenu
+Specifies an inner menu payload which contains mapped data, where each map key is a section name, lowercased, and
+each map value is itself a product, and each map is addressed at a typed property name.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| apothecary | [StaticMenu.ApothecaryEntry](#opencannabis.products.menu.StaticMenu.ApothecaryEntry) | repeated | Specifies APOTHECARY products attached to this menu. |
+| cartridges | [StaticMenu.CartridgesEntry](#opencannabis.products.menu.StaticMenu.CartridgesEntry) | repeated | Specifies CARTRIDGE products attached to this menu. |
+| edibles | [StaticMenu.EdiblesEntry](#opencannabis.products.menu.StaticMenu.EdiblesEntry) | repeated | Specifies EDIBLE products attached to this menu. |
+| extracts | [StaticMenu.ExtractsEntry](#opencannabis.products.menu.StaticMenu.ExtractsEntry) | repeated | Specifies EXTRACT products attached to this menu. |
+| flowers | [StaticMenu.FlowersEntry](#opencannabis.products.menu.StaticMenu.FlowersEntry) | repeated | Specifies FLOWER products attached to this menu. |
+| merchandise | [StaticMenu.MerchandiseEntry](#opencannabis.products.menu.StaticMenu.MerchandiseEntry) | repeated | Specifies MERCHANDISE products attached to this menu. |
+| plants | [StaticMenu.PlantsEntry](#opencannabis.products.menu.StaticMenu.PlantsEntry) | repeated | Specifies PLANT products attached to this menu. |
+| prerolls | [StaticMenu.PrerollsEntry](#opencannabis.products.menu.StaticMenu.PrerollsEntry) | repeated | Specifies PREROLL products attached to this menu. |
+
+
+<a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"/>
+
+### StaticMenu.ApothecaryEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"/>
+
+### StaticMenu.CartridgesEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"/>
+
+### StaticMenu.EdiblesEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Edible](#opencannabis.products.Edible) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"/>
+
+### StaticMenu.ExtractsEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Extract](#opencannabis.products.Extract) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.FlowersEntry"/>
+
+### StaticMenu.FlowersEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Flower](#opencannabis.products.Flower) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"/>
+
+### StaticMenu.MerchandiseEntry
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.PlantsEntry"/>
+
+### StaticMenu.PlantsEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Plant](#opencannabis.products.Plant) |  |  |
+
+
+<a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"/>
+
+### StaticMenu.PrerollsEntry
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  |  |
+
+
+<a name="opencannabis.products.menu.Flag"/>
+
+### Flag
+Enumerates flags that can be set on a menu.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| DRAFT | 0 | Indicates that this entire menu is considered a draft. |
+| PRIVATE | 1 | Indicates that the underlying menu data is currently private and should not be exposed publicly. |
+| OUT_OF_DATE | 2 | Indicates that the underlying menu data is known to be out-of-date. |
+
+
+<a name="opencannabis.products.menu.Status"/>
+
+### Status
+Enumerates statuses a menu may assume.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNPUBLISHED | 0 | Indicates that a menu revision is not yet published. |
+| LIVE | 1 | Indicates that a menu revision has been published and is considered live. |
