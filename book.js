@@ -6,6 +6,7 @@ module.exports = {
     plugins: [
       'theme-ocs',
       //'coss-ocs',
+      'ga',
       'code',
       'sitemap',
       'insert-logo',
@@ -15,6 +16,9 @@ module.exports = {
       'rss'
     ],
     pluginsConfig: {
+      ga: {
+        token: "UA-116543052-1"
+      },
       sitemap: {
         hostname: 'https://rfc.opencannabis.info/'
       },
