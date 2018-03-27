@@ -75,6 +75,14 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
   - [person/Person.proto](#person/Person.proto)
       - [Person](#opencannabis.person.Person)
 - `contact`: Email, phone, and postal addresses.
+  - [contact/PhoneNumber.proto](#contact/PhoneNumber.proto)
+      - [PhoneNumber](#opencannabis.contact.PhoneNumber)
+    - [contact/ContactInfo.proto](#contact/ContactInfo.proto)
+      - [ContactInfo](#opencannabis.contact.ContactInfo)
+    - [contact/EmailAddress.proto](#contact/EmailAddress.proto)
+      - [EmailAddress](#opencannabis.contact.EmailAddress)
+    - [contact/Website.proto](#contact/Website.proto)
+      - [Website](#opencannabis.contact.Website)
 - `media`: Images, video, documents, etc.
 - `products`: High-level product structures.
 - `structs`: Utility structures used across the spec.
@@ -1054,7 +1062,7 @@ form a full person&#39;s name. Additional names, like middle names, etc, are als
 <a name="opencannabis.person.Person"/>
 
 ### Person
-A person/patient and their name, legal name, nickname, etc.
+A person&#39;s and their name, legal name, nickname, etc.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -1063,3 +1071,105 @@ A person/patient and their name, legal name, nickname, etc.
 | alternate_name | [Name](#opencannabis.person.Name) |  | Person&#39;s optional alternate name. |
 | contact | [opencannabis.contact.ContactInfo](#opencannabis.contact.ContactInfo) |  | Person&#39;s contact information. |
 | date_of_birth | [opencannabis.temporal.Date](#opencannabis.temporal.Date) |  | Date of birth. |
+
+## `opencannabis.contact`
+
+Specifies a person&#39;s contact information, address, email, phone numbers, website and location
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[PhoneNumber
+ | e164: string
+ | validated: bool]
+
+[ContactInfo
+ | location: opencannabis.geo.Location
+ | phone: PhoneNumber
+ | email: EmailAddress
+ | website: Website]
+
+[EmailAddress
+ | address: string
+ | validated: bool]
+
+[Website
+ | uri: string
+ | title: string
+ | icon: bytes]
+
+{% endnomnoml %}
+
+
+<a name="contact/PhoneNumber.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## contact/PhoneNumber.proto
+
+
+<a name="opencannabis.contact.PhoneNumber"/>
+
+### PhoneNumber
+Payload that specifies a phone number, and any additional information to be carried with it (including verification
+state, if applicable).
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| e164 | [string](#string) |  | E164-formatted telephone number. |
+| validated | [bool](#bool) |  | Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone number remains unvalidated. |
+
+
+<a name="contact/ContactInfo.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## contact/ContactInfo.proto
+
+
+<a name="opencannabis.contact.ContactInfo"/>
+
+### ContactInfo
+Contact information for a person, organization, or other entity.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| location | [opencannabis.geo.Location](#opencannabis.geo.Location) |  | Geographic location and physical mail contact information. |
+| phone | [PhoneNumber](#opencannabis.contact.PhoneNumber) |  | Telephone contact information. |
+| email | [EmailAddress](#opencannabis.contact.EmailAddress) |  | Electronic mail contact information. |
+| website | [Website](#opencannabis.contact.Website) |  | Website contact information. |
+
+
+<a name="contact/EmailAddress.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## contact/EmailAddress.proto
+
+
+<a name="opencannabis.contact.EmailAddress"/>
+
+### EmailAddress
+Specifies information about an electronic mail (email) address, and optionally, its validation status.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| address | [string](#string) |  | Email address, in standard format (&#39;example@sample.com&#39;). |
+| validated | [bool](#bool) |  | Validation status. Usable by providers to indicate an email address that has already been validated, or that an address remains unvalidated. |
+
+
+<a name="contact/Website.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## contact/Website.proto
+
+
+<a name="opencannabis.contact.Website"/>
+
+### Website
+Specifies a structure that describes a URI/website, and related information.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uri | [string](#string) |  | URI for the website. |
+| title | [string](#string) |  | Title from the HTML page at URI. |
+| icon | [bytes](#bytes) |  | Favicon raw bytes from the HTML page at URI. |
