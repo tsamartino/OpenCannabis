@@ -56,6 +56,19 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
       - [DeviceFlags](#opencannabis.device.DeviceFlags)
       - [DeviceType](#opencannabis.device.DeviceType)
 - `content`: Narrative and marketing content.
+  - [content/Name.proto](#content/Name.proto)
+      - [Name](#opencannabis.content.Name)
+  - [content/Content.proto](#content/Content.proto)
+      - [Content](#opencannabis.content.Content)
+      - [Content.Encoding](#opencannabis.content.Content.Encoding)
+      - [Content.Type](#opencannabis.content.Content.Type)
+    - [content/MaterialsData.proto](#content/MaterialsData.proto)
+      - [MaterialsData](#opencannabis.content.MaterialsData)
+    - [content/Brand.proto](#content/Brand.proto)
+      - [Brand](#opencannabis.content.Brand)
+    - [content/ProductContent.proto](#content/ProductContent.proto)
+      - [ProductContent](#opencannabis.content.ProductContent)
+      - [ProductTimestamps](#opencannabis.content.ProductTimestamps)
 - `person`: People, names, birth dates, and so on.
 - `contact`: Email, phone, and postal addresses.
 - `media`: Images, video, documents, etc.
@@ -207,7 +220,8 @@ Dates, times, and so on.
   |iso8601: string]
 
 [Instant
-  |iso8601: string|timestamp: uint64]
+  |iso8601: string
+  |timestamp: uint64]
 
 [Time
   |iso8601: string]
@@ -776,3 +790,205 @@ Enumerates major types of devices that might be encountered, including desktops,
 | PHONE | 2 | The end-device is a phone. |
 | TABLET | 3 | The end-device is a tablet. |
 | TV | 4 | The end-device is a TV of some kind. |
+
+## `opencannabis.content`
+
+Specifies Timestamps, Products, Brands, formats, encoding, and so on
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+[Name
+  | primary: string
+  | display: string]
+
+[Content
+ | type: Content.Type
+ | encoding: Content.Encoding
+ | content: string
+ | language: opencannabis.base.Language
+ | compression: opencannabis.base.Compression]
+
+[Encoding
+ | UTF8: 0
+ | B64: 1
+ | B64_ASCII: 2]
+
+[Type
+ | TEXT: 0
+ | MARKDOWN: 1
+ | HTML: 2]
+
+[MaterialsData
+ | species: opencannabis.structs.Species
+ | genetics: opencannabis.structs.Genetics
+ | grow: opencannabis.structs.Grow
+ | shelf: opencannabis.structs.Shelf
+ | tests: opencannabis.structs.labtesting.TestResults
+ | channel: opencannabis.products.distribution.DistributionPolicy: repeated]
+
+[Brand
+ | name: Name
+ | parent: Brand
+ | summary: Content
+ | media: opencannabis.media.MediaItem: repeated]
+
+[ProductContent
+ | name: Name
+ | brand: Brand
+ | summary: Content
+ | usage: Content
+ | dosage: Content
+ | media: opencannabis.media.MediaItem: repeated
+ | pricing: opencannabis.structs.pricing.ProductPricing
+ | flags: opencannabis.structs.ProductFlag
+ | ts: ProductTimestamps]
+
+[ProductTimestamps
+ | created: opencannabis.temporal.Instant
+ | modified: opencannabis.temporal.Instant
+ | published: opencannabis.temporal.Instant]
+
+
+{% endnomnoml %}
+
+<a name="content/Name.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## content/Name.proto
+
+
+<a name="opencannabis.content.Name"/>
+
+### Name
+Displayable content name.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| primary | [string](#string) |  | Primary name. |
+| display | [string](#string) |  | Display name, if different from the &#39;primary name&#39;. |
+
+
+<a name="content/Content.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## content/Content.proto
+
+
+<a name="opencannabis.content.Content"/>
+
+### Content
+Specifies a freeform content payload of some kind.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| type | [Content.Type](#opencannabis.content.Content.Type) |  | Format/underlying type of content data. |
+| encoding | [Content.Encoding](#opencannabis.content.Content.Encoding) |  | Encoding of underlying content data. |
+| content | [string](#string) |  | Raw bytes of underlying content data. |
+| language | [opencannabis.base.Language](#opencannabis.base.Language) |  | Language information for underlying content. |
+| compression | [opencannabis.base.Compression](#opencannabis.base.Compression) |  | Compression settings for underlying content. |
+
+
+<a name="opencannabis.content.Content.Encoding"/>
+
+### Content.Encoding
+Enumerates supported encodings for content data.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UTF8 | 0 | UTF-8 standard encoding. |
+| B64 | 1 | Base-64 encoded UTF-8. |
+| B64_ASCII | 2 | Base-64 encoded ASCII. |
+
+
+<a name="opencannabis.content.Content.Type"/>
+
+### Content.Type
+Enumerates supported types/formats for content data.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| TEXT | 0 | Plaintext format. |
+| MARKDOWN | 1 | Markdown format. |
+| HTML | 2 | HTML format. |
+
+
+<a name="content/MaterialsData.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## content/MaterialsData.proto
+Quantitative or empirical content regarding the substance or material of a given product.
+
+
+<a name="opencannabis.content.MaterialsData"/>
+
+### MaterialsData
+Specifies materials-related data about a product that contains cannabis.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| species | [opencannabis.structs.Species](#opencannabis.structs.Species) |  | Species of an item, if known. |
+| genetics | [opencannabis.structs.Genetics](#opencannabis.structs.Genetics) |  | Specifies the genetics of an item, if known. |
+| grow | [opencannabis.structs.Grow](#opencannabis.structs.Grow) |  | Specifies how this item was grown. |
+| shelf | [opencannabis.structs.Shelf](#opencannabis.structs.Shelf) |  | Shelf status of this product. |
+| tests | [opencannabis.structs.labtesting.TestResults](#opencannabis.structs.labtesting.TestResults) |  | Laboratory testing results for this particular subject material. |
+| channel | [opencannabis.products.distribution.DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy) | repeated | Specifies distribution policy for this particular subject material. |
+
+
+<a name="content/Brand.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## content/Brand.proto
+
+
+<a name="opencannabis.content.Brand"/>
+
+### Brand
+Information about a particular brand or producer of products or materials.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [Name](#opencannabis.content.Name) |  | Naming information for this brand. |
+| parent | [Brand](#opencannabis.content.Brand) |  | Parent/owning brand, if applicable. |
+| summary | [Content](#opencannabis.content.Content) |  | Summary information or content about this brand. |
+| media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) | repeated | Media items attached to this brand. |
+
+
+<a name="content/ProductContent.proto"/>
+<p align="right"><a href="#top">Top</a></p>
+
+## content/ProductContent.proto
+
+
+<a name="opencannabis.content.ProductContent"/>
+
+### ProductContent
+Specifies a common model for product content, mostly user-visible, and shared by all concrete models. Most of the
+information you see when a product is displayed or listed comes from this model.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [Name](#opencannabis.content.Name) |  | Main product name. |
+| brand | [Brand](#opencannabis.content.Brand) |  | Brand information for this product. |
+| summary | [Content](#opencannabis.content.Content) |  | Description or narrative-style content about this product. |
+| usage | [Content](#opencannabis.content.Content) |  | Content about how this product is best used, or recommended to be used, either from the manufacturer or retailer. |
+| dosage | [Content](#opencannabis.content.Content) |  | Dosage advice about this product, either from the manufacturer or retailer. |
+| media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) | repeated | Product media, including images, videos, and so on. |
+| pricing | [opencannabis.structs.pricing.ProductPricing](#opencannabis.structs.pricing.ProductPricing) |  | Pricing specification for this product, regardless of pricing type (i.e. weighted or unit-style pricing). |
+| flags | [opencannabis.structs.ProductFlag](#opencannabis.structs.ProductFlag) | repeated | Product flags attached to this content. |
+| ts | [ProductTimestamps](#opencannabis.content.ProductTimestamps) |  | Timestamps for this product. |
+
+
+<a name="opencannabis.content.ProductTimestamps"/>
+
+### ProductTimestamps
+Specifies timestamps applied to a product, so that it may be tracked or sorted according to publish date, creation
+date, or last modification date.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| created | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was created. |
+| modified | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last modified. |
+| published | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When the subject product was last or first published. |
