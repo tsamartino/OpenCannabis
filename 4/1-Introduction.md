@@ -1,16 +1,8 @@
----
-domain: rfc.opencannabis.info
-shortname: 4/OCS-M
-name: OpenCannabis Media Extension
-status: raw
-editor: Sam Gammon <sam@bloombox.io>
-contributors:
-  - Randal Stevens <randy@bloombox.io>
----
 
 # OpenCannabis: Media Extension
 - Version `1.0`
 - Status: `RAW`
+
 
 ### Status of this Memo
 
@@ -33,7 +25,6 @@ _"Digital media,"_ in this context, refers to:
 - Raw data
 
 ### Table of Contents
-- **[Introduction](./1-Introduction.md)**
 - **[Subpart 1: Media Protocol](./2-Media-Protocol.md)**
 
 ## Copyright Notice
