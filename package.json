@@ -1,6 +1,40 @@
 {
   "dependencies": {
     "gitbook": "^3.2.3",
-    "gitbook-cli": "^2.3.2"
-  }
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-colors": "^0.0.12",
+    "gitbook-plugin-ga": "^2.0.0",
+    "gitbook-plugin-insert-logo": "^0.1.5",
+    "gitbook-plugin-nomnoml": "^1.0.0",
+    "gitbook-plugin-rss": "^3.0.2",
+    "gitbook-plugin-sitemap": "^1.2.0",
+    "gitbook-plugin-terminal": "^0.3.2",
+    "gitbook-plugin-theme-ocs": "^1.0.8"
+  },
+  "name": "opencannabis",
+  "description": "![Version: V1](https://img.shields.io/badge/Version-V1-lightgray.svg?style=flat-square) [![Status: Raw](https://img.shields.io/badge/Status-Raw-lightgray.svg?style=flat-square)](https://rfc.opencannabis.info/2/#Raw-Specifications) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0) [![Code Climate](https://img.shields.io/codeclimate/maintainability/OpenCannabis/RFC.svg?style=flat-square&label=code%20quality)](https://codeclimate.com/github/OpenCannabis/RFC) [![Travis branch](https://img.shields.io/travis/OpenCannabis/RFC.svg?style=flat-square)](https://travis-ci.org/OpenCannabis/RFC)",
+  "version": "1.0.0",
+  "main": "book.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCannabis/RFC.git"
+  },
+  "keywords": [
+    "cannabis",
+    "specification",
+    "protobuf",
+    "marijuana",
+    "protocol"
+  ],
+  "author": "OpenCannabis Editors and Contributors",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OpenCannabis/RFC/issues"
+  },
+  "homepage": "https://github.com/OpenCannabis/RFC#readme"
 }
