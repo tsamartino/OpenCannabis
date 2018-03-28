@@ -153,12 +153,27 @@ Foundational structures used across the spec.
 
 {% nomnoml %}
 
+#title: "Base Models: Content"
+#font: Lato
+#zoom: 1
+#direction: down
 #fill: #d5e7ee; #8ebff2
+
 [Language
   |ENGLISH: 0|SPANISH: 1|FRENCH: 2]
 
 [Compression|enabled: bool|type: Compression.Type|
   [Type|NONE: 0|GZIP: 1|BROTLI: 2|SNAPPY: 3]]
+
+{% endnomnoml %}
+
+{% nomnoml %}
+
+#title: "Base Models: Product References"
+#font: Lato
+#zoom: 1
+#direction: down
+#fill: #d5e7ee; #8ebff2
 
 [ProductKind
   |FLOWERS: 0|EDIBLES: 1|EXTRACTS: 2|PREROLLS: 3|APOTHECARY: 4|CARTRIDGES: 5|PLANTS: 6|MERCHANDISE: 7]
