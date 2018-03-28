@@ -4,8 +4,10 @@ git:
   depth: false
   submodules: false
 
+cache: yarn
+
 before_install:
-- npm install -g gitbook
+- yarn global add gitbook-cli
 
 install: gitbook install
 script: gitbook build
