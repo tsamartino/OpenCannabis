@@ -505,7 +505,7 @@ Specifies a distance between two locations.
 
 <a name="opencannabis.geo.DistanceValue"/>
 
-### DistanceValue
+### `DistanceValue.Type`
 Specifies a single distance value.
 
 
@@ -517,7 +517,7 @@ Specifies a single distance value.
 
 <a name="opencannabis.geo.Location"/>
 
-### Location
+### `Location.Type`
 Represents a physically addressable location in the real world.
 
 
@@ -531,7 +531,7 @@ Represents a physically addressable location in the real world.
 
 <a name="opencannabis.geo.LocationAccuracy"/>
 
-### LocationAccuracy
+### `LocationAccuracy.Type`
 Represents an estimate of location accuracy.
 
 
@@ -543,7 +543,7 @@ Represents an estimate of location accuracy.
 
 <a name="opencannabis.geo.DistanceUnit"/>
 
-### DistanceUnit
+### `DistanceUnit.number`
 Enumeration of recognized units of distance.
 
 | Name | Number | Description |
@@ -557,15 +557,10 @@ Enumeration of recognized units of distance.
 | MILES | 6 | Distance in miles. |
 
 
-<a name="geo/Address.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/Address.proto"/>
 
-## geo/Address.proto
-
-
-<a name="opencannabis.geo.Address"/>
-
-### Address
+### `Address.Type`
 Specifies a standard postal address, with two address lines, and space for a municipality (&#39;city&#39;), provincial
 authority (&#39;state&#39;), and national authority (&#39;country&#39;).
 
@@ -580,15 +575,10 @@ authority (&#39;state&#39;), and national authority (&#39;country&#39;).
 | country | [string](#string) |  | Country code associated with this address (&#39;US&#39; or &#39;USA&#39; for United States, for instance). |
 
 
-<a name="geo/USState.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/USState.proto"/>
 
-## geo/USState.proto
-
-
-<a name="opencannabis.geo.usa.USState"/>
-
-### USState
+### `USState.Number`
 Enumerates United States member states and territories by their full name and abbreviation.
 
 | Name | Number | Description |
@@ -736,12 +726,7 @@ Specifies a variety of devices, device flags, device types, and so on.
 <a name="device/Device.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## device/Device.proto
-
-
-<a name="opencannabis.device.Device"/>
-
-### Device
+### `Device.Type`
 Specifies a structure that describes a known device.
 
 | Field | Type | Label | Description |
@@ -754,7 +739,7 @@ Specifies a structure that describes a known device.
 
 <a name="opencannabis.device.DeviceCredentials"/>
 
-### DeviceCredentials
+### `DeviceCredentials.Type`
 Credentials that assert a device&#39;s identity or authorization.
 
 | Field | Type | Label | Description |
@@ -768,7 +753,7 @@ Credentials that assert a device&#39;s identity or authorization.
 
 <a name="opencannabis.device.DeviceFlags"/>
 
-### DeviceFlags
+### `DeviceFlags.Type`
 Stateful flags that may be set on a device.
 
 | Field | Type | Label | Description |
@@ -779,7 +764,7 @@ Stateful flags that may be set on a device.
 
 <a name="opencannabis.device.DeviceType"/>
 
-### DeviceType
+### `DeviceType.Number`
 Enumerates major types of devices that might be encountered, including desktops, phones, tablets, TVs, and browsers.
 
 | Name | Number | Description |
@@ -859,15 +844,10 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
 {% endnomnoml %}
 
 
-<a name="content/Name.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="content/Name.proto"/>
 
-## content/Name.proto
-
-
-<a name="opencannabis.content.Name"/>
-
-### Name
+### `Name.Type`
 Displayable content name.
 
 | Field | Type | Label | Description |
@@ -876,15 +856,10 @@ Displayable content name.
 | display | [string](#string) |  | Display name, if different from the &#39;primary name&#39;. |
 
 
-<a name="content/Content.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="content/Content.proto"/>
 
-## content/Content.proto
-
-
-<a name="opencannabis.content.Content"/>
-
-### Content
+### `Content.Type`
 Specifies a freeform content payload of some kind.
 
 
@@ -899,7 +874,7 @@ Specifies a freeform content payload of some kind.
 
 <a name="opencannabis.content.Content.Encoding"/>
 
-### Content.Encoding
+### `Content.Encoding.Number`
 Enumerates supported encodings for content data.
 
 | Name | Number | Description |
@@ -911,7 +886,7 @@ Enumerates supported encodings for content data.
 
 <a name="opencannabis.content.Content.Type"/>
 
-### Content.Type
+### `Content.Number`
 Enumerates supported types/formats for content data.
 
 | Name | Number | Description |
@@ -921,16 +896,10 @@ Enumerates supported types/formats for content data.
 | HTML | 2 | HTML format. |
 
 
-<a name="content/MaterialsData.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="content/MaterialsData.proto"/>
 
-## content/MaterialsData.proto
-Quantitative or empirical content regarding the substance or material of a given product.
-
-
-<a name="opencannabis.content.MaterialsData"/>
-
-### MaterialsData
+### `MaterialsData.Type`
 Specifies materials-related data about a product that contains cannabis.
 
 
@@ -944,15 +913,10 @@ Specifies materials-related data about a product that contains cannabis.
 | channel | [opencannabis.products.distribution.DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy) | repeated | Specifies distribution policy for this particular subject material. |
 
 
-<a name="content/Brand.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="content/Brand.proto"/>
 
-## content/Brand.proto
-
-
-<a name="opencannabis.content.Brand"/>
-
-### Brand
+### `Brand.Type`
 Information about a particular brand or producer of products or materials.
 
 | Field | Type | Label | Description |
@@ -963,15 +927,10 @@ Information about a particular brand or producer of products or materials.
 | media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) | repeated | Media items attached to this brand. |
 
 
-<a name="content/ProductContent.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="content/ProductContent.proto"/>
 
-## content/ProductContent.proto
-
-
-<a name="opencannabis.content.ProductContent"/>
-
-### ProductContent
+### `ProductContent.Type`
 Specifies a common model for product content, mostly user-visible, and shared by all concrete models. Most of the
 information you see when a product is displayed or listed comes from this model.
 
@@ -990,7 +949,7 @@ information you see when a product is displayed or listed comes from this model.
 
 <a name="opencannabis.content.ProductTimestamps"/>
 
-### ProductTimestamps
+### `ProductTimestamps.Type`
 Specifies timestamps applied to a product, so that it may be tracked or sorted according to publish date, creation
 date, or last modification date.
 
@@ -1027,15 +986,10 @@ information
 
 {% endnomnoml %}
 
-<a name="person/PersonName.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="person/PersonName.proto"/>
 
-## person/PersonName.proto
-
-
-<a name="opencannabis.person.Name"/>
-
-### Name
+### `Name.Type`
 Represents a human being&#39;s name, in the style of &#34;given&#34; name (first) and &#34;family&#34; name (last) being concatenated to
 form a full person&#39;s name. Additional names, like middle names, etc, are also specified here.
 
@@ -1049,15 +1003,10 @@ form a full person&#39;s name. Additional names, like middle names, etc, are als
 | postfix | [string](#string) |  | Postfix for a person&#39;s name. |
 
 
-<a name="person/Person.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="person/Person.proto"/>
 
-## person/Person.proto
-
-
-<a name="opencannabis.person.Person"/>
-
-### Person
+### `Person.Type`
 A person&#39;s and their name, legal name, nickname, etc.
 
 | Field | Type | Label | Description |
@@ -1099,15 +1048,10 @@ Specifies a person&#39;s contact information, address, email, phone numbers, web
 {% endnomnoml %}
 
 
-<a name="contact/PhoneNumber.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="contact/PhoneNumber.proto"/>
 
-## contact/PhoneNumber.proto
-
-
-<a name="opencannabis.contact.PhoneNumber"/>
-
-### PhoneNumber
+### `PhoneNumber.Type`
 Payload that specifies a phone number, and any additional information to be carried with it (including verification
 state, if applicable).
 
@@ -1118,15 +1062,10 @@ state, if applicable).
 | validated | [bool](#bool) |  | Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone number remains unvalidated. |
 
 
-<a name="contact/ContactInfo.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="contact/ContactInfo.proto"/>
 
-## contact/ContactInfo.proto
-
-
-<a name="opencannabis.contact.ContactInfo"/>
-
-### ContactInfo
+### `ContactInfo.Type`
 Contact information for a person, organization, or other entity.
 
 
@@ -1138,15 +1077,10 @@ Contact information for a person, organization, or other entity.
 | website | [Website](#opencannabis.contact.Website) |  | Website contact information. |
 
 
-<a name="contact/EmailAddress.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="contact/EmailAddress.proto"/>
 
-## contact/EmailAddress.proto
-
-
-<a name="opencannabis.contact.EmailAddress"/>
-
-### EmailAddress
+### `EmailAddress.Type`
 Specifies information about an electronic mail (email) address, and optionally, its validation status.
 
 | Field | Type | Label | Description |
@@ -1155,15 +1089,10 @@ Specifies information about an electronic mail (email) address, and optionally, 
 | validated | [bool](#bool) |  | Validation status. Usable by providers to indicate an email address that has already been validated, or that an address remains unvalidated. |
 
 
-<a name="contact/Website.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="contact/Website.proto"/>
 
-## contact/Website.proto
-
-
-<a name="opencannabis.contact.Website"/>
-
-### Website
+### `Website.Type`
 Specifies a structure that describes a URI/website, and related information.
 
 | Field | Type | Label | Description |
@@ -1247,15 +1176,10 @@ Specifies a type of media, device orientation, file-type and so on
  | uri: string]
 {% endnomnoml %}
 
-<a name="media/MediaOrientation.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="media/MediaOrientation.proto"/>
 
-## media/MediaOrientation.proto
-
-
-<a name="opencannabis.media.MediaOrientation"/>
-
-### MediaOrientation
+### `MediaOrientation.Number`
 Orientation status of a piece of media. Provided by camera operations on mobile devices,
 in some cases, and also stored along with media sometimes.
 
@@ -1271,15 +1195,10 @@ in some cases, and also stored along with media sometimes.
 | RIGHT_MIRRORED | 7 | Media is oriented &#39;right,&#39; and mirrored. |
 
 
-<a name="media/MediaKey.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="media/MediaKey.proto"/>
 
-## media/MediaKey.proto
-
-
-<a name="opencannabis.media.MediaKey"/>
-
-### MediaKey
+### `MediaKey.Type`
 Key uniquely describing an item of media known to the system. An &#34;item of media&#34; can be anything from an image
 or a video, to a PDF document, or larger data.
 
@@ -1288,15 +1207,15 @@ or a video, to a PDF document, or larger data.
 | id | [string](#string) |  | Unique ID for this media item. |
 
 
-<a name="media/MediaType.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="media/MediaType.proto"/>
 
-## media/MediaType.proto
+## `MediaType`
 
 
 <a name="opencannabis.media.DocumentType"/>
 
-### DocumentType
+### `DocumentType.Type`
 Specifies document type information.
 
 | Field | Type | Label | Description |
@@ -1307,7 +1226,7 @@ Specifies document type information.
 
 <a name="opencannabis.media.ImageType"/>
 
-### ImageType
+### `ImageType.Type`
 Specifies image type information.
 
 | Field | Type | Label | Description |
@@ -1317,7 +1236,7 @@ Specifies image type information.
 
 <a name="opencannabis.media.MediaType"/>
 
-### MediaType
+### `MediaType.Type`
 Specifies the type of media being attached or described.
 
 | Field | Type | Label | Description |
@@ -1330,7 +1249,7 @@ Specifies the type of media being attached or described.
 
 <a name="opencannabis.media.VideoType"/>
 
-### VideoType
+### `VideoType.Type`
 Specifies video type information.
 
 | Field | Type | Label | Description |
@@ -1340,7 +1259,7 @@ Specifies video type information.
 
 <a name="opencannabis.media.DocumentType.DocumentKind"/>
 
-### DocumentType.DocumentKind
+### `DocumentType.DocumentKind.Number`
 Specifies kinds of documents that may be attached or described.
 
 | Name | Number | Description |
@@ -1353,7 +1272,7 @@ Specifies kinds of documents that may be attached or described.
 
 <a name="opencannabis.media.ImageType.ImageKind"/>
 
-### ImageType.ImageKind
+### `ImageType.ImageKind.Number`
 Specifies kinds of images that may be attached or described.
 
 | Name | Number | Description |
@@ -1367,7 +1286,7 @@ Specifies kinds of images that may be attached or described.
 
 <a name="opencannabis.media.MediaType.Kind"/>
 
-### MediaType.Kind
+### `MediaType.Kind.Number`
 Enumerates, in generic terms, the kinds of media that can be attached or described.
 
 | Name | Number | Description |
@@ -1380,7 +1299,7 @@ Enumerates, in generic terms, the kinds of media that can be attached or describ
 
 <a name="opencannabis.media.VideoType.VideoKind"/>
 
-### VideoType.VideoKind
+### `VideoType.VideoKind.Number`
 Specifies kinds of videos that may be attached or described.
 
 | Name | Number | Description |
@@ -1390,15 +1309,10 @@ Specifies kinds of videos that may be attached or described.
 | HLS | 2 | HTTP Live Streaming video. |
 
 
-<a name="media/MediaItem.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="media/MediaItem.proto"/>
 
-## media/MediaItem.proto
-
-
-<a name="opencannabis.media.MediaItem"/>
-
-### MediaItem
+### `MediaItem.Type`
 Describes an individual media item, which can be an image, video, etc.
 
 | Field | Type | Label | Description |
@@ -1739,15 +1653,10 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
 {% endnomnoml %}
 
 
-<a name="products/Merchandise.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Merchandise.proto"/>
 
-## products/Merchandise.proto
-
-
-<a name="opencannabis.products.Merchandise"/>
-
-### Merchandise
+### `Merchandise.Type`
 Specifies an item of merchandise, that does not contain cannabis, but is sold anyway by a dispensary, such as branded
 clothing, containers, lighters, and other random stuff.
 
@@ -1761,7 +1670,7 @@ clothing, containers, lighters, and other random stuff.
 
 <a name="opencannabis.products.MerchandiseFlag"/>
 
-### MerchandiseFlag
+### `MerchandiseFlag.Number`
 Flags that may be applied specifically to merchandise items.
 
 | Name | Number | Description |
@@ -1773,7 +1682,7 @@ Flags that may be applied specifically to merchandise items.
 
 <a name="opencannabis.products.MerchandiseType"/>
 
-### MerchandiseType
+### `MerchandiseType.Number`
 Specifies types of generic merchandise that may be carried on a dispensary menu.
 
 | Name | Number | Description |
@@ -1785,15 +1694,10 @@ Specifies types of generic merchandise that may be carried on a dispensary menu.
 | LIGHTER | 4 | Tools to produce fire to consume cannabis. |
 
 
-<a name="products/Apothecary.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Apothecary.proto"/>
 
-## products/Apothecary.proto
-
-
-<a name="opencannabis.products.Apothecary"/>
-
-### Apothecary
+### `Apothecary.Type`
 Specifies an apothecary item for sale. Apothecary items are described as drugstore-style items, like capsules, oils,
 injectors, and other edge-case applications.
 
@@ -1807,7 +1711,7 @@ injectors, and other edge-case applications.
 
 <a name="opencannabis.products.ApothecaryType"/>
 
-### ApothecaryType
+### `ApothecaryType.Number`
 Specifies types of apothecary items that may be expressed.
 
 | Name | Number | Description |
@@ -1820,15 +1724,10 @@ Specifies types of apothecary items that may be expressed.
 | SUBLINGUAL | 5 | Specifies a sublingual-applied product, i.e., under-the-tongue. |
 
 
-<a name="products/Flower.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Flower.proto"/>
 
-## products/Flower.proto
-
-
-<a name="opencannabis.products.Flower"/>
-
-### Flower
+### `Flower.Type`
 Specifies the model for a traditional &#39;flower&#39;-style product, which involves the sale or consumption of the flower
 or &#39;bud,&#39; of a cannabis plant.
 
@@ -1839,15 +1738,11 @@ or &#39;bud,&#39; of a cannabis plant.
 | material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this product. |
 
 
-<a name="products/Edible.proto"/>
 <p align="right"><a href="#top">Top</a></p>
-
-## products/Edible.proto
-
 
 <a name="opencannabis.products.Edible"/>
 
-### Edible
+### `Edible.Type`
 Specifies an edible product that may be consumed as a food or beverage, that contains cannabis or cannabinoids in
 some quantity.
 
@@ -1863,7 +1758,7 @@ some quantity.
 
 <a name="opencannabis.products.EdibleIngredient"/>
 
-### EdibleIngredient
+### `EdibleIngredient.Type`
 Specifies an ingredient included in an edible.
 
 | Field | Type | Label | Description |
@@ -1874,7 +1769,7 @@ Specifies an ingredient included in an edible.
 
 <a name="opencannabis.products.EdibleFlag"/>
 
-### EdibleFlag
+### `EdibleFlag.Number`
 Flags that may be applied specifically to an edible product.
 
 | Name | Number | Description |
@@ -1890,7 +1785,7 @@ Flags that may be applied specifically to an edible product.
 
 <a name="opencannabis.products.EdibleType"/>
 
-### EdibleType
+### `EdibleType.Number`
 Specifies types of edible products that are known and considered sub-categories of the full &#39;edibles&#39; menu section.
 
 | Name | Number | Description |
@@ -1902,15 +1797,10 @@ Specifies types of edible products that are known and considered sub-categories 
 | DRINK | 4 | Specifies beverage products. |
 
 
-<a name="products/Extract.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Extract.proto"/>
 
-## products/Extract.proto
-
-
-<a name="opencannabis.products.Extract"/>
-
-### Extract
+### `Extract.Type`
 Specifies an extracted cannabis product, whereby cannabis plant material has been reduced to a more potent and
 concentrated form by some process.
 
@@ -1926,7 +1816,7 @@ concentrated form by some process.
 
 <a name="opencannabis.products.ExtractFlag"/>
 
-### ExtractFlag
+### `ExtractFlag.Number`
 Specifies flags that may specifically be applied to an extracted cannabis product.
 
 | Name | Number | Description |
@@ -1937,7 +1827,7 @@ Specifies flags that may specifically be applied to an extracted cannabis produc
 
 <a name="opencannabis.products.ExtractType"/>
 
-### ExtractType
+### `ExtractType.Number`
 Enumerates types of extracted oleoresin cannabis products that have known/specified subcategories.
 
 | Name | Number | Description |
@@ -1952,15 +1842,10 @@ Enumerates types of extracted oleoresin cannabis products that have known/specif
 | ROSIN | 7 | Heated and terpene-vaporized live resin. |
 
 
-<a name="products/distribution/DistributionChannel.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/distribution/DistributionChannel.proto"/>
 
-## products/distribution/DistributionChannel.proto
-
-
-<a name="opencannabis.products.distribution.DistributionPolicy"/>
-
-### DistributionPolicy
+### `DistributionPolicy.Type`
 Specifies information required to note a channel and its settings for a given datapoint. Presence of this record
 indicates an affirmative setting to distribute it to the specified channel, unless `suppress` is set.
 
@@ -1974,7 +1859,7 @@ indicates an affirmative setting to distribute it to the specified channel, unle
 
 <a name="opencannabis.products.distribution.Channel"/>
 
-### Channel
+### `Channel.Number`
 Specifies kinds of channels that may be used or specified for product distribution policies.
 
 | Name | Number | Description |
@@ -1987,7 +1872,7 @@ Specifies kinds of channels that may be used or specified for product distributi
 
 <a name="opencannabis.products.distribution.ChannelType"/>
 
-### ChannelType
+### `ChannelType.Number`
 Specifies the supertypes of channels that may be used to categorize channels applied to product distribution
 policies.
 
@@ -1998,15 +1883,10 @@ policies.
 | MARKETPLACE | 2 | Distribution through a second-party partner marketplace system. &#34;Marketplace retail&#34; would refer to digital or physical aggregators or clearinghouses that work directly with consumers. |
 
 
-<a name="products/Cartridge.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Cartridge.proto"/>
 
-## products/Cartridge.proto
-
-
-<a name="opencannabis.products.Cartridge"/>
-
-### Cartridge
+### `Cartridge.Type`
 Specifies a vaporizor or cartridge-style product, for instance, vaporizor pens and table units. Vaporizors are
 composed of two elements: a battery, or the bottom power unit, and a cartridge, or the top fuel unit, that contains
 cannabinoids and is disposable or refillable.
@@ -2021,7 +1901,7 @@ cannabinoids and is disposable or refillable.
 
 <a name="opencannabis.products.CartridgeType"/>
 
-### CartridgeType
+### `CartridgeType.Number`
 Specifies types of cartridge products that may be expressed.
 
 | Name | Number | Description |
@@ -2032,15 +1912,10 @@ Specifies types of cartridge products that may be expressed.
 | KIT | 3 | Specifies a full kit with a battery and cartridge unit. |
 
 
-<a name="products/Plant.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Plant.proto"/>
 
-## products/Plant.proto
-
-
-<a name="opencannabis.products.Plant"/>
-
-### Plant
+### `Plant.Type`
 Specifies a plant product, such as seeds, or clones, that are designed to be cultivated by the end user.
 
 | Field | Type | Label | Description |
@@ -2054,7 +1929,7 @@ Specifies a plant product, such as seeds, or clones, that are designed to be cul
 
 <a name="opencannabis.products.PlantType"/>
 
-### PlantType
+### `PlantType.Number`
 Enumerates types or subcategories of plants that may be sold.
 
 | Name | Number | Description |
@@ -2064,15 +1939,10 @@ Enumerates types or subcategories of plants that may be sold.
 | CLONE | 2 | Specifies a cloned plant that is grown to some point and then sold. |
 
 
-<a name="products/Preroll.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/Preroll.proto"/>
 
-## products/Preroll.proto
-
-
-<a name="opencannabis.products.Preroll"/>
-
-### Preroll
+### `Preroll.Type`
 Specifies a pre-rolled cannabis product, where a production process consumes cannabis plant material and produces
 end-products that are already rolled into joints, marijuana cigarettes, blunts, and so on.
 
@@ -2088,15 +1958,9 @@ end-products that are already rolled into joints, marijuana cigarettes, blunts, 
 | material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Specifies handling and materials data associated with this prerolled item. |
 
 
-
-
-
- 
-
-
 <a name="opencannabis.products.PrerollFlag"/>
 
-### PrerollFlag
+### `PrerollFlag.Number`
 Specifies flags that may be specifically applied to pre-rolled cannabis products.
 
 | Name | Number | Description |
@@ -2109,15 +1973,10 @@ Specifies flags that may be specifically applied to pre-rolled cannabis products
 | CONTAINS_TOBACCO | 5 | Specifies that this product contains tobacco. |
 
 
-<a name="products/menu/Section.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/menu/Section.proto"/>
 
-## products/menu/Section.proto
-
-
-<a name="opencannabis.products.menu.section.CustomSection"/>
-
-### CustomSection
+### `CustomSection.Type`
 Custom configuration-based menu sections, usually via `FilteredSection`.
 
 | Field | Type | Label | Description |
@@ -2128,7 +1987,7 @@ Custom configuration-based menu sections, usually via `FilteredSection`.
 
 <a name="opencannabis.products.menu.section.SectionMedia"/>
 
-### SectionMedia
+### `SectionMedia.Type`
 Specifies media for a section.
 
 | Field | Type | Label | Description |
@@ -2138,7 +1997,7 @@ Specifies media for a section.
 
 <a name="opencannabis.products.menu.section.SectionSettings"/>
 
-### SectionSettings
+### `SectionSettings.Type`
 Specifies settings that a menu section may consider.
 
 | Field | Type | Label | Description |
@@ -2149,7 +2008,7 @@ Specifies settings that a menu section may consider.
 
 <a name="opencannabis.products.menu.section.SectionSpec"/>
 
-### SectionSpec
+### `SectionSpec.Type`
 Specifies a menu section, along with section configuration (settings and flags).
 
 | Field | Type | Label | Description |
@@ -2163,7 +2022,7 @@ Specifies a menu section, along with section configuration (settings and flags).
 
 <a name="opencannabis.products.menu.section.FilteredSection"/>
 
-### FilteredSection
+### `FilteredSection.Number`
 Special filtered sections - commonly used sections based on filters builtin to apps/sites.
 
 | Name | Number | Description |
@@ -2175,7 +2034,7 @@ Special filtered sections - commonly used sections based on filters builtin to a
 
 <a name="opencannabis.products.menu.section.Section"/>
 
-### Section
+### `Section.Number`
 Known sections, that are expected to be included with nearly every menu.
 
 | Name | Number | Description |
@@ -2193,7 +2052,7 @@ Known sections, that are expected to be included with nearly every menu.
 
 <a name="opencannabis.products.menu.section.SectionFlag"/>
 
-### SectionFlag
+### `SectionFlag.Number'
 Flags that may be applied to a section&#39;s configuration.
 
 | Name | Number | Description |
@@ -2202,15 +2061,10 @@ Flags that may be applied to a section&#39;s configuration.
 | FEATURED | 1 | This section should be promoted and/or presented with high priority. |
 
 
-<a name="products/menu/Menu.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="products/menu/Menu.proto"/>
 
-## products/menu/Menu.proto
-
-
-<a name="opencannabis.products.menu.Menu"/>
-
-### Menu
+### `Menu.Type`
 Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
 are filed in. Categories are enumerated in `menu.Section`.
 
@@ -2223,7 +2077,7 @@ are filed in. Categories are enumerated in `menu.Section`.
 
 <a name="opencannabis.products.menu.MenuProduct"/>
 
-### MenuProduct
+### `MenuProduct.Type`
 Menu product payload stanza. Specifies a single product as a member of a menu section.
 
 | Field | Type | Label | Description |
@@ -2241,7 +2095,7 @@ Menu product payload stanza. Specifies a single product as a member of a menu se
 
 <a name="opencannabis.products.menu.MenuSettings"/>
 
-### MenuSettings
+### `MenuSettings.Type`
 Specifies settings used to generate a menu, or used as input when generating menus.
 
 | Field | Type | Label | Description |
@@ -2255,7 +2109,7 @@ Specifies settings used to generate a menu, or used as input when generating men
 
 <a name="opencannabis.products.menu.Metadata"/>
 
-### Metadata
+### `Metadata.Type`
 Specifies metadata for a package of menu data.
 
 | Field | Type | Label | Description |
@@ -2270,7 +2124,7 @@ Specifies metadata for a package of menu data.
 
 <a name="opencannabis.products.menu.SectionData"/>
 
-### SectionData
+### `SectionData.Type`
 Specifies an inner menu payload which contains menu data for a given menu section.
 
 | Field | Type | Label | Description |
@@ -2282,7 +2136,7 @@ Specifies an inner menu payload which contains menu data for a given menu sectio
 
 <a name="opencannabis.products.menu.SectionedMenu"/>
 
-### SectionedMenu
+### `SectionedMenu.Type`
 Specifies a menu split into section-level chunks.
 
 | Field | Type | Label | Description |
@@ -2293,7 +2147,7 @@ Specifies a menu split into section-level chunks.
 
 <a name="opencannabis.products.menu.StaticMenu"/>
 
-### StaticMenu
+### `StaticMenu.Type`
 Specifies an inner menu payload which contains mapped data, where each map key is a section name, lowercased, and
 each map value is itself a product, and each map is addressed at a typed property name.
 
@@ -2311,7 +2165,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"/>
 
-### StaticMenu.ApothecaryEntry
+### `StaticMenu.ApothecaryEntry.Type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2321,7 +2175,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"/>
 
-### StaticMenu.CartridgesEntry
+### `StaticMenu.CartridgesEntry.type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2331,7 +2185,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"/>
 
-### StaticMenu.EdiblesEntry
+### `StaticMenu.EdiblesEntry.Type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2341,7 +2195,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"/>
 
-### StaticMenu.ExtractsEntry
+### `StaticMenu.ExtractsEntry.Type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2351,7 +2205,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.FlowersEntry"/>
 
-### StaticMenu.FlowersEntry
+### `StaticMenu.FlowersEntry.Type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2361,7 +2215,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"/>
 
-### StaticMenu.MerchandiseEntry
+### `StaticMenu.MerchandiseEntry.Type`
 
 
 | Field | Type | Label | Description |
@@ -2372,7 +2226,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.PlantsEntry"/>
 
-### StaticMenu.PlantsEntry
+### `StaticMenu.PlantsEntry.Type`
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -2382,7 +2236,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"/>
 
-### StaticMenu.PrerollsEntry
+### `StaticMenu.PrerollsEntry.Type`
 
 
 | Field | Type | Label | Description |
@@ -2393,7 +2247,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 <a name="opencannabis.products.menu.Flag"/>
 
-### Flag
+### `Flag.Number`
 Enumerates flags that can be set on a menu.
 
 | Name | Number | Description |
@@ -2405,7 +2259,7 @@ Enumerates flags that can be set on a menu.
 
 <a name="opencannabis.products.menu.Status"/>
 
-### Status
+### `Status.Number`
 Enumerates statuses a menu may assume.
 
 | Name | Number | Description |
