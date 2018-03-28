@@ -42,7 +42,7 @@ If you'd like to adopt the spec, or list yourself as a backer, file a pull reque
 | M3 Mobile Meds    | [m3meds.com](http://www.m3meds.com)                 | Distributor                             |
 
 <div style="text-align:center;width:100%;">
-<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v1.png" alt="Spec Adopters">
+<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v2.png" alt="Spec Adopters">
 </div>
 
 ### Contributing
