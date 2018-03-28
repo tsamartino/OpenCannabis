@@ -125,8 +125,8 @@ Specifies a type of media, device orientation, file-type and so on
  | uri: string]
 {% endnomnoml %}
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="media/MediaOrientation.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaOrientation.Number`
 Orientation status of a piece of media. Provided by camera operations on mobile devices,
@@ -144,8 +144,8 @@ in some cases, and also stored along with media sometimes.
 | RIGHT_MIRRORED | 7 | Media is oriented &#39;right,&#39; and mirrored. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="media/MediaKey.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaKey.Type`
 Key uniquely describing an item of media known to the system. An &#34;item of media&#34; can be anything from an image
@@ -156,13 +156,14 @@ or a video, to a PDF document, or larger data.
 | id | [string](#string) |  | Unique ID for this media item. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="media/MediaType.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ## `MediaType`
 
 
 <a name="opencannabis.media.DocumentType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `DocumentType.Type`
 Specifies document type information.
@@ -174,6 +175,7 @@ Specifies document type information.
 
 
 <a name="opencannabis.media.ImageType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `ImageType.Type`
 Specifies image type information.
@@ -184,6 +186,7 @@ Specifies image type information.
 
 
 <a name="opencannabis.media.MediaType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaType.Type`
 Specifies the type of media being attached or described.
@@ -197,6 +200,7 @@ Specifies the type of media being attached or described.
 
 
 <a name="opencannabis.media.VideoType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `VideoType.Type`
 Specifies video type information.
@@ -207,6 +211,7 @@ Specifies video type information.
 
 
 <a name="opencannabis.media.DocumentType.DocumentKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `DocumentType.DocumentKind.Number`
 Specifies kinds of documents that may be attached or described.
@@ -220,6 +225,7 @@ Specifies kinds of documents that may be attached or described.
 
 
 <a name="opencannabis.media.ImageType.ImageKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `ImageType.ImageKind.Number`
 Specifies kinds of images that may be attached or described.
@@ -234,6 +240,7 @@ Specifies kinds of images that may be attached or described.
 
 
 <a name="opencannabis.media.MediaType.Kind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaType.Kind.Number`
 Enumerates, in generic terms, the kinds of media that can be attached or described.
@@ -247,6 +254,7 @@ Enumerates, in generic terms, the kinds of media that can be attached or describ
 
 
 <a name="opencannabis.media.VideoType.VideoKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `VideoType.VideoKind.Number`
 Specifies kinds of videos that may be attached or described.
@@ -258,8 +266,8 @@ Specifies kinds of videos that may be attached or described.
 | HLS | 2 | HTTP Live Streaming video. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="media/MediaItem.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaItem.Type`
 Describes an individual media item, which can be an image, video, etc.
