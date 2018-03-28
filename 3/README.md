@@ -5,6 +5,7 @@ name: OpenCannabis Specification
 status: raw
 editor: Sam Gammon <sam@bloombox.io>
 contributors:
+  - Randal Stevens <randy@bloombox.io>
   - Tyler Porras <tyler@bloombox.io>
   - Tim Samartino <tim@bloombox.io>
   - Matt McLean <matt@gocaliva.com>
@@ -46,7 +47,7 @@ connecting disparate systems and datasets.
     1. [Message Categories](2-Datamodel.md)
         - [Part 1.1: Core Structures](3-Core-Structures.md)
         - [Part 1.2: Extension Structures](4-Extension-Structures.md)
-- **[Section 2: Services: Information in motion**
+- **Section 2: Services: Information in motion**
     1. Toolchain
     1. RPC
     1. REST
@@ -60,7 +61,7 @@ connecting disparate systems and datasets.
         1. Wholesale
         1. Retail
         1. Consumer
-- **Seciton 3: Tables: Insights from information**
+- **Section 3: Tables: Insights from information**
     1. Toolchain
     1. Data Concerns
         1. Telemetry
