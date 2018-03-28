@@ -197,8 +197,8 @@ Enumerates available types of compression, or strategies or algorithms for compr
 | SNAPPY | 3 | Snappy-based compression. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.ProductKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `ProductKind`
 Enumerates types of products known to the spec.
@@ -214,8 +214,8 @@ Enumerates types of products known to the spec.
 | PLANTS | 6 | Plants sold direct, in various forms such as pre-grown (clones) or raw seeds. |
 | MERCHANDISE | 7 | Merchandise, usually branded in-house. Also covers glassware and miscellaneous items. |
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.Language"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `Language`
 Specifies languages available for specification, usually used as an attachment to content or media.
@@ -227,8 +227,8 @@ Specifies languages available for specification, usually used as an attachment t
 | FRENCH | 2 | French. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.ProductKey"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `ProductKey`
 Specifies a general key for a product, which is the combined specification of a product ID and type, which is
