@@ -95,56 +95,6 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
       - [VideoType.VideoKind](#opencannabis.media.VideoType.VideoKind)
   - [media/MediaItem.proto](#media/MediaItem.proto)
       - [MediaItem](#opencannabis.media.MediaItem)
-- `structs`: Flags, types, pricing, weight, etc
-  - [structs/ProductFlags.proto](#structs/ProductFlags.proto)  
-      - [ProductFlag](#opencannabis.structs.ProductFlag)
-  - [structs/Species.proto](#structs/Species.proto)
-      - [Species](#opencannabis.structs.Species)
-  - [structs/Genetics.proto](#structs/Genetics.proto)
-      - [Genetics](#opencannabis.structs.Genetics)
-  - [structs/Grow.proto](#structs/Grow.proto)
-      - [Grow](#opencannabis.structs.Grow)
-  - [structs/Version.proto](#structs/Version.proto)
-      - [VersionSpec](#opencannabis.structs.VersionSpec)
-  - [structs/pricing/PricingDescriptor.proto](#structs/pricing/PricingDescriptor.proto)
-      - [PricingDescriptor](#opencannabis.structs.pricing.PricingDescriptor)
-      - [PricingTierAvailability](#opencannabis.structs.pricing.PricingTierAvailability)
-      - [ProductPricing](#opencannabis.structs.pricing.ProductPricing)
-      - [UnitPricingDescriptor](#opencannabis.structs.pricing.UnitPricingDescriptor)
-      - [WeightedPricingDescriptor](#opencannabis.structs.pricing.WeightedPricingDescriptor)
-      - [PricingType](#opencannabis.structs.pricing.PricingType)
-      - [PricingWeightTier](#opencannabis.structs.pricing.PricingWeightTier)
-  - [structs/pricing/SaleDescriptor.proto](#structs/pricing/SaleDescriptor.proto)
-      - [BOGODiscount](#opencannabis.structs.pricing.BOGODiscount)
-      - [LoyaltyDiscount](#opencannabis.structs.pricing.LoyaltyDiscount)
-      - [PercentageDiscount](#opencannabis.structs.pricing.PercentageDiscount)
-      - [SaleDescriptor](#opencannabis.structs.pricing.SaleDescriptor)
-      - [SaleType](#opencannabis.structs.pricing.SaleType)
-  - [structs/labtesting/TestValue.proto](#structs/labtesting/TestValue.proto)
-      - [TestMedia](#opencannabis.structs.labtesting.TestMedia)
-      - [TestValue](#opencannabis.structs.labtesting.TestValue)
-      - [TestMediaType](#opencannabis.structs.labtesting.TestMediaType)
-      - [TestValueType](#opencannabis.structs.labtesting.TestValueType)
-  - [structs/labtesting/TestResults.proto](#structs/labtesting/TestResults.proto)
-      - [Cannabinoids](#opencannabis.structs.labtesting.Cannabinoids)
-      - [Cannabinoids.Result](#opencannabis.structs.labtesting.Cannabinoids.Result)
-      - [Moisture](#opencannabis.structs.labtesting.Moisture)
-      - [Pesticides](#opencannabis.structs.labtesting.Pesticides)
-      - [Pesticides.MeasurementsEntry](#opencannabis.structs.labtesting.Pesticides.MeasurementsEntry)
-      - [Subjective](#opencannabis.structs.labtesting.Subjective)
-      - [Terpenes](#opencannabis.structs.labtesting.Terpenes)
-      - [Terpenes.Result](#opencannabis.structs.labtesting.Terpenes.Result)
-      - [TestCoordinates](#opencannabis.structs.labtesting.TestCoordinates)
-      - [TestResults](#opencannabis.structs.labtesting.TestResults)
-      - [Cannabinoid](#opencannabis.structs.labtesting.Cannabinoid)
-      - [CannabinoidRatio](#opencannabis.structs.labtesting.CannabinoidRatio)
-      - [Feeling](#opencannabis.structs.labtesting.Feeling)
-      - [PotencyEstimate](#opencannabis.structs.labtesting.PotencyEstimate)
-      - [TasteNote](#opencannabis.structs.labtesting.TasteNote)
-      - [Terpene](#opencannabis.structs.labtesting.Terpene)
-  - [structs/Shelf.proto](#structs/Shelf.proto)
-      - [Shelf](#opencannabis.structs.Shelf)
-
 ----
 
 ## `opencannabis.base`
@@ -459,7 +409,11 @@ Location data, distance, addresses, and so on.
   |address: Address
   |point: Point
   |accuracy: LocationAccuracy]
-  
+
+{% endnomnoml %}
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [LocationAccuracy
   |estimate: bool
   |value: DistanceValue]
@@ -886,6 +840,12 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
  | MARKDOWN: 1
  | HTML: 2]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [MaterialsData
  | species: opencannabis.structs.Species
  | genetics: opencannabis.structs.Genetics
@@ -916,8 +876,8 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
  | modified: opencannabis.temporal.Instant
  | published: opencannabis.temporal.Instant]
 
-
 {% endnomnoml %}
+
 
 <a name="content/Name.proto"/>
 <p align="right"><a href="#top">Top</a></p>
@@ -1270,6 +1230,12 @@ Specifies a type of media, device orientation, file-type and so on
 [VideoType
  | kind: VideoType.VideoKind]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [DocumentType:
  | TXT: 0
  | HTML: 1
@@ -1299,7 +1265,6 @@ Specifies a type of media, device orientation, file-type and so on
  | type: MediaType
  | name: string
  | uri: string]
-
 {% endnomnoml %}
 
 <a name="media/MediaOrientation.proto"/>
@@ -1496,6 +1461,12 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | product: opencannabis.content.ProductContent
  | material: opencannabis.content.MaterialsData]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [ApothecaryType
  | UNSPECIFIED_APOTHECARY: 0
  | TOPICAL: 1
@@ -1521,6 +1492,14 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | label: string
  | amount: string]
 
+{% endnomnoml %}
+
+
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [EdibleFlag
  | NO_EDIBLE_FLAG: 0
  | VEGAN: 1
@@ -1549,6 +1528,14 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | NO_EXTRACT_FLAGS:0
  | SOLVENTLESS:1]
 
+{% endnomnoml %}
+
+
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [ExractType
  | UNSPECIFIED_EXTRACT: 0
  | OIL: 1
@@ -1575,6 +1562,13 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | type: CartridgeType
  | product: opencannabis.content.ProductContent
  | material: opencannabis.content.MaterialsData]
+
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 
 [CartridgeType
  | UNSPECIFIED_CARTRIDGE: 0
@@ -1603,6 +1597,13 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | product: opencannabis.content.ProductContent
  | material: opencannabis.content.MaterialsData]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+
 [CustomSection
  | id: string
  | filter: FilteredSection]
@@ -1625,6 +1626,13 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | ON_SALE: 0
  | HOUSE: 1
  | CBD: 2]
+
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 
 [Section
  | UNSPECIFIED: 0
@@ -1660,6 +1668,13 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | fingerprint: opencannabis.crypto.primitives.integrity.Hash
  | section: section.Section]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+
 [MetaData
  | scope: string
  | version: uint64
@@ -1687,6 +1702,13 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | plants: repeated StaticMenu.PlantsEntry
  | prerolls: repeated StaticMenu.PrerollsEntry]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
+
 [StaticMenu.ApothacaryEntry
  | key: string
  | value: opencannabis.products.Apothecary]
@@ -1707,6 +1729,12 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
  | key: string
  | value: opencannabis.products.Flower]
 
+{% endnomnoml %}
+
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [StaticMenu.MerchandiseEntry
  | key: string
  | value: opencannabis.products.Merchandise]
@@ -2404,826 +2432,3 @@ Enumerates statuses a menu may assume.
 | ---- | ------ | ----------- |
 | UNPUBLISHED | 0 | Indicates that a menu revision is not yet published. |
 | LIVE | 1 | Indicates that a menu revision has been published and is considered live. |
-
-
-----
-
-## `opencannabis.structs`
-
-Specifies product categories, types, availability, pricing and enumerates test results, terpenes, cannabinoids and so on
-
-{% nomnoml %}
-
-#fill: #d5e7ee; #8ebff2
-[ProductFlag
- | VISIBLE: 0
- | HIDDEN: 1
- | PREMIUM: 2
- | FEATURED: 3
- | EXCLUSIVE: 4
- | IN_HOUSE: 5
- | LAST_CHANCE: 6
- | LIMITED_TIME: 7
- | LOCAL: 8
- | ON_SALE: 20]
-
-[Species
- | UNSPECIFIED: 0
- | SATIVA: 1
- | HYBRID_SATIVA: 2
- | HYBRID: 3
- | HYBRID_INDICA: 4
- | INDICA: 5]
-
-[Genetics
- | male: opencannabis.base.ProductReference
- | female: opencannabis.base.ProductReference]
-
-[Grow
-| GENERIC:0
-| INDOOR:1
-| GREENHOUSE:2
-| OUTDOOR:3]
-
-[VersionSpec
- | name: string]
-
-[PricingDescriptor
- | type: PricingType
- | unit: UnitPricingDescriptor
- | weighted: WeightedPricingDescriptor]
-
-[PricingTierAvailability
- | offered: bool
- | available: bool]
-
-[ProductPricing
- | discounts: repeated SaleDescriptor
- | manifest: repeated PricingDescriptor]
-
-[PricingType
- | UNIT:0
- | WEIGHTED:1]
-
-[PricingWeightTier
- | OTHER: 0
- | GRAM: 1
- | HALFGRAM: 2
- | QUARTERGRAM: 3
- | DUB: 4
- | EIGHTH: 5
- | QUARTER: 6
- | HALF: 7
- | OUNCE: 8
- | POUND: 9
- | KILO: 10
- | TON: 11]
-
-[BOGODiscount
- | trigger: uint32
- | reward: uint32]
-
-[loyaltyDiscount
- | trigger: uint32
- | reward: uint32]
-
-[PercentageDiscount
- | discount: uint32]
-
-[SaleDescriptor
- | type: SaleType
- | effective: opencannabis.temporal.Instant
- | expiration: opencannabis.temporal.Instant
- | percentage_off: PercentageDiscount
- | bogo: BOGODiscount
- | loyalty: LoyaltyDiscount]
-
-[SaleType
- | PERCENTAGE_REDUCTION: 0
- | VALUE_REDUCTION: 1
- | BOGO: 2
- | LOYALTY: 3]
-
-[TestMedia
-| type: TestMediaType
-| media_item: opencannabis.media.MediaItem]
-
-[TestValue
- | type: TestValueType
- | measurement: double
- | present: bool]
-
-[TestMediaType
- | CERTIFICATE: 0
- | RESULTS: 1
- | PRODUCT_IMAGE: 2]
-
-[TestValueType
- | MILLIGRAMS: 0
- | PERCENTAGE: 1
- | PRESENCE: 3]
-
-[Canabinoids
- | cannabinoid: Cannabinoid
- | ratio: CannabinoidRatio
- | measurement: TestValue]
-
-[Moisture
- | measurement: TestValue]
-
-[Pesticides
- | pesticide_free: bool
- | measurements: Pesticides.MeasurementsEntry]
-
-[Pesticides.MeasurementsEntry
- | key: string
- | value: TestValue]
-
-[Subjective
- | description: opencannabis.content.Content
- | taste: opencannabis.content.Content
- | potency: PotencyEstimate
- | feeling_tags: Feeling
- | tasting_notes: TasteNote]
-
-[Terpenes
- | available: bool
- | terpenes: Terpenes.Result]
-
-[Terpenes.Result
- | terpene: Terpene
- | measurement: TestValue]
-
-[TestCoordinates
- | zone: string
- | group: string]
-
-[TestResults
- | available: bool
- | media: repeated TestMedia
- | last_updated: opencannabis.temporal.Instant
- | sealed: opencannabis.temporal.Instant
- | coordinates: TestCoordinates
- | cannabinoids: Cannabinoids
- | terpenes: Terpenes
- | pesticides: Pesticides
- | moisture: Moisture
- | subjective: Subjective
- | aroma: repeated TasteNote
- | data: repeated TestResults]
-
-[Cannabinoid
- | THC: 0
- | THC_A: 1
- | THC_V: 2
- | CBD: 10
- | CBD_A: 11
- | CBD_V: 12
- | CBD_VA: 13
- | CBC: 20
- | CBG: 30
- | CBG_A: 31
- | CBN: 40
- | CBV: 50
- | CBV_A: 51]
-
-[CannabinoidRatio
- | NO_CANNABINOID_PREFERENCE: 0
- | THC_ONLY: 1
- | THC_OVER_CBD: 2
- | EQUAL: 3
- | CBD_OVER_THC: 4
- | CBD_ONLY: 5]
-
-[Feeling
- | NO_FEELING_PREFERENCE: 0
- | GROUNDING: 1
- | SLEEP: 2
- | CALMING: 3
- | STIMULATING: 4
- | FUNNY: 5
- | FOCUS: 6
- | PASSION: 7]
-
-[PotencyEstimate
- | LIGHT: 0
- | MEDIUM: 1
- | HEAVY: 2
- | SUPER: 3]
-
-[TasteNote
- | NO_TASTE_PREFERENCE: 0
- | SWEET: 1
- | SOUR: 2
- | SPICE: 3
- | SMOOTH: 4
- | CITRUS: 5
- | PINE: 6
- | FRUIT: 7
- | TROPICS: 8
- | FLORAL: 9
- | HERB: 10
- | EARTH: 11]
-
-[Terpene
- | CAMPHENE: 0
- | CARENE: 1
- | BETA_CARYOPHYLLENE: 2
- | CARYOPHYLLENE_OXIDE: 3
- | EUCALYPTOL: 4
- | FENCHOL: 5
- | ALPHA_HUMULENE: 6
- | LIMONENE: 7
- | LINALOOL: 8
- | MYRCENE: 9
- | ALPHA_OCIMENE: 10
- | BETA_OCIMENE: 11
- | ALPHA_PHELLANDRENE: 12
- | ALPHA_PINENE: 13
- | BETA_PINENE: 14
- | ALPHA_TERPINEOL: 15
- | ALPHA_TERPININE: 16
- | GAMMA_TERPININE: 17
- | TERPINOLENE: 18]
-
-{% endnomnoml %}
-
-
-<a name="structs/ProductFlags.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/ProductFlags.proto
-
-
-<a name="opencannabis.structs.ProductFlag"/>
-
-### ProductFlag
-Flags that may be applied to an entire product entry, that govern how an independent product and all of its variants
-or sub-products are processed or treated.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| VISIBLE | 0 | Default flag value. Marks a product as &#39;VISIBLE,&#39; meaning it is eligible to be displayed in public circumstances. In some cases, this is interpreted to mean &#39;IN STOCK.&#39; Being that this flag is a default value, the absence of this flag does not designate an item as non-visible - this is accomplished by explicitly specifying the &#39;HIDDEN&#39; flag. |
-| HIDDEN | 1 | Indicates that this entire product entry should be &#39;HIDDEN&#39; from public view, or considered &#39;OUT-OF-STOCK&#39; in back- office systems. |
-| PREMIUM | 2 | Designates a product as &#39;PREMIUM,&#39; indicating it is a top-shelf or super-high-quality product. In some cases, this flag is used to indicate items that are produced in-house. |
-| FEATURED | 3 | Designates a product as &#39;FEATURED,&#39; which makes it eligible for extra promotional display. Featured products are generally highlighted or displayed top-of-the-fold. |
-| EXCLUSIVE | 4 | Designates a product as &#39;EXCLUSIVE,&#39; meaning it is only carried or produced by the owning retailer or manufacturer. |
-| IN_HOUSE | 5 | Designates a product as &#39;IN-HOUSE,&#39; indicating it is carried and produced by the same organization. In a retail context, this flag is used to indicate items manufactured by the retailer or the retailer&#39;s partners. |
-| LAST_CHANCE | 6 | Indicates that a product will not be around long, or that it is running out. In retail contexts, this designates the product in a way that may trigger extra promotional UI. |
-| LIMITED_TIME | 7 | Indicates that a particular product will only be available for a limited time, or is available only in limited batches. |
-| LOCAL | 8 | Indicates that a particular product is produced locally. In retail contexts, this may trigger extra promotional UI. |
-| ON_SALE | 20 | Designates, in general, that a product is &#39;ON-SALE.&#39; This designation SHOULD be propagated-to by implementing servers, from a product&#39;s weighted pricing sale flags. This means, if ANY product weight or variant is marked on sale, the &#39;ON-SALE&#39; flag SHOULD be sent along with the top-level product information. |
-
-
-<a name="structs/Species.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/Species.proto
-
-
-<a name="opencannabis.structs.Species"/>
-
-### Species
-Enumerates known cannabis species, that may be applied to products to indicate their general genetic and
-pharmacokinetic traits.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| UNSPECIFIED | 0 | Unspecified or unknown species value. |
-| SATIVA | 1 | Purely Sativa species value. |
-| HYBRID_SATIVA | 2 | Hybrid Indica/Sativa species value, with a focus or predominance towards Sativa. |
-| HYBRID | 3 | Purely hybrid Indica/Sativa species value. |
-| HYBRID_INDICA | 4 | Hybrid Indica/Sativa species value, with a focus or predominance towards Indica. |
-| INDICA | 5 | Purely Indica species value. |
-
-
-<a name="structs/Genetics.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/Genetics.proto
-
-
-<a name="opencannabis.structs.Genetics"/>
-
-### Genetics
-Specifies genetics for a particular plant or flower item.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| male | [opencannabis.base.ProductReference](#opencannabis.base.ProductReference) |  | Specifies the male side of an item&#39;s genetics. |
-| female | [opencannabis.base.ProductReference](#opencannabis.base.ProductReference) |  | Specifies the female side of an item&#39;s genetics. |
-
-
-<a name="structs/Grow.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/Grow.proto
-
-
-<a name="opencannabis.structs.Grow"/>
-
-### Grow
-Enumerates common/known types or styles of cultivation that might produce a flower for sale, or resale after
-manufacture.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| GENERIC | 0 | Generic, or unknown, grow circumstances. |
-| INDOOR | 1 | Indoor grow circumstances, implying high-precision environment controls (temperature, humidity, light, and so on) and close monitoring and optimization. |
-| GREENHOUSE | 2 | Greenhouse-based grow circumstances. This includes any indoor grow operation that makes use of natural light in any manner, augmenting replacing controlled indoor lighting. |
-| OUTDOOR | 3 | Outdoor-based grow circumstances, that use entirely natural light from the sun. |
-
-
-<a name="structs/Version.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/Version.proto
-
-
-<a name="opencannabis.structs.VersionSpec"/>
-
-### VersionSpec
-Structure that allows universal specification of most common version patterns.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| name | [string](#string) |  | Version specified by arbitrary name. |
-
-
-<a name="structs/pricing/PricingDescriptor.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/pricing/PricingDescriptor.proto
-
-
-<a name="opencannabis.structs.pricing.PricingDescriptor"/>
-
-### PricingDescriptor
-Specifies a descriptor for product pricing, which specifies the price configuration for one independent price tier
-in a given set of pricing tiers for a product.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| type | [PricingType](#opencannabis.structs.pricing.PricingType) |  | Type of pricing tier this descriptor is specifying. |
-| unit | [UnitPricingDescriptor](#opencannabis.structs.pricing.UnitPricingDescriptor) |  | Unit-based pricing information, with no variance in price change. |
-| weighted | [WeightedPricingDescriptor](#opencannabis.structs.pricing.WeightedPricingDescriptor) |  | Weight-based pricing information, with prices assgined to specific or known weights. |
-
-
-<a name="opencannabis.structs.pricing.PricingTierAvailability"/>
-
-### PricingTierAvailability
-Specifies availability and stock status flags for a particular pricing tier.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| offered | [bool](#bool) |  | Specifies whether a particular pricing tier is offered at all. This would be interpreted to indicate whether a particular pricing tier is &#39;ever available&#39; or &#39;ever offered.&#39; |
-| available | [bool](#bool) |  | Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a particular pricing tier is &#39;currently available,&#39; &#39;currently in stock,&#39; or &#39;currently offered.&#39; |
-
-
-<a name="opencannabis.structs.pricing.ProductPricing"/>
-
-### ProductPricing
-Pricing manifest for a product, with the combined tiers and top-level discounts that are currently configured for a
-given sellable material or unit of merchandise.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| discounts | [SaleDescriptor](#opencannabis.structs.pricing.SaleDescriptor) | repeated | Discounts that should apply across all pricing tiers for the subject product. |
-| manifest | [PricingDescriptor](#opencannabis.structs.pricing.PricingDescriptor) | repeated | Pricing tiers attached to this product pricing manifest. |
-
-
-<a name="opencannabis.structs.pricing.UnitPricingDescriptor"/>
-
-### UnitPricingDescriptor
-Specifies pricing information for a unit-priced product, including the price value, tier status, and any discounts
-that currently apply.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| price | [opencannabis.commerce.CurrencyValue](#opencannabis.commerce.CurrencyValue) |  | Unit price value. |
-| status | [PricingTierAvailability](#opencannabis.structs.pricing.PricingTierAvailability) |  | Availability flags for this unit-priced tier. |
-| discounts | [SaleDescriptor](#opencannabis.structs.pricing.SaleDescriptor) | repeated | Discounts that should apply to this tier. |
-
-
-<a name="opencannabis.structs.pricing.WeightedPricingDescriptor"/>
-
-### WeightedPricingDescriptor
-Specifies pricing information for a weight-priced product, at a particular weight tier, including the price value,
-tier status, and, optionally, a custom weight.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| weight | [PricingWeightTier](#opencannabis.structs.pricing.PricingWeightTier) |  | Weight tier selection. |
-| tier | [UnitPricingDescriptor](#opencannabis.structs.pricing.UnitPricingDescriptor) |  | Pricing descriptor for this tier, including the price value, status, and any discounts that should apply. |
-| weight_in_grams | [float](#float) |  | Custom weight in grams, if any. |
-
-
-<a name="opencannabis.structs.pricing.PricingType"/>
-
-### PricingType
-Enumerates supported pricing schemes. Defaults to &#39;UNIT&#39;-based pricing.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| UNIT | 0 | Cost-per-item based pricing scheme, where each product is priced individually, regardless of other attributes. For example, edibles or standard merchandise are purchased, at their price, &#34;each.&#34; |
-| WEIGHTED | 1 | Cost-by-weight pricing scheme, where each product has multiple weight tiers, each priced individually. For example, standard retail flower pricing is weighted at 1g (one gram), 3.5g, 7g, 14g and 28g (one ounce). |
-
-
-<a name="opencannabis.structs.pricing.PricingWeightTier"/>
-
-### PricingWeightTier
-Enumerates supported pricing tiers, when the &#39;WEIGHTED&#39; pricing scheme is in effect. Each known tier is enumerated,
-with an additional defaulted option for &#39;OTHER,&#39; which would allow a custom weight to be assigned via some other
-property or metric.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| OTHER | 0 | &#39;Other,&#39; or custom weighted pricing. |
-| GRAM | 1 | Pricing for &#39;ONE GRAM&#39; of the subject material or merchandise. |
-| HALFGRAM | 2 | Pricing for one &#39;HALF GRAM&#39; of the subject material or merchandise. Usually used only for extracts. |
-| QUARTERGRAM | 3 | Pricing for one &#39;QUARTER GRAM&#39; of the subject material or merchandise. Usually used only for extracts. |
-| DUB | 4 | Pricing for TWO GRAMS of the subject material or merchandise. Rarely used. |
-| EIGHTH | 5 | Pricing for an &#39;EIGHTH&#39; of the subject material or merchandise, usually defined as 3-and-one-half grams. In some cases, providers may choose to define their &#39;EIGHTH&#39; weight value at 4 grams. This functionality is supported via partner or location-level settings. &#39;EIGHTH&#39; usually refers to an eighth-of-an-ounce. |
-| QUARTER | 6 | Pricing for a &#39;QUARTER&#39; of the subject material or merchandise, usually defined as 7 grams. |
-| HALF | 7 | Pricing for a &#39;HALF OUNCE&#39; of the subject material or merchandise. Usually defined as 14 grams. |
-| OUNCE | 8 | Pricing for &#39;ONCE OUNCE&#39; of subject material or merchandise. Usually defined as 28 grams. |
-| POUND | 9 | Pricing for &#39;ONE POUND&#39; of subject material or merchandise. |
-| KILO | 10 | Pricing for &#39;ONE KILO&#39; of subject material or merchandise. |
-| TON | 11 | Pricing for &#39;ONE TON&#39; of subject material or merchandise. |
-
-
-<a name="structs/pricing/SaleDescriptor.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/pricing/SaleDescriptor.proto
-
-
-<a name="opencannabis.structs.pricing.BOGODiscount"/>
-
-### BOGODiscount
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| trigger | [uint32](#uint32) |  |  |
-| reward | [uint32](#uint32) |  |  |
-
-
-<a name="opencannabis.structs.pricing.LoyaltyDiscount"/>
-
-### LoyaltyDiscount
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| trigger | [uint32](#uint32) |  |  |
-| reward | [uint32](#uint32) |  |  |
-
-
-<a name="opencannabis.structs.pricing.PercentageDiscount"/>
-
-### PercentageDiscount
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| discount | [uint32](#uint32) |  |  |
-
-
-<a name="opencannabis.structs.pricing.SaleDescriptor"/>
-
-### SaleDescriptor
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| type | [SaleType](#opencannabis.structs.pricing.SaleType) |  | sale metadata |
-| effective | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  |  |
-| expiration | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  |  |
-| percentage_off | [PercentageDiscount](#opencannabis.structs.pricing.PercentageDiscount) |  |  |
-| bogo | [BOGODiscount](#opencannabis.structs.pricing.BOGODiscount) |  |  |
-| loyalty | [LoyaltyDiscount](#opencannabis.structs.pricing.LoyaltyDiscount) |  |  |
-
-
-<a name="opencannabis.structs.pricing.SaleType"/>
-
-### SaleType
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| PERCENTAGE_REDUCTION | 0 |  |
-| VALUE_REDUCTION | 1 |  |
-| BOGO | 2 |  |
-| LOYALTY | 3 |  |
-
-
-<a name="structs/labtesting/TestValue.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/labtesting/TestValue.proto
-
-
-<a name="opencannabis.structs.labtesting.TestMedia"/>
-
-### TestMedia
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| type | [TestMediaType](#opencannabis.structs.labtesting.TestMediaType) |  |  |
-| media_item | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.TestValue"/>
-
-### TestValue
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| type | [TestValueType](#opencannabis.structs.labtesting.TestValueType) |  |  |
-| measurement | [double](#double) |  |  |
-| present | [bool](#bool) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.TestMediaType"/>
-
-### TestMediaType
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| CERTIFICATE | 0 |  |
-| RESULTS | 1 |  |
-| PRODUCT_IMAGE | 2 |  |
-
-
-<a name="opencannabis.structs.labtesting.TestValueType"/>
-
-### TestValueType
--- Testing: Base (Shared) Protocol
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| MILLIGRAMS | 0 |  |
-| PERCENTAGE | 1 |  |
-| PRESENCE | 3 |  |
-
-
-<a name="structs/labtesting/TestResults.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/labtesting/TestResults.proto
-Empirical laboratory product testing structures and definitions. Provides support for cannabinoid testing, terpene
-testing, pesticide testing, moisture ratings, and subjective testing.
-
-
-<a name="opencannabis.structs.labtesting.Cannabinoids"/>
-
-### Cannabinoids
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| thc | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-| cbd | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-| results | [Cannabinoids.Result](#opencannabis.structs.labtesting.Cannabinoids.Result) | repeated |  |
-
-
-<a name="opencannabis.structs.labtesting.Cannabinoids.Result"/>
-
-### Cannabinoids.Result
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| cannabinoid | [Cannabinoid](#opencannabis.structs.labtesting.Cannabinoid) |  |  |
-| ratio | [CannabinoidRatio](#opencannabis.structs.labtesting.CannabinoidRatio) |  |  |
-| measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.Moisture"/>
-
-### Moisture
--- Testing: Moisture
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.Pesticides"/>
-
-### Pesticides
--- Testing: Pesticides
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| pesticide_free | [bool](#bool) |  |  |
-| measurements | [Pesticides.MeasurementsEntry](#opencannabis.structs.labtesting.Pesticides.MeasurementsEntry) | repeated |  |
-
-
-<a name="opencannabis.structs.labtesting.Pesticides.MeasurementsEntry"/>
-
-### Pesticides.MeasurementsEntry
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| key | [string](#string) |  |  |
-| value | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.Subjective"/>
-
-### Subjective
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| description | [opencannabis.content.Content](#opencannabis.content.Content) |  |  |
-| taste | [opencannabis.content.Content](#opencannabis.content.Content) |  |  |
-| potency | [PotencyEstimate](#opencannabis.structs.labtesting.PotencyEstimate) |  |  |
-| feeling_tags | [Feeling](#opencannabis.structs.labtesting.Feeling) | repeated |  |
-| tasting_notes | [TasteNote](#opencannabis.structs.labtesting.TasteNote) | repeated |  |
-
-
-<a name="opencannabis.structs.labtesting.Terpenes"/>
-
-### Terpenes
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| available | [bool](#bool) |  |  |
-| terpenes | [Terpenes.Result](#opencannabis.structs.labtesting.Terpenes.Result) | repeated |  |
-
-
-<a name="opencannabis.structs.labtesting.Terpenes.Result"/>
-
-### Terpenes.Result
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| terpene | [Terpene](#opencannabis.structs.labtesting.Terpene) |  |  |
-| measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.TestCoordinates"/>
-
-### TestCoordinates
-Specifies coordinate values for a given lab testing result. This generally consists of a &#39;lot&#39; and &#39;batch&#39; value,
-which essentially correlate to a &#39;zone&#39; and &#39;group&#39;, which are expressed here.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| zone | [string](#string) |  | Specifies the &#39;zone,&#39; or &#39;lot,&#39; value for a set of test results. |
-| group | [string](#string) |  | Specifies the &#39;group,&#39; or &#39;batch,&#39; value for a set of test results. |
-
-
-<a name="opencannabis.structs.labtesting.TestResults"/>
-
-### TestResults
-Lab testing results for a given product. Includes cannabinoid, terpene, pesticide, moisture, and subjective testing
-properties. Only cannabinoid testing is considered required.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| available | [bool](#bool) |  | Boolean flag indicating whether results are available for lab testing at all. |
-| media | [TestMedia](#opencannabis.structs.labtesting.TestMedia) | repeated | Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs) specifying test results, and so on. |
-| last_updated | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | Last-updated value for these lab test results. Updated each time the record is updated. |
-| sealed | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | Precise moment that these results were considered &#39;sealed&#39; and returned. Once this timestamp is set, a given set of test results (unique by their coordinates) is considered immutable. |
-| coordinates | [TestCoordinates](#opencannabis.structs.labtesting.TestCoordinates) |  | Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests, indicates the coordinates for the active set of test results. |
-| cannabinoids | [Cannabinoids](#opencannabis.structs.labtesting.Cannabinoids) |  | Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid compounds. |
-| terpenes | [Terpenes](#opencannabis.structs.labtesting.Terpenes) |  | Testing for terpene volatiles, which might indicate aroma or flavor notes. |
-| pesticides | [Pesticides](#opencannabis.structs.labtesting.Pesticides) |  | Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value. |
-| moisture | [Moisture](#opencannabis.structs.labtesting.Moisture) |  | Moisture rating and test results. |
-| subjective | [Subjective](#opencannabis.structs.labtesting.Subjective) |  | Results from subjective testing - i.e, opinionated human evaluation. |
-| aroma | [TasteNote](#opencannabis.structs.labtesting.TasteNote) | repeated | Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if available. |
-| data | [TestResults](#opencannabis.structs.labtesting.TestResults) | repeated | Raw test result data, stored under a master set of test results. Only one level of nesting is allowed. |
-
-
-<a name="opencannabis.structs.labtesting.Cannabinoid"/>
-
-### Cannabinoid
--- Testing: Cannabinoids
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| THC | 0 |  |
-| THC_A | 1 |  |
-| THC_V | 2 |  |
-| CBD | 10 |  |
-| CBD_A | 11 |  |
-| CBD_V | 12 |  |
-| CBD_VA | 13 |  |
-| CBC | 20 |  |
-| CBG | 30 |  |
-| CBG_A | 31 |  |
-| CBN | 40 |  |
-| CBV | 50 |  |
-| CBV_A | 51 |  |
-
-
-<a name="opencannabis.structs.labtesting.CannabinoidRatio"/>
-
-### CannabinoidRatio
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| NO_CANNABINOID_PREFERENCE | 0 |  |
-| THC_ONLY | 1 |  |
-| THC_OVER_CBD | 2 |  |
-| EQUAL | 3 |  |
-| CBD_OVER_THC | 4 |  |
-| CBD_ONLY | 5 |  |
-
-
-<a name="opencannabis.structs.labtesting.Feeling"/>
-
-### Feeling
--- Testing: Subjective
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| NO_FEELING_PREFERENCE | 0 |  |
-| GROUNDING | 1 |  |
-| SLEEP | 2 |  |
-| CALMING | 3 |  |
-| STIMULATING | 4 |  |
-| FUNNY | 5 |  |
-| FOCUS | 6 |  |
-| PASSION | 7 |  |
-
-
-<a name="opencannabis.structs.labtesting.PotencyEstimate"/>
-
-### PotencyEstimate
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| LIGHT | 0 |  |
-| MEDIUM | 1 |  |
-| HEAVY | 2 |  |
-| SUPER | 3 |  |
-
-
-<a name="opencannabis.structs.labtesting.TasteNote"/>
-
-### TasteNote
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| NO_TASTE_PREFERENCE | 0 |  |
-| SWEET | 1 |  |
-| SOUR | 2 |  |
-| SPICE | 3 |  |
-| SMOOTH | 4 |  |
-| CITRUS | 5 |  |
-| PINE | 6 |  |
-| FRUIT | 7 |  |
-| TROPICS | 8 |  |
-| FLORAL | 9 |  |
-| HERB | 10 |  |
-| EARTH | 11 |  |
-
-
-<a name="opencannabis.structs.labtesting.Terpene"/>
-
-### Terpene
--- Testing: Terpenes
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| CAMPHENE | 0 |  |
-| CARENE | 1 |  |
-| BETA_CARYOPHYLLENE | 2 |  |
-| CARYOPHYLLENE_OXIDE | 3 |  |
-| EUCALYPTOL | 4 |  |
-| FENCHOL | 5 |  |
-| ALPHA_HUMULENE | 6 |  |
-| LIMONENE | 7 |  |
-| LINALOOL | 8 |  |
-| MYRCENE | 9 |  |
-| ALPHA_OCIMENE | 10 |  |
-| BETA_OCIMENE | 11 |  |
-| ALPHA_PHELLANDRENE | 12 |  |
-| ALPHA_PINENE | 13 |  |
-| BETA_PINENE | 14 |  |
-| ALPHA_TERPINEOL | 15 |  |
-| ALPHA_TERPININE | 16 |  |
-| GAMMA_TERPININE | 17 |  |
-| TERPINOLENE | 18 |  |
-
-
-<a name="structs/Shelf.proto"/>
-<p align="right"><a href="#top">Top</a></p>
-
-## structs/Shelf.proto
-
-
-<a name="opencannabis.structs.Shelf"/>
-
-### Shelf
-Enumerates available &#39;shelf&#39; entries, for use in retail contexts, to indicate the quality of a particular product
-entry (usually flowers).
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| GENERIC_SHELF | 0 | Default value, indicating no specific shelf choice. |
-| ECONOMY | 1 | &#39;Economy&#39; shelf. Best value for the money, generally with a focus on THC-per-gram. |
-| MIDSHELF | 2 | &#39;Midshelf&#39;. Medium-grade products that strike a balance between cost and potency/quality. |
-| TOPSHELF | 3 | &#39;Topshelf&#39;. High-grade, or highly-refined products, that focus on potency or quality to the exclusion or detriment of cost. |
