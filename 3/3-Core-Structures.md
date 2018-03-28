@@ -10,16 +10,12 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
 ## Table of Contents
 
 - `base`: Foundational structures used across the spec.
-    - [base/Compression.proto](#base/Compression.proto)
-        - [Compression](#opencannabis.base.Compression)
-        - [Compression.Type](#opencannabis.base.Compression.Type)
-    - [base/ProductKind.proto](#base/ProductKind.proto)
-        - [ProductKind](#opencannabis.base.ProductKind)
-    - [base/Language.proto](#base/Language.proto)
-        - [Language](#opencannabis.base.Language)
-    - [base/ProductKey.proto](#base/ProductKey.proto)
-        - [ProductKey](#opencannabis.base.ProductKey)
-        - [ProductReference](#opencannabis.base.ProductReference)
+    - [Compression](#opencannabis.base.Compression)
+    - [Compression.Type](#opencannabis.base.Compression.Type)
+    - [ProductKind](#opencannabis.base.ProductKind)
+    - [Language](#opencannabis.base.Language)
+    - [ProductKey](#opencannabis.base.ProductKey)
+    - [ProductReference](#opencannabis.base.ProductReference)
 - `temporal`: Dates, times, and so on.
     - [temporal/Date.proto](#temporal/Date.proto)
         - [Date](#opencannabis.temporal.Date)
@@ -176,16 +172,9 @@ Foundational structures used across the spec.
 {% endnomnoml %}
 
 
-<a name="base/Compression.proto"/>
-
-### base/Compression.proto
-Provides tools and structures related to compressing data, and indicating data compression. Also enumerates
-registered compression algorithims.
-
-
 <a name="opencannabis.base.Compression"/>
 
-#### Compression
+#### `Compression`
 Specifies enabled/disabled state and compression type, and is usually attached to arbitrary data or metadata.
 
 
@@ -197,7 +186,7 @@ Specifies enabled/disabled state and compression type, and is usually attached t
 
 <a name="opencannabis.base.Compression.Type"/>
 
-#### Compression.Type
+#### `Compression.Type`
 Enumerates available types of compression, or strategies or algorithms for compressing data.
 
 | Name | Number | Description |
@@ -208,16 +197,10 @@ Enumerates available types of compression, or strategies or algorithms for compr
 | SNAPPY | 3 | Snappy-based compression. |
 
 
-
-<a name="base/ProductKind.proto"/>
 <p align="right"><a href="#top">Top</a></p>
-
-### base/ProductKind.proto
-Enumerates types of addressable cannabis products.
-
 <a name="opencannabis.base.ProductKind"/>
 
-#### ProductKind
+#### `ProductKind`
 Enumerates types of products known to the spec.
 
 | Name | Number | Description |
@@ -231,16 +214,10 @@ Enumerates types of products known to the spec.
 | PLANTS | 6 | Plants sold direct, in various forms such as pre-grown (clones) or raw seeds. |
 | MERCHANDISE | 7 | Merchandise, usually branded in-house. Also covers glassware and miscellaneous items. |
 
-
-<a name="base/Language.proto"/>
 <p align="right"><a href="#top">Top</a></p>
-
-### base/Language.proto
-Specifies natural language-related messages and enumerations. Also enumerates registered languages.
-
 <a name="opencannabis.base.Language"/>
 
-#### Language
+#### `Language`
 Specifies languages available for specification, usually used as an attachment to content or media.
 
 | Name | Number | Description |
@@ -250,16 +227,10 @@ Specifies languages available for specification, usually used as an attachment t
 | FRENCH | 2 | French. |
 
 
-
-<a name="base/ProductKey.proto"/>
 <p align="right"><a href="#top">Top</a></p>
-
-### base/ProductKey.proto
-Specifies structures that reference specific products at their unique key or name.
-
 <a name="opencannabis.base.ProductKey"/>
 
-#### ProductKey
+#### `ProductKey`
 Specifies a general key for a product, which is the combined specification of a product ID and type, which is
 enumerated in `base.ProductType`.
 
@@ -271,7 +242,7 @@ enumerated in `base.ProductType`.
 
 <a name="opencannabis.base.ProductReference"/>
 
-#### ProductReference
+#### `ProductReference`
 Specifies a reference to a product.
 
 
