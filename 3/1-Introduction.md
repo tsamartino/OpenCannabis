@@ -29,13 +29,13 @@ connecting disparate systems and datasets.
     1. [Message Categories](2-Datamodel.md)
         - [Part 1.1: Core Structures](3-Core-Structures.md)
         - [Part 1.2: Extension Structures](4-Extension-Structures.md)
-- **[Section 2: Services](5-Services.md): Information in motion**
-    1. [Toolchain](5-Services.md)
-    1. [RPC](5-Services.md)
-    1. [REST](5-Services.md)
-    1. [Open Services](5-Services.md)
-    1. [Vendored Services](5-Services.md)
-    1. [Service Verticals](5-Services.md)
+- **Section 2: Services: Information in motion**
+    1. Toolchain
+    1. RPC
+    1. REST
+    1. Open Services
+    1. Vendored Services
+    1. Service Verticals
         1. Cultivation
         1. Transport
         1. Manufacturing
@@ -43,9 +43,9 @@ connecting disparate systems and datasets.
         1. Wholesale
         1. Retail
         1. Consumer
-- **[Seciton 3: Tables](6-Tables.md): Insights from information**
-    1. [Toolchain](6-Tables.md)
-    1. [Data Concerns](6-Tables.md)
+- **Seciton 3: Tables: Insights from information**
+    1. Toolchain
+    1. Data Concerns
         1. Telemetry
         1. Laboratory Testing
         1. Commercial Ordering
