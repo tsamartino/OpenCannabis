@@ -11,7 +11,7 @@
 
 ## Extensions
 
-* [Media](4/README.md) (Status: `RAW`)
+* [4/OCS-M: Digital Media](4/README.md)
 
 ## RFC Reference
 
