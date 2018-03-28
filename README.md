@@ -1,4 +1,11 @@
-# OpenCannabis Project  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
+# OpenCannabis Project
+![Version: V1](https://img.shields.io/badge/Version-V1-lightgray.svg?style=flat-square)
+[![Status: Raw](https://img.shields.io/badge/Status-Raw-lightgray.svg?style=flat-square)](https://rfc.opencannabis.info/2/#Raw-Specifications)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/OpenCannabis/RFC.svg?style=flat-square&label=code%20quality)](https://codeclimate.com/github/OpenCannabis/RFC)
+[![Travis branch](https://img.shields.io/travis/OpenCannabis/RFC.svg?style=flat-square)](https://travis-ci.org/OpenCannabis/RFC)
+
+
 
 _OpenCannabis_ is a multilateral industrial effort to create an interoperable technical data specification tailored for
 the **worldwide legal cannabis market**.
@@ -32,6 +39,7 @@ If you'd like to adopt the spec, or list yourself as a backer, file a pull reque
 | Bloombox          | [bloombox.io](https://bloombox.io)                  | Software Provider                       |
 | Caliva            | [caliva.menu](https://caliva.menu)                  | Cultivator, Retailer, Manufacturer, Lab |
 | Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                |
+| M3 Mobile Meds    | [m3meds.com](http://www.m3meds.com)                 | Distributor                             |
 
 <div style="text-align:center;width:100%;">
 <img align="center" src="https://storage.googleapis.com/ocs-media/backers-v1.png" alt="Spec Adopters">
