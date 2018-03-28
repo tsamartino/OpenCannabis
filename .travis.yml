@@ -9,5 +9,5 @@ cache: yarn
 
 before_install: yarn
 install: ./node_modules/gitbook-cli/bin/gitbook.js install
-script: ./node_modules/gitbook-cli/bin/gitbook build
+script: ./node_modules/gitbook-cli/bin/gitbook.js build
 
