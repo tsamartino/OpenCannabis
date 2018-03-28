@@ -34,7 +34,6 @@ _"Digital media,"_ in this context, refers to:
 
 ### Table of Contents
 - **[Subpart 1: Datamodel](./1-Datamodel.md)**
-    - Coming soon.
 
 ## Copyright Notice
 
