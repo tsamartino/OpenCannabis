@@ -84,6 +84,22 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
     - [contact/Website.proto](#contact/Website.proto)
       - [Website](#opencannabis.contact.Website)
 - `media`: Images, video, documents, etc.
+  - [media/MediaOrientation.proto](#media/MediaOrientation.proto)
+      - [MediaOrientation](#opencannabis.media.MediaOrientation)
+  - [media/MediaKey.proto](#media/MediaKey.proto)
+      - [MediaKey](#opencannabis.media.MediaKey)
+  - [media/MediaType.proto](#media/MediaType.proto)
+      - [DocumentType](#opencannabis.media.DocumentType)
+      - [ImageType](#opencannabis.media.ImageType)
+      - [MediaType](#opencannabis.media.MediaType)
+      - [VideoType](#opencannabis.media.VideoType)
+      - [DocumentType.DocumentKind](#opencannabis.media.DocumentType.DocumentKind)
+      - [ImageType.ImageKind](#opencannabis.media.ImageType.ImageKind)
+      - [MediaType.Kind](#opencannabis.media.MediaType.Kind)
+      - [VideoType.VideoKind](#opencannabis.media.VideoType.VideoKind)
+  - [media/MediaItem.proto](#media/MediaItem.proto)
+      - [MediaItem](#opencannabis.media.MediaItem)
+- `structs`: Flags, types, pricing, weight, etc
   - [structs/ProductFlags.proto](#structs/ProductFlags.proto)  
       - [ProductFlag](#opencannabis.structs.ProductFlag)
   - [structs/Species.proto](#structs/Species.proto)
@@ -1855,7 +1871,6 @@ some quantity.
 
 ### EdibleIngredient
 Specifies an ingredient included in an edible.
-
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
