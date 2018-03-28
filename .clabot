@@ -1,5 +1,5 @@
 {
-  "contributors": ["sgammon"],
+  "contributors": ["sgammon", "tyler-porras", "tsamartino", "samt", "RandyStevens", "noahdamiani", "mstan", "momentron", "cannabot", "KyleVandagriff"],
   "message": "OpenCannabis requires contributors to sign a _Contributor License Agreement_, and we don\"t have one on file for you! In order for us to review and merge your code, please contact @OpenCannabis/editors to get yourself added.",
   "label": "CLA: Ready",
   "recheckComment": "clacheck"
