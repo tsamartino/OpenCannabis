@@ -51,6 +51,16 @@ You can start contributing by sending a pull request to [OpenCannabis/RFC](https
 GitHub. See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information, including guidance on filing pull requests and
 issues.
 
+#### Contributor License Agreements (CLAs)
+
+Each individual and corporate contributor must complete and sign a _Contributor License Agreement_ before contributions
+may be accepted. This agreement stipulates that contributions to the _OpenCannabis Project_ are owned by the _Project_
+and automatically made open source, among other things.
+
+You can preview the CLAs in PDF form before signing. They very closely follow the Apache Foundation CLAs:
+- [Individual Contributor License Agreement (ICLA)](./3/OpenCannabis-ICLA.pdf)
+- [Corporate Contributor License Agreement (CCLA)](./3/OpenCannabis-CCLA.pdf)
+
 ### Guidelines
 
 * Specifications **MUST** be created and modified by pull requests according to [RFC 1/C4](1/README.md)
