@@ -6,9 +6,7 @@ git:
 
 cache: yarn
 
-before_install:
-- yarn global add gitbook-cli
-
-install: gitbook install
-script: gitbook build
+before_install: yarn
+install: ./node_modules/gitbook-cli/bin/gitbook.js install
+script: ./node_modules/gitbook-cli/bin/gitbook build
 
