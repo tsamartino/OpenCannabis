@@ -261,13 +261,13 @@ Specifies a particular calendar date.
 <a name="temporal/Instant.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-### temporal/Instant.proto
+### `Instant`
 Provides timestamp-related definitions and structures.
 
 
 <a name="opencannabis.temporal.Instant"/>
 
-#### Instant
+#### `Instant.type`
 Specifies a particular moment in time.
 
 
@@ -281,13 +281,13 @@ Specifies a particular moment in time.
 <a name="temporal/Time.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-### temporal/Time.proto
+### `Time`
 Provides time-of-day-related definitions and structures.
 
 
 <a name="opencannabis.temporal.Time"/>
 
-#### Time
+#### `Time.type`
 Specifies a particular time of day.
 
 
@@ -329,11 +329,11 @@ Cryptographic primitives, including hashing tools, encrypted data containers, an
 <a name="crypto/primitives/Integrity.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## crypto/primitives/Integrity.proto
+## `crypto.primitives.Integrity.Hash`
 
 <a name="opencannabis.crypto.primitives.integrity.Hash"/>
 
-### Hash
+### `Hash.type`
 Specifies the hash portion of hashed data, along with the algorithm used to calculate the digest enclosed. This
 particular container does not specify or otherwise contain the original referenced data.
 
@@ -347,7 +347,7 @@ particular container does not specify or otherwise contain the original referenc
 
 <a name="opencannabis.crypto.primitives.integrity.HashedData"/>
 
-### HashedData
+### `HashedData.type`
 Specifies a set of raw data, of some kind, and an attached digest/hash value, along with the algorithm used to
 calculate the digest.
 
@@ -359,7 +359,7 @@ calculate the digest.
 
 <a name="opencannabis.crypto.primitives.integrity.HashAlgorithm"/>
 
-### HashAlgorithm
+### `HashAlgorithm.number`
 Enumerates hash algorithms supported or known by the runtime for shared use.
 
 | Name | Number | Description |
@@ -446,15 +446,10 @@ Location data, distance, addresses, and so on.
   |WY / Wyoming: 51]
 {% endnomnoml %}
 
-<a name="geo/Country.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/Country.proto"/>
 
-## geo/Country.proto
-
-
-<a name="opencannabis.geo.Country"/>
-
-### Country
+### `Country.type`
 Specifies an independent nation state.
 
 
@@ -463,15 +458,10 @@ Specifies an independent nation state.
 | code | [string](#string) |  | ISO country code. |
 
 
-<a name="geo/Point.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/Point.proto"/>
 
-## geo/Point.proto
-
-
-<a name="opencannabis.geo.Point"/>
-
-### Point
+### `Point.type`
 Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
 optionally an accuracy rating. Accuracy and elevation are interpreted in &#39;feet&#39; by default.
 
@@ -484,15 +474,10 @@ optionally an accuracy rating. Accuracy and elevation are interpreted in &#39;fe
 | accuracy | [double](#double) |  | Accuracy rating attached to this point, if any. |
 
 
-<a name="geo/Province.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/Province.proto"/>
 
-## geo/Province.proto
-
-
-<a name="opencannabis.geo.Province"/>
-
-### Province
+### `Province.type`
 Specifies a US or non-US province.
 
 
@@ -502,15 +487,10 @@ Specifies a US or non-US province.
 | province | [string](#string) |  | Generic province reference, by name. |
 
 
-<a name="geo/Location.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="geo/Location.proto"/>
 
-## geo/Location.proto
-
-
-<a name="opencannabis.geo.Distance"/>
-
-### Distance
+### `Distance.type`
 Specifies a distance between two locations.
 
 
