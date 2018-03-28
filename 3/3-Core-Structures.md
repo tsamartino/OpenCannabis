@@ -172,7 +172,7 @@ Foundational structures used across the spec.
 #title: "Base Models: Product References"
 #font: Lato
 #zoom: 1
-#direction: down
+#direction: right
 #fill: #d5e7ee; #8ebff2
 
 [ProductKind
