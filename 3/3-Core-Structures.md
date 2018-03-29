@@ -125,8 +125,8 @@ Enumerates available types of compression, or strategies or algorithms for compr
 | SNAPPY | 3 | Snappy-based compression. |
 
 
-<a name="opencannabis.base.ProductKind"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.base.ProductKind"/>
 
 #### `ProductKind`
 Enumerates types of products known to the spec.
@@ -142,8 +142,8 @@ Enumerates types of products known to the spec.
 | PLANTS | 6 | Plants sold direct, in various forms such as pre-grown (clones) or raw seeds. |
 | MERCHANDISE | 7 | Merchandise, usually branded in-house. Also covers glassware and miscellaneous items. |
 
-<a name="opencannabis.base.Language"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.base.Language"/>
 
 #### `Language`
 Specifies languages available for specification, usually used as an attachment to content or media.
@@ -155,8 +155,8 @@ Specifies languages available for specification, usually used as an attachment t
 | FRENCH | 2 | French. |
 
 
-<a name="opencannabis.base.ProductKey"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.base.ProductKey"/>
 
 #### `ProductKey`
 Specifies a general key for a product, which is the combined specification of a product ID and type, which is
@@ -409,8 +409,8 @@ Location data, distance, addresses, and so on.
   |WY / Wyoming: 51]
 {% endnomnoml %}
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/Country.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Country.type`
 Specifies an independent nation state.
@@ -437,8 +437,8 @@ optionally an accuracy rating. Accuracy and elevation are interpreted in &#39;fe
 | accuracy | [double](#double) |  | Accuracy rating attached to this point, if any. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/Province.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Province.type`
 Specifies a US or non-US province.
@@ -450,8 +450,8 @@ Specifies a US or non-US province.
 | province | [string](#string) |  | Generic province reference, by name. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/Location.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Distance.type`
 Specifies a distance between two locations.
@@ -520,8 +520,8 @@ Enumeration of recognized units of distance.
 | MILES | 6 | Distance in miles. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/Address.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Address.Type`
 Specifies a standard postal address, with two address lines, and space for a municipality (&#39;city&#39;), provincial
@@ -538,8 +538,8 @@ authority (&#39;state&#39;), and national authority (&#39;country&#39;).
 | country | [string](#string) |  | Country code associated with this address (&#39;US&#39; or &#39;USA&#39; for United States, for instance). |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/USState.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `USState.Number`
 Enumerates United States member states and territories by their full name and abbreviation.
