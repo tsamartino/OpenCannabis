@@ -210,8 +210,8 @@ Specifies video type information.
 | kind | [VideoType.VideoKind](#opencannabis.media.VideoType.VideoKind) |  | Specifies the kind of video being attached or described. |
 
 
-<a name="opencannabis.media.DocumentType.DocumentKind"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.media.DocumentType.DocumentKind"/>
 
 ### `DocumentType.DocumentKind.Number`
 Specifies kinds of documents that may be attached or described.
@@ -239,8 +239,8 @@ Specifies kinds of images that may be attached or described.
 | WEBP | 4 | WEBP image. |
 
 
-<a name="opencannabis.media.MediaType.Kind"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.media.MediaType.Kind"/>
 
 ### `MediaType.Kind.Number`
 Enumerates, in generic terms, the kinds of media that can be attached or described.
@@ -253,8 +253,8 @@ Enumerates, in generic terms, the kinds of media that can be attached or describ
 | VIDEO | 3 | Video data. |
 
 
-<a name="opencannabis.media.VideoType.VideoKind"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.media.VideoType.VideoKind"/>
 
 ### `VideoType.VideoKind.Number`
 Specifies kinds of videos that may be attached or described.
@@ -266,8 +266,8 @@ Specifies kinds of videos that may be attached or described.
 | HLS | 2 | HTTP Live Streaming video. |
 
 
-<a name="media/MediaItem.proto"/>
 <p align="right"><a href="#top">Top</a></p>
+<a name="media/MediaItem.proto"/>
 
 ### `MediaItem.Type`
 Describes an individual media item, which can be an image, video, etc.
