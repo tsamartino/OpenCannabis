@@ -19,7 +19,7 @@ This specification's current status is considered `RAW`, i.e. pre-`DRAFT`. Distr
 ### Abstract
 
 This document describes an extension to the _OpenCannabis Specification, version 1_, that introduces menu-
-related definitions structures, and services that compose, create .
+related definitions structures, and services that compose, create and reference menus.
 
 _"Menu"_ in this context, refers to:
 - The contents of a dispensaries products
@@ -58,7 +58,7 @@ _"Menu"_ in this context, refers to:
 
 ## Protocol Definition
 ### `opencannabis.menu`
-Specifies a menu, menu data structure, contents, products and so on
+Specifies a menu, menu data structure, contents, products and so on.
 
 {% nomnoml %}
 
