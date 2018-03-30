@@ -43,7 +43,7 @@ connecting disparate systems and datasets.
         1. Wholesale
         1. Retail
         1. Consumer
-- **Seciton 3: Tables: Insights from information**
+- **Section 3: Tables: Insights from information**
     1. Toolchain
     1. Data Concerns
         1. Telemetry

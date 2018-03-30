@@ -58,6 +58,30 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
     - [EmailAddress](#opencannabis.contact.EmailAddress)
     - [Website](#opencannabis.contact.Website)
 - `products`: High-level concrete product structures.
+    - [Merchandise](#opencannabis.products.Merchandise)
+    - [MerchandiseFlag](#opencannabis.products.MerchandiseFlag)
+    - [MerchandiseType](#opencannabis.products.MerchandiseType)
+    - [Apothecary](#opencannabis.products.Apothecary)
+    - [ApothecaryType](#opencannabis.products.ApothecaryType)
+    - [Flower](#opencannabis.products.Flower)
+    - [Edible](#opencannabis.products.Edible)
+    - [EdibleIngredient](#opencannabis.products.EdibleIngredient)
+    - [EdibleFlag](#opencannabis.products.EdibleFlag)
+    - [EdibleType](#opencannabis.products.EdibleType)
+    - [Extract](#opencannabis.products.Extract)
+    - [ExtractFlag](#opencannabis.products.ExtractFlag)
+    - [ExtractType](#opencannabis.products.ExtractType)
+    - [DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy)
+    - [Channel](#opencannabis.products.distribution.Channel)
+    - [ChannelType](#opencannabis.products.distribution.ChannelType)
+    - [Cartridge](#opencannabis.products.Cartridge)
+    - [CartridgeType](#opencannabis.products.CartridgeType)
+    - [Plant](#opencannabis.products.Plant)
+    - [PlantType](#opencannabis.products.PlantType)
+    - [Preroll](#opencannabis.products.Preroll)
+    - [PrerollFlag](#opencannabis.products.PrerollFlag)
+
+
 ----
 
 ## `opencannabis.base`
