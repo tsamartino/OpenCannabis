@@ -29,7 +29,7 @@ _"Menu"_ in this context, refers to:
 
 
 ### Table of Contents
-- [Protocol Definition](#Protocol-Definition): `Menu`: distribution channels, product labels, product types, etc.
+- [Protocol Definition](#Protocol-Definition): `Menu`: Distribution channels, product labels, product types, etc.
     - [CustomSection](#opencannabis.products.menu.section.CustomSection)
     - [SectionMedia](#opencannabis.products.menu.section.SectionMedia)
     - [SectionSettings](#opencannabis.products.menu.section.SectionSettings)
