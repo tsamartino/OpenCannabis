@@ -161,8 +161,8 @@ Full menu structures and payloads.
 {% endnomnoml %}
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/menu/Section.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `CustomSection.Type`
 Custom configuration-based menu sections, usually via `FilteredSection`.
@@ -249,8 +249,8 @@ Flags that may be applied to a section&#39;s configuration.
 | FEATURED | 1 | This section should be promoted and/or presented with high priority. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/menu/Menu.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Menu.Type`
 Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
