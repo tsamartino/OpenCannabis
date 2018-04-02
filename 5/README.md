@@ -22,7 +22,7 @@ This document describes an extension to the _OpenCannabis Specification, version
 related definitions structures, and services that compose, create and reference menus.
 
 _"Menu"_ in this context, refers to:
-- The contents of a dispensaries products
+- The contents of a dispensary&#39;s products
 - The product categories and their respective names
 - The status of the "Menu"
 - The channel through which the "Menu" is displayed to customers
@@ -110,8 +110,8 @@ Specifies a menu, menu data structure, contents, products and so on.
   | extracts:StaticMenu.ExtractsEntry
   | flowers:StaticMenu.FlowersEntry
   | merchandise:StaticMenu.MerchandiseEntry
-  | plants:StaticMenu.PlantsEntry
-  | prerolls:StaticMenu.PrerollsEntry]
+  | prerolls:StaticMenu.PrerollsEntry
+  | plants:StaticMenu.PlantsEntry]
 
 [StaticMenu.ApothecaryEntry
   | key:string
@@ -145,11 +145,11 @@ Specifies a menu, menu data structure, contents, products and so on.
 
 [StaticMenu.PrerollsEntry
   | key:string
-  | value:opencannabis.products.Plant]
-
-[StaticMenu.PrerollsEntry
-  | key:string
   | value:opencannabis.products.Preroll]
+
+[StaticMenu.PlantsEntry
+  | key:string
+  | value:opencannabis.products.Plant]
 
 
 {% endnomnoml %}
