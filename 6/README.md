@@ -11,6 +11,7 @@ contributors:
 # OpenCannabis: Commerce Extension
 - Version `1.0`
 - Status: `RAW`
+<a name="top"/>
 
 ### Status of this Memo
 
@@ -195,8 +196,8 @@ Specifies a commercial discount structure, order structure, product variance, cu
 {% endnomnoml %}
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Discounts.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Discount
 Specifies a discount to be applied during a purchase or order.
@@ -213,6 +214,7 @@ Specifies a discount to be applied during a purchase or order.
 
 
 <a name="opencannabis.commerce.DiscountSpec"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### DiscountSpec
 Specifies the concept of a discount, and how it is set to behave.
@@ -226,6 +228,7 @@ Specifies the concept of a discount, and how it is set to behave.
 
 
 <a name="opencannabis.commerce.DiscountBasis"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### DiscountBasis
 Enumerates operational calculation modes for discounts.
@@ -238,6 +241,7 @@ Enumerates operational calculation modes for discounts.
 
 
 <a name="opencannabis.commerce.DiscountType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### DiscountType
 Enumerates types of discounts that may be applied.
@@ -249,8 +253,8 @@ Enumerates types of discounts that may be applied.
 | COMMERCIAL | 2 | Commercial discount, for instance, for vendors, brand ambassadors, and staff. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Delivery.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### DeliveryDestination
 Specifies the location to deliver the order.
@@ -262,8 +266,8 @@ Specifies the location to deliver the order.
 | instructions | [string](#string) |  | Special delivery instructions |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Customer.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Customer
 Customer identity.
@@ -276,8 +280,8 @@ Customer identity.
 | user_key | [string](#string) |  | Resolved subject user key. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Item.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Item
 Specifies the Item via the product key as well as weight, and count of product ordered
@@ -314,8 +318,8 @@ Specifies weight and price of  ordered product
 | SIZE | 2 | Variance by product size. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Order.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Order
 Represents a full order submitted to the server for fulfillment, from an end-user, for delivery or express pickup.
@@ -359,6 +363,7 @@ Specifies the desired timing of the delivery order.
 
 
 <a name="opencannabis.commerce.StatusCheckin"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### StatusCheckin
 Specifies a moment at which an order changed status, when it happened, and, optionally, why.
@@ -371,6 +376,7 @@ Specifies a moment at which an order changed status, when it happened, and, opti
 
 
 <a name="opencannabis.commerce.OrderStatus"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### OrderStatus
 Enumeration for current status of order
@@ -386,6 +392,7 @@ Enumeration for current status of order
 
 
 <a name="opencannabis.commerce.OrderType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### OrderType
 Specifies the type of order requested.
@@ -397,6 +404,7 @@ Specifies the type of order requested.
 
 
 <a name="opencannabis.commerce.SchedulingType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### SchedulingType
 Specifies the types of delivery timing.
@@ -407,8 +415,8 @@ Specifies the types of delivery timing.
 | TIMED | 1 | Desired time. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="commerce/Currency.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### CurrencyValue
 Specifies a value, with a particular currency specification as the unit.
@@ -422,6 +430,7 @@ Specifies a value, with a particular currency specification as the unit.
 
 
 <a name="opencannabis.commerce.CurrencyType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### CurrencyType
 Specifies known or explicitly supported currency types.
@@ -434,6 +443,7 @@ Specifies known or explicitly supported currency types.
 
 
 <a name="opencannabis.commerce.FiatCurrency"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### FiatCurrency
 Specifies known or explicitly supported fiat currencies.
