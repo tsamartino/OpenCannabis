@@ -426,7 +426,6 @@ each map value is itself a product, and each map is addressed at a typed propert
 
 ### `StaticMenu.PrerollsEntry.Type`
 
-
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
