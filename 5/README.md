@@ -145,7 +145,7 @@ Specifies a menu, menu data structure, contents, products and so on.
 
 [StaticMenu.PrerollsEntry
   | key:string
-  | value:opencannabis.products.Plant]
+  | value:opencannabis.products.Preroll]
 
 [StaticMenu.PlantsEntry
   | key:string
