@@ -11,6 +11,7 @@ contributors:
 # OpenCannabis: Menu Extension
 - Version `1.0`
 - Status: `RAW`
+<a name="top"/>
 
 ### Status of this Memo
 
@@ -168,8 +169,8 @@ Specifies a menu, menu data structure, contents, products and so on.
 
 {% endnomnoml %}
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/menu/Menu.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Menu
 Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
@@ -197,8 +198,8 @@ Specifies settings used to generate a menu, or used as input when generating men
 | section | [section.Section](#opencannabis.products.menu.section.Section) | repeated | Sections to include in the menu. If unspecified, include all sections. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.Metadata"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Metadata
 Specifies metadata for a package of menu data.
@@ -213,8 +214,8 @@ Specifies metadata for a package of menu data.
 | settings | [MenuSettings](#opencannabis.products.menu.MenuSettings) |  | Settings that produced this menu data. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.SectionData"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### SectionData
 Specifies an inner menu payload which contains menu data for a given menu section.
@@ -237,8 +238,8 @@ Specifies a menu split into section-level chunks.
 | payload | [SectionData](#opencannabis.products.menu.SectionData) | repeated | Specifies a payload of sectioned menu data. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.StaticMenu"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### StaticMenu
 Specifies an inner menu payload which contains mapped data, where each map key is a section name, lowercased, and
@@ -340,8 +341,8 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  |  |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.Flag"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Flag
 Enumerates flags that can be set on a menu.
@@ -352,8 +353,8 @@ Enumerates flags that can be set on a menu.
 | PRIVATE | 1 | Indicates that the underlying menu data is currently private and should not be exposed publicly. |
 | OUT_OF_DATE | 2 | Indicates that the underlying menu data is known to be out-of-date. |
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.Status"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### Status
 Enumerates statuses a menu may assume.

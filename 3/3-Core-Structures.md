@@ -149,8 +149,8 @@ Enumerates available types of compression, or strategies or algorithms for compr
 | SNAPPY | 3 | Snappy-based compression. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.ProductKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `ProductKind`
 Enumerates types of products known to the spec.
@@ -166,8 +166,8 @@ Enumerates types of products known to the spec.
 | PLANTS | 6 | Plants sold direct, in various forms such as pre-grown (clones) or raw seeds. |
 | MERCHANDISE | 7 | Merchandise, usually branded in-house. Also covers glassware and miscellaneous items. |
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.Language"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `Language`
 Specifies languages available for specification, usually used as an attachment to content or media.
@@ -179,8 +179,8 @@ Specifies languages available for specification, usually used as an attachment t
 | FRENCH | 2 | French. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.base.ProductKey"/>
+<p align="right"><a href="#top">Top</a></p>
 
 #### `ProductKey`
 Specifies a general key for a product, which is the combined specification of a product ID and type, which is
@@ -445,8 +445,8 @@ Specifies an independent nation state.
 | code | [string](#string) |  | ISO country code. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="geo/Point.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Point.type`
 Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
@@ -831,8 +831,8 @@ Specifies Timestamps, Products, Brands, formats, encoding, and so on
 {% endnomnoml %}
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="content/Name.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Name.Type`
 Displayable content name.
@@ -843,8 +843,8 @@ Displayable content name.
 | display | [string](#string) |  | Display name, if different from the &#39;primary name&#39;. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="content/Content.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Content.Type`
 Specifies a freeform content payload of some kind.
@@ -883,8 +883,8 @@ Enumerates supported types/formats for content data.
 | HTML | 2 | HTML format. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="content/MaterialsData.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MaterialsData.Type`
 Specifies materials-related data about a product that contains cannabis.
@@ -900,8 +900,8 @@ Specifies materials-related data about a product that contains cannabis.
 | channel | [opencannabis.products.distribution.DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy) | repeated | Specifies distribution policy for this particular subject material. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="content/Brand.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Brand.Type`
 Information about a particular brand or producer of products or materials.
@@ -914,8 +914,8 @@ Information about a particular brand or producer of products or materials.
 | media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) | repeated | Media items attached to this brand. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="content/ProductContent.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `ProductContent.Type`
 Specifies a common model for product content, mostly user-visible, and shared by all concrete models. Most of the
@@ -973,8 +973,8 @@ information
 
 {% endnomnoml %}
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="person/PersonName.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Name.Type`
 Represents a human being&#39;s name, in the style of &#34;given&#34; name (first) and &#34;family&#34; name (last) being concatenated to
@@ -990,8 +990,8 @@ form a full person&#39;s name. Additional names, like middle names, etc, are als
 | postfix | [string](#string) |  | Postfix for a person&#39;s name. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="person/Person.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Person.Type`
 A person&#39;s and their name, legal name, nickname, etc.
@@ -1035,8 +1035,8 @@ Specifies a person&#39;s contact information, address, email, phone numbers, web
 {% endnomnoml %}
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="contact/PhoneNumber.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `PhoneNumber.Type`
 Payload that specifies a phone number, and any additional information to be carried with it (including verification
@@ -1049,8 +1049,8 @@ state, if applicable).
 | validated | [bool](#bool) |  | Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone number remains unvalidated. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="contact/ContactInfo.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `ContactInfo.Type`
 Contact information for a person, organization, or other entity.
@@ -1064,8 +1064,8 @@ Contact information for a person, organization, or other entity.
 | website | [Website](#opencannabis.contact.Website) |  | Website contact information. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="contact/EmailAddress.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `EmailAddress.Type`
 Specifies information about an electronic mail (email) address, and optionally, its validation status.
@@ -1076,8 +1076,8 @@ Specifies information about an electronic mail (email) address, and optionally, 
 | validated | [bool](#bool) |  | Validation status. Usable by providers to indicate an email address that has already been validated, or that an address remains unvalidated. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="contact/Website.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Website.Type`
 Specifies a structure that describes a URI/website, and related information.
@@ -1317,8 +1317,8 @@ Specifies types of generic merchandise that may be carried on a dispensary menu.
 | LIGHTER | 4 | Tools to produce fire to consume cannabis. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Apothecary.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Apothecary.Type`
 Specifies an apothecary item for sale. Apothecary items are described as drugstore-style items, like capsules, oils,
@@ -1347,8 +1347,8 @@ Specifies types of apothecary items that may be expressed.
 | SUBLINGUAL | 5 | Specifies a sublingual-applied product, i.e., under-the-tongue. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Flower.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Flower.Type`
 Specifies the model for a traditional &#39;flower&#39;-style product, which involves the sale or consumption of the flower
@@ -1361,9 +1361,8 @@ or &#39;bud,&#39; of a cannabis plant.
 | material | [opencannabis.content.MaterialsData](#opencannabis.content.MaterialsData) |  | Materials and handling information about this product. |
 
 
-<p align="right"><a href="#top">Top</a></p>
-
 <a name="opencannabis.products.Edible"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Edible.Type`
 Specifies an edible product that may be consumed as a food or beverage, that contains cannabis or cannabinoids in
@@ -1420,8 +1419,8 @@ Specifies types of edible products that are known and considered sub-categories 
 | DRINK | 4 | Specifies beverage products. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Extract.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Extract.Type`
 Specifies an extracted cannabis product, whereby cannabis plant material has been reduced to a more potent and
@@ -1465,8 +1464,8 @@ Enumerates types of extracted oleoresin cannabis products that have known/specif
 | ROSIN | 7 | Heated and terpene-vaporized live resin. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/distribution/DistributionChannel.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `DistributionPolicy.Type`
 Specifies information required to note a channel and its settings for a given datapoint. Presence of this record
@@ -1506,8 +1505,8 @@ policies.
 | MARKETPLACE | 2 | Distribution through a second-party partner marketplace system. &#34;Marketplace retail&#34; would refer to digital or physical aggregators or clearinghouses that work directly with consumers. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Cartridge.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Cartridge.Type`
 Specifies a vaporizor or cartridge-style product, for instance, vaporizor pens and table units. Vaporizors are
@@ -1535,8 +1534,8 @@ Specifies types of cartridge products that may be expressed.
 | KIT | 3 | Specifies a full kit with a battery and cartridge unit. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Plant.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Plant.Type`
 Specifies a plant product, such as seeds, or clones, that are designed to be cultivated by the end user.
@@ -1562,8 +1561,8 @@ Enumerates types or subcategories of plants that may be sold.
 | CLONE | 2 | Specifies a cloned plant that is grown to some point and then sold. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Preroll.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Preroll.Type`
 Specifies a pre-rolled cannabis product, where a production process consumes cannabis plant material and produces
@@ -1595,8 +1594,8 @@ Specifies flags that may be specifically applied to pre-rolled cannabis products
 | FULL_FLOWER | 4 | Specifies that this pre-rolled item is rolled with &#34;full flower&#34; buds, rather than trimmings, or other discarded cannabis from other production processes. |
 | CONTAINS_TOBACCO | 5 | Specifies that this product contains tobacco. |
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.MenuProduct"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### MenuProduct
 Menu product payload stanza. Specifies a single product as a member of a menu section.
