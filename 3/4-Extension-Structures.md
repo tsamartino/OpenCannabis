@@ -10,12 +10,13 @@ Definitions considered core to the main specification are enumerated separately 
 
 ## Table of Contents
 - [4/OCS-M](../4/README.md) / `media`: Images, video, documents, etc.
-- `labtesting`: Laboratory testing and QA.
-- `pricing`: Pricing schemes and structures.
-- `proximity`: Bluetooth and GPS-related structures.
-- `oauth`: OAuth2 implementation structures.
-- `commerce`: Commercial ordering and fulfillment structures.
-- `accounting`: Bookkeeping, accounting, taxes, and so on.
+- [5/OCS-N](../5/README.md) / `menu` : Distribution channels, product labels, product types, etc.
+- [6/OCS-C](../6/README.md) / `commerce`: Commercial ordering and fulfillment structures.
+- [7/OCS-L](../7/README.md) / `labtesting`: Laboratory testing and QA.
+- [8/OCS-P](../8/README.md) / `pricing`: Pricing schemes and structures.
+- [9/OCS-X](../9/README.md) / `proximity`: Bluetooth and GPS-related structures.
+- [10/OCS-O](../10/README.md) / `oauth`: OAuth2 implementation structures.
+- [11/OCS-A](../11/README.md) / `accounting`: Bookkeeping, accounting, taxes, and so on.
 
 ----
 

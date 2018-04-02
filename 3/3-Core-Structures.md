@@ -58,6 +58,30 @@ separately in [Part 1.2, Extension Structures](4-Extension-Structures.md).
     - [EmailAddress](#opencannabis.contact.EmailAddress)
     - [Website](#opencannabis.contact.Website)
 - `products`: High-level concrete product structures.
+    - [Merchandise](#opencannabis.products.Merchandise)
+    - [MerchandiseFlag](#opencannabis.products.MerchandiseFlag)
+    - [MerchandiseType](#opencannabis.products.MerchandiseType)
+    - [Apothecary](#opencannabis.products.Apothecary)
+    - [ApothecaryType](#opencannabis.products.ApothecaryType)
+    - [Flower](#opencannabis.products.Flower)
+    - [Edible](#opencannabis.products.Edible)
+    - [EdibleIngredient](#opencannabis.products.EdibleIngredient)
+    - [EdibleFlag](#opencannabis.products.EdibleFlag)
+    - [EdibleType](#opencannabis.products.EdibleType)
+    - [Extract](#opencannabis.products.Extract)
+    - [ExtractFlag](#opencannabis.products.ExtractFlag)
+    - [ExtractType](#opencannabis.products.ExtractType)
+    - [DistributionPolicy](#opencannabis.products.distribution.DistributionPolicy)
+    - [Channel](#opencannabis.products.distribution.Channel)
+    - [ChannelType](#opencannabis.products.distribution.ChannelType)
+    - [Cartridge](#opencannabis.products.Cartridge)
+    - [CartridgeType](#opencannabis.products.CartridgeType)
+    - [Plant](#opencannabis.products.Plant)
+    - [PlantType](#opencannabis.products.PlantType)
+    - [Preroll](#opencannabis.products.Preroll)
+    - [PrerollFlag](#opencannabis.products.PrerollFlag)
+
+
 ----
 
 ## `opencannabis.base`
@@ -1235,6 +1259,22 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
 
 {% endnomnoml %}
 
+{% nomnoml %}
+
+
+#fill: #d5e7ee; #8ebff2
+[MenuProduct
+  | key:opencannabis.base.ProductKey
+  | apothecary:opencannabis.products.Apothecary
+  | cartridge:opencannabis.products.Cartridge
+  | edible:opencannabis.products.Edible
+  | extract:opencannabis.products.Extract
+  | flower:opencannabis.products.Flower
+  | merchandise:opencannabis.products.Merchandise
+  | plant:opencannabis.products.Plant
+  | preroll:opencannabis.products.Preroll]
+
+{% endnomnoml %}
 
 <p align="right"><a href="#top">Top</a></p>
 <a name="products/Merchandise.proto"/>
@@ -1554,3 +1594,21 @@ Specifies flags that may be specifically applied to pre-rolled cannabis products
 | FORTIFIED | 3 | Specifies that this pre-rolled item is fortified with extracted cannabis products in some manner. |
 | FULL_FLOWER | 4 | Specifies that this pre-rolled item is rolled with &#34;full flower&#34; buds, rather than trimmings, or other discarded cannabis from other production processes. |
 | CONTAINS_TOBACCO | 5 | Specifies that this product contains tobacco. |
+
+<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.MenuProduct"/>
+
+### MenuProduct
+Menu product payload stanza. Specifies a single product as a member of a menu section.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Section that this data is attached to. |
+| apothecary | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  | Apothecary product. |
+| cartridge | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  | Cartridge product. |
+| edible | [opencannabis.products.Edible](#opencannabis.products.Edible) |  | Edible product. |
+| extract | [opencannabis.products.Extract](#opencannabis.products.Extract) |  | Extract product. |
+| flower | [opencannabis.products.Flower](#opencannabis.products.Flower) |  | Flower product. |
+| merchandise | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  | Merchandise product. |
+| plant | [opencannabis.products.Plant](#opencannabis.products.Plant) |  | Plant product. |
+| preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
