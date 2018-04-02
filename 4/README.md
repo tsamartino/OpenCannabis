@@ -8,6 +8,8 @@ contributors:
   - Randal Stevens <randy@bloombox.io>
 ---
 
+<a name="top"/>
+
 # OpenCannabis: Media Extension
 - Version `1.0`
 - Status: `RAW`
@@ -210,8 +212,8 @@ Specifies video type information.
 | kind | [VideoType.VideoKind](#opencannabis.media.VideoType.VideoKind) |  | Specifies the kind of video being attached or described. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.media.DocumentType.DocumentKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `DocumentType.DocumentKind.Number`
 Specifies kinds of documents that may be attached or described.
@@ -239,8 +241,8 @@ Specifies kinds of images that may be attached or described.
 | WEBP | 4 | WEBP image. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.media.MediaType.Kind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaType.Kind.Number`
 Enumerates, in generic terms, the kinds of media that can be attached or described.
@@ -253,8 +255,8 @@ Enumerates, in generic terms, the kinds of media that can be attached or describ
 | VIDEO | 3 | Video data. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.media.VideoType.VideoKind"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `VideoType.VideoKind.Number`
 Specifies kinds of videos that may be attached or described.
@@ -266,8 +268,8 @@ Specifies kinds of videos that may be attached or described.
 | HLS | 2 | HTTP Live Streaming video. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="media/MediaItem.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MediaItem.Type`
 Describes an individual media item, which can be an image, video, etc.
