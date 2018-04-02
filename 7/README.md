@@ -10,7 +10,7 @@ contributors:
 
 <a name="top"/>
 
-# OpenCannabis: Menu Extension
+# OpenCannabis: Lab Testing Extension
 - Version `1.0`
 - Status: `RAW`
 
