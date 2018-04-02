@@ -69,17 +69,6 @@ Specifies a menu, menu data structure, contents, products and so on.
   | payload:SectionedMenu
   | menu:StaticMenu]
 
-[MenuProduct
-  | key:opencannabis.base.ProductKey
-  | apothecary:opencannabis.products.Apothecary
-  | cartridge:opencannabis.products.Cartridge
-  | edible:opencannabis.products.Edible
-  | extract:opencannabis.products.Extract
-  | flower:opencannabis.products.Flower
-  | merchandise:opencannabis.products.Merchandise
-  | plant:opencannabis.products.Plant
-  | preroll:opencannabis.products.Preroll]
-
 [MenuSettings
   | full:bool
   | keys_only:bool
@@ -191,24 +180,6 @@ are filed in. Categories are enumerated in `menu.Section`.
 | metadata | [Metadata](#opencannabis.products.menu.Metadata) |  | Metadata for the menu. |
 | payload | [SectionedMenu](#opencannabis.products.menu.SectionedMenu) |  | Data payloads attached to this menu. |
 | menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
-
-
-<a name="opencannabis.products.menu.MenuProduct"/>
-
-### MenuProduct
-Menu product payload stanza. Specifies a single product as a member of a menu section.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Section that this data is attached to. |
-| apothecary | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  | Apothecary product. |
-| cartridge | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  | Cartridge product. |
-| edible | [opencannabis.products.Edible](#opencannabis.products.Edible) |  | Edible product. |
-| extract | [opencannabis.products.Extract](#opencannabis.products.Extract) |  | Extract product. |
-| flower | [opencannabis.products.Flower](#opencannabis.products.Flower) |  | Flower product. |
-| merchandise | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  | Merchandise product. |
-| plant | [opencannabis.products.Plant](#opencannabis.products.Plant) |  | Plant product. |
-| preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
 
 
 <p align="right"><a href="#top">Top</a></p>
