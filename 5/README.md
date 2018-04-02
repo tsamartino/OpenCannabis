@@ -183,8 +183,8 @@ are filed in. Categories are enumerated in `menu.Section`.
 | menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
 
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="opencannabis.products.menu.MenuSettings"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### MenuSettings
 Specifies settings used to generate a menu, or used as input when generating menus.
@@ -228,6 +228,7 @@ Specifies an inner menu payload which contains menu data for a given menu sectio
 
 
 <a name="opencannabis.products.menu.SectionedMenu"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### SectionedMenu
 Specifies a menu split into section-level chunks.

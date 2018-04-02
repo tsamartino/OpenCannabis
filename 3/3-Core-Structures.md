@@ -1292,6 +1292,7 @@ clothing, containers, lighters, and other random stuff.
 
 
 <a name="opencannabis.products.MerchandiseFlag"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MerchandiseFlag.Number`
 Flags that may be applied specifically to merchandise items.
@@ -1304,6 +1305,7 @@ Flags that may be applied specifically to merchandise items.
 
 
 <a name="opencannabis.products.MerchandiseType"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `MerchandiseType.Number`
 Specifies types of generic merchandise that may be carried on a dispensary menu.
