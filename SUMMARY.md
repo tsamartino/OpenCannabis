@@ -12,8 +12,8 @@
 ## Extensions
 
 * [4/OCS-M: Digital Media](4/README.md)
-* [5/OCS-N: Menus](4/README.md)
-* [6/OCS-C: Commerce](4/README.md)
+* [5/OCS-N: Menus](5/README.md)
+* [6/OCS-C: Commerce](6/README.md)
 
 ## RFC Reference
 
