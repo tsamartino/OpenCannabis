@@ -19,7 +19,7 @@ This specification's current status is considered `RAW`, i.e. pre-`DRAFT`. Distr
 ### Abstract
 
 This document describes an extension to the _OpenCannabis Specification, version 1_, that introduces menu-
-related definitions structures, and services that compose, create .
+related definitions structures, and services that compose, create and reference menus.
 
 _"Menu"_ in this context, refers to:
 - The contents of a dispensary&#39;s products
@@ -29,7 +29,7 @@ _"Menu"_ in this context, refers to:
 
 
 ### Table of Contents
-- [Protocol Definition](#Protocol-Definition): `Menu`: distribution channels, product labels, product types, etc.
+- [Protocol Definition](#Protocol-Definition): `Menu`: Distribution channels, product labels, product types, etc.
     - [CustomSection](#opencannabis.products.menu.section.CustomSection)
     - [SectionMedia](#opencannabis.products.menu.section.SectionMedia)
     - [SectionSettings](#opencannabis.products.menu.section.SectionSettings)
@@ -58,7 +58,7 @@ _"Menu"_ in this context, refers to:
 
 ## Protocol Definition
 ### `opencannabis.menu`
-Specifies a menu, menu data structure, contents, products and so on
+Specifies a menu, menu data structure, contents, products and so on.
 
 {% nomnoml %}
 
@@ -68,17 +68,6 @@ Specifies a menu, menu data structure, contents, products and so on
   | metadata:Metadata
   | payload:SectionedMenu
   | menu:StaticMenu]
-
-[MenuProduct
-  | key:opencannabis.base.ProductKey
-  | apothecary:opencannabis.products.Apothecary
-  | cartridge:opencannabis.products.Cartridge
-  | edible:opencannabis.products.Edible
-  | extract:opencannabis.products.Extract
-  | flower:opencannabis.products.Flower
-  | merchandise:opencannabis.products.Merchandise
-  | plant:opencannabis.products.Plant
-  | preroll:opencannabis.products.Preroll]
 
 [MenuSettings
   | full:bool
@@ -191,24 +180,6 @@ are filed in. Categories are enumerated in `menu.Section`.
 | metadata | [Metadata](#opencannabis.products.menu.Metadata) |  | Metadata for the menu. |
 | payload | [SectionedMenu](#opencannabis.products.menu.SectionedMenu) |  | Data payloads attached to this menu. |
 | menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
-
-
-<a name="opencannabis.products.menu.MenuProduct"/>
-
-### MenuProduct
-Menu product payload stanza. Specifies a single product as a member of a menu section.
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Section that this data is attached to. |
-| apothecary | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  | Apothecary product. |
-| cartridge | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  | Cartridge product. |
-| edible | [opencannabis.products.Edible](#opencannabis.products.Edible) |  | Edible product. |
-| extract | [opencannabis.products.Extract](#opencannabis.products.Extract) |  | Extract product. |
-| flower | [opencannabis.products.Flower](#opencannabis.products.Flower) |  | Flower product. |
-| merchandise | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  | Merchandise product. |
-| plant | [opencannabis.products.Plant](#opencannabis.products.Plant) |  | Plant product. |
-| preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
 
 
 <p align="right"><a href="#top">Top</a></p>

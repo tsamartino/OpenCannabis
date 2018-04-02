@@ -1259,6 +1259,22 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
 
 {% endnomnoml %}
 
+{% nomnoml %}
+
+
+#fill: #d5e7ee; #8ebff2
+[MenuProduct
+  | key:opencannabis.base.ProductKey
+  | apothecary:opencannabis.products.Apothecary
+  | cartridge:opencannabis.products.Cartridge
+  | edible:opencannabis.products.Edible
+  | extract:opencannabis.products.Extract
+  | flower:opencannabis.products.Flower
+  | merchandise:opencannabis.products.Merchandise
+  | plant:opencannabis.products.Plant
+  | preroll:opencannabis.products.Preroll]
+
+{% endnomnoml %}
 
 <p align="right"><a href="#top">Top</a></p>
 <a name="products/Merchandise.proto"/>
@@ -1578,3 +1594,21 @@ Specifies flags that may be specifically applied to pre-rolled cannabis products
 | FORTIFIED | 3 | Specifies that this pre-rolled item is fortified with extracted cannabis products in some manner. |
 | FULL_FLOWER | 4 | Specifies that this pre-rolled item is rolled with &#34;full flower&#34; buds, rather than trimmings, or other discarded cannabis from other production processes. |
 | CONTAINS_TOBACCO | 5 | Specifies that this product contains tobacco. |
+
+<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.MenuProduct"/>
+
+### MenuProduct
+Menu product payload stanza. Specifies a single product as a member of a menu section.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [opencannabis.base.ProductKey](#opencannabis.base.ProductKey) |  | Section that this data is attached to. |
+| apothecary | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  | Apothecary product. |
+| cartridge | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  | Cartridge product. |
+| edible | [opencannabis.products.Edible](#opencannabis.products.Edible) |  | Edible product. |
+| extract | [opencannabis.products.Extract](#opencannabis.products.Extract) |  | Extract product. |
+| flower | [opencannabis.products.Flower](#opencannabis.products.Flower) |  | Flower product. |
+| merchandise | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  | Merchandise product. |
+| plant | [opencannabis.products.Plant](#opencannabis.products.Plant) |  | Plant product. |
+| preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
