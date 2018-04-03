@@ -1,6 +1,6 @@
 ---
 domain: rfc.opencannabis.info
-shortname: 7/OCS-P
+shortname: 8/OCS-P
 name: OpenCannabis Pricing Extension
 status: raw
 editor: Randal Stevens <randy@bloombox.io>
