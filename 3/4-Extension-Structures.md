@@ -13,10 +13,9 @@ Definitions considered core to the main specification are enumerated separately 
 - [5/OCS-N](../5/README.md) / `menu` : Distribution channels, product labels, product types, etc.
 - [6/OCS-C](../6/README.md) / `commerce`: Commercial ordering and fulfillment structures.
 - [7/OCS-L](../7/README.md) / `labtesting`: Laboratory testing and QA.
-- [8/OCS-P](../8/README.md) / `pricing`: Pricing schemes and structures.
-- [9/OCS-X](../9/README.md) / `proximity`: Bluetooth and GPS-related structures.
-- [10/OCS-O](../10/README.md) / `oauth`: OAuth2 implementation structures.
-- [11/OCS-A](../11/README.md) / `accounting`: Bookkeeping, accounting, taxes, and so on.
+- [8/OCS-X](../8/README.md) / `proximity`: Bluetooth and GPS-related structures.
+- [9/OCS-O](../9/README.md) / `oauth`: OAuth2 implementation structures.
+- [10/OCS-A](../10/README.md) / `accounting`: Bookkeeping, accounting, taxes, and so on.
 
 ----
 
