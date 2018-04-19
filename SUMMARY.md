@@ -14,21 +14,21 @@
 * [4/OCS-M: Digital Media](4/README.md)
 * [5/OCS-N: Menus](5/README.md)
 * [6/OCS-C: Commerce](6/README.md)
-* [7/OCS-L](7/README.md)
-* [8/OCS-X](8/README.md)
-* [9/OCS-O](9/README.md)
-* [10/OCS-A](10/README.md)
+* [7/OCS-L: Lab Testing](7/README.md)
+* [8/OCS-X: Proximity](8/README.md)
+* [9/OCS-O: OAuth](9/README.md)
+* [10/OCS-A: Accounting](10/README.md)
 
 ## RFC Reference
 
 * Raw
-  * [10/OCS-A](10/README.md)
-  * [9/OCS-O](9/README.md)
-  * [8/OCS-X](8/README.md)
-  * [7/OCS-L](7/README.md)
+  * [10/OCS-A: Accounting](10/README.md)
+  * [9/OCS-O: OAuth](9/README.md)
+  * [8/OCS-X: Proximity](8/README.md)
+  * [7/OCS-L: Lab Testing](7/README.md)
   * [6/OCS-C: Commerce](6/README.md)
   * [5/OCS-N: Menus](5/README.md)
-  * [4/OCS-M](4/README.md)
+  * [4/OCS-M: Digital Media](4/README.md)
   * [3/OCS](3/README.md)
 * Draft
   * [2/COSS](2/README.md)
