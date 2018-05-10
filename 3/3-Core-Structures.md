@@ -1276,8 +1276,8 @@ Specifies and enumerates products in the menu; flowers, extracts, edibles, apoth
 
 {% endnomnoml %}
 
-<p align="right"><a href="#top">Top</a></p>
 <a name="products/Merchandise.proto"/>
+<p align="right"><a href="#top">Top</a></p>
 
 ### `Merchandise.Type`
 Specifies an item of merchandise, that does not contain cannabis, but is sold anyway by a dispensary, such as branded
