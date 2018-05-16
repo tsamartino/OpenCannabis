@@ -3,9 +3,10 @@ domain: rfc.opencannabis.info
 shortname: 7/OCS-L
 name: OpenCannabis Lab Testing Extension
 status: raw
-editor: Randal Stevens <randy@bloombox.io>
+editor: Tim Samartino <tim@bloombox.io>
 contributors:
 - Sam Gammon <sam@bloombox.io>
+- Tim Samartino <tim@bloombox.io>
 ---
 
 <a name="top"/>
