@@ -77,6 +77,11 @@ Specifies a menu, menu data structure, contents, products and so on.
   | fingerprint:opencannabis.crypto.primitives.integrity.Hash
   | section:section.Section]
 
+{% endnomnoml %}
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [Metadata
   | scope:string
   | version:uint64
@@ -85,11 +90,6 @@ Specifies a menu, menu data structure, contents, products and so on.
   | published:opencannabis.temporal.Instant
   | settings:MenuSettings]
 
-{% endnomnoml %}
-
-{% nomnoml %}
-
-#fill: #d5e7ee; #8ebff2
 [SectionData
   | count:int32
   | section:section.SectionSpec
@@ -118,6 +118,11 @@ Specifies a menu, menu data structure, contents, products and so on.
   | key:string
   | value:opencannabis.products.Apothecary]
 
+{% endnomnoml %}
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [StaticMenu.CartridgesEntry
   | key:string
   | value:opencannabis.products.Cartridge]
@@ -127,7 +132,6 @@ Specifies a menu, menu data structure, contents, products and so on.
   | value:opencannabis.products.Edible]
 
 {% endnomnoml %}
-
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
@@ -139,7 +143,10 @@ Specifies a menu, menu data structure, contents, products and so on.
   | key:string
   | value:opencannabis.products.Flower]
 
+{% endnomnoml %}
+{% nomnoml %}
 
+#fill: #d5e7ee; #8ebff2
 [StaticMenu.MerchandiseEntry
   | key:string
   | value:opencannabis.products.Merchandise]
@@ -147,17 +154,14 @@ Specifies a menu, menu data structure, contents, products and so on.
 [StaticMenu.PrerollsEntry
   | key:string
   | value:opencannabis.products.Preroll]
+{% endnomnoml %}
+{% nomnoml %}
 
+#fill: #d5e7ee; #8ebff2
 [StaticMenu.PlantsEntry
   | key:string
   | value:opencannabis.products.Plant]
 
-
-{% endnomnoml %}
-
-{% nomnoml %}
-
-#fill: #d5e7ee; #8ebff2
 [Flag
   | DRAFT:0
   | PRIVATE:1

@@ -53,6 +53,11 @@ _"Accounting"_ in this context, refers to:
   | municipality:string
   | province:opencannabis.geo.Province
   | country:opencannabis.geo.Country]
+{% endnomnoml %}
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 
 [ProvincialTax
   | province:opencannabis.geo.Province

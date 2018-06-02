@@ -94,16 +94,16 @@ Specifies a commercial discount structure, order structure, product variance, cu
   | ORDER_SUBTOTAL:1
   | ORDER_TOTAL:2]
 
-[DiscountType
-  | CUSTOM:0
-  | STATUTORY:1
-  | COMMERCIAL:2]
+
 
 {% endnomnoml %}
 
 {% nomnoml %}
-
 #fill: #d5e7ee; #8ebff2
+[DiscountType
+  | CUSTOM:0
+  | STATUTORY:1
+  | COMMERCIAL:2]
 
 [DeliveryDestination
   | address:opencannabis.geo.Address
@@ -113,7 +113,10 @@ Specifies a commercial discount structure, order structure, product variance, cu
   | person:opencannabis.person.Person
   | foreign_id:string
   | user_key:string]
+{% endnomnoml %}
+{% nomnoml %}
 
+#fill: #d5e7ee; #8ebff2
 [Item
   | key:opencannabis.base.ProductKey
   | variant:VariantSpec
@@ -125,13 +128,16 @@ Specifies a commercial discount structure, order structure, product variance, cu
   | size:string
   | color:string]
 
+{% endnomnoml %}
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [Product Variant
   | WEIGHT:0
   | COLOR:1
   | SIZE:2]
 
 {% endnomnoml %}
-
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
@@ -206,16 +212,16 @@ Specifies a commercial discount structure, order structure, product variance, cu
 [FiatCurrency
   | USD:0]
 
+[PricingDescriptor
+  | type:PricingType
+  | unit:UnitPricingDescriptor
+  | weighted:WeightedPricingDescriptor]
 {% endnomnoml %}
 
 
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
-[PricingDescriptor
-  | type:PricingType
-  | unit:UnitPricingDescriptor
-  | weighted:WeightedPricingDescriptor]
 
 [PricingTierAvailability
   | offered:bool
@@ -229,17 +235,17 @@ Specifies a commercial discount structure, order structure, product variance, cu
   | price:opencannabis.commerce.CurrencyValue
   | status:PricingTierAvailability
   | discounts:SaleDescriptor]
+{% endnomnoml %}
+
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 
 [WeightedPricingDescriptor
   | weight:PricingWeightTier
   | tier:UnitPricingDescriptor
   | weight_in_grams:float]
 
-{% endnomnoml %}
-
-{% nomnoml %}
-
-#fill: #d5e7ee; #8ebff2
 [PricingType
   | UNIT:0
   | WEIGHTED:1]
