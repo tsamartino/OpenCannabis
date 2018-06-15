@@ -99,6 +99,10 @@ Specifies testing media, tested attributes, structure of results and so on.
 [Moisture
   | measurement:TestValue]
 
+{% endnomnoml %}
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [Pesticides
   | pesticide_free:bool
   | measurements:repeated:Pesticides.MeasurementsEntry]
@@ -108,7 +112,6 @@ Specifies testing media, tested attributes, structure of results and so on.
   | value:TestValue]
 
 {% endnomnoml %}
-
 {% nomnoml %}
 
 #fill: #d5e7ee; #8ebff2
@@ -123,6 +126,10 @@ Specifies testing media, tested attributes, structure of results and so on.
   | available:bool
   | terpenes:repeated:Terpenes.Result]
 
+{% endnomnoml %}
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [Terpenes.Result
   | terpene:Terpene
   | measurement:TestValue]
@@ -131,6 +138,10 @@ Specifies testing media, tested attributes, structure of results and so on.
   | zone:string
   | group:string]
 
+{% endnomnoml %}
+{% nomnoml %}
+
+#fill: #d5e7ee; #8ebff2
 [TestResults
   | available:bool
   | media:repeated:TestMedia
@@ -145,11 +156,6 @@ Specifies testing media, tested attributes, structure of results and so on.
   | aroma:repeated:TasteNote
   | data:repeated:TestResults]
 
-{% endnomnoml %}
-
-{% nomnoml %}
-
-#fill: #d5e7ee; #8ebff2
 [Cannabanoid
   | THC:0
   | THC_A:1
@@ -165,7 +171,10 @@ Specifies testing media, tested attributes, structure of results and so on.
   | EQUAL:3
   | CBD_OVER_THC:4
   | CBD_ONLY:5]
+{% endnomnoml %}
+{% nomnoml %}
 
+#fill: #d5e7ee; #8ebff2
 [Feeling
   | NO_FEELING_PREFERENCE:0
   | GROUNDING:1
