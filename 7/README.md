@@ -288,9 +288,6 @@ Specifies testing media, tested attributes, structure of results and so on.
 | MILLIGRAMS | 0 |  |
 | PERCENTAGE | 1 |  |
 | PRESENCE | 3 |  |
-| AMOUNT | 4 |  |
-
-
 
 <a name="structs/labtesting/TestResults.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
