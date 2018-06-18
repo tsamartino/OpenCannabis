@@ -3,12 +3,14 @@ domain: rfc.opencannabis.info
 shortname: 7/OCS-L
 name: OpenCannabis Lab Testing Extension
 status: raw
-editor: Randal Stevens <randy@bloombox.io>
+editor: Tim Samartino <tim@bloombox.io>
 contributors:
 - Sam Gammon <sam@bloombox.io>
+- Tim Samartino <tim@bloombox.io>
+- Randy Stevens <randy@bloombox.io>
 ---
 
-<a name="top"/>
+<a name="top"></a>
 
 # OpenCannabis: Lab Testing Extension
 - Version `1.0`
@@ -207,8 +209,48 @@ Specifies testing media, tested attributes, structure of results and so on.
 
 {% endnomnoml %}
 
+# Protocol Documentation
+<a name="top"></a>
+## Table of Contents
+- [structs/labtesting/TestValue.proto](#structs/labtesting/TestValue.proto)
+    - [TestMedia](#opencannabis.structs.labtesting.TestMedia)
+    - [TestValue](#opencannabis.structs.labtesting.TestValue)
+    - [TestMediaType](#opencannabis.structs.labtesting.TestMediaType)
+    - [TestValueType](#opencannabis.structs.labtesting.TestValueType)
+- [structs/labtesting/TestResults.proto](#structs/labtesting/TestResults.proto)
+    - [Cannabinoids](#opencannabis.structs.labtesting.Cannabinoids)
+    - [Cannabinoids.Result](#opencannabis.structs.labtesting.Cannabinoids.Result)
+    - [Contaminants](#opencannabis.structs.labtesting.Contaminants)
+    - [Metals](#opencannabis.structs.labtesting.Metals)
+    - [Metals.MeasurementsEntry](#opencannabis.structs.labtesting.Metals.MeasurementsEntry)
+    - [Mildew](#opencannabis.structs.labtesting.Mildew)
+    - [Mildew.MeasurementsEntry](#opencannabis.structs.labtesting.Mildew.MeasurementsEntry)
+    - [Moisture](#opencannabis.structs.labtesting.Moisture)
+    - [Mold](#opencannabis.structs.labtesting.Mold)
+    - [Mold.MeasurementsEntry](#opencannabis.structs.labtesting.Mold.MeasurementsEntry)
+    - [Pesticides](#opencannabis.structs.labtesting.Pesticides)
+    - [Pesticides.MeasurementsEntry](#opencannabis.structs.labtesting.Pesticides.MeasurementsEntry)
+    - [Subjective](#opencannabis.structs.labtesting.Subjective)
+    - [Terpenes](#opencannabis.structs.labtesting.Terpenes)
+    - [Terpenes.Result](#opencannabis.structs.labtesting.Terpenes.Result)
+    - [TestCoordinates](#opencannabis.structs.labtesting.TestCoordinates)
+    - [TestResults](#opencannabis.structs.labtesting.TestResults)
+    - [TestSuite](#opencannabis.structs.labtesting.TestSuite)
+    - [Cannabinoid](#opencannabis.structs.labtesting.Cannabinoid)
+    - [CannabinoidRatio](#opencannabis.structs.labtesting.CannabinoidRatio)
+    - [Feeling](#opencannabis.structs.labtesting.Feeling)
+    - [PotencyEstimate](#opencannabis.structs.labtesting.PotencyEstimate)
+    - [TasteNote](#opencannabis.structs.labtesting.TasteNote)
+    - [Terpene](#opencannabis.structs.labtesting.Terpene)
+    - [TestMethod](#opencannabis.structs.labtesting.TestMethod)
 
-<a name="opencannabis.structs.labtesting.TestMedia"/>
+
+<a name="structs/labtesting/TestValue.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## structs/labtesting/TestValue.proto
+
+<a name="opencannabis.structs.labtesting.TestMedia"></a>
 
 ### TestMedia
 
@@ -217,8 +259,7 @@ Specifies testing media, tested attributes, structure of results and so on.
 | type | [TestMediaType](#opencannabis.structs.labtesting.TestMediaType) |  |  |
 | media_item | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) |  |  |
 
-
-<a name="opencannabis.structs.labtesting.TestValue"/>
+<a name="opencannabis.structs.labtesting.TestValue"></a>
 
 ### TestValue
 
@@ -228,8 +269,7 @@ Specifies testing media, tested attributes, structure of results and so on.
 | measurement | [double](#double) |  |  |
 | present | [bool](#bool) |  |  |
 
-
-<a name="opencannabis.structs.labtesting.TestMediaType"/>
+<a name="opencannabis.structs.labtesting.TestMediaType"></a>
 
 ### TestMediaType
 
@@ -239,11 +279,9 @@ Specifies testing media, tested attributes, structure of results and so on.
 | RESULTS | 1 |  |
 | PRODUCT_IMAGE | 2 |  |
 
-
-<a name="opencannabis.structs.labtesting.TestValueType"/>
+<a name="opencannabis.structs.labtesting.TestValueType"></a>
 
 ### TestValueType
--- Testing: Base (Shared) Protocol
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -251,15 +289,14 @@ Specifies testing media, tested attributes, structure of results and so on.
 | PERCENTAGE | 1 |  |
 | PRESENCE | 3 |  |
 
-
-<a name="structs/labtesting/TestResults.proto"/>
+<a name="structs/labtesting/TestResults.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## structs/labtesting/TestResults.proto
 Empirical laboratory product testing structures and definitions. Provides support for cannabinoid testing, terpene
 testing, pesticide testing, moisture ratings, and subjective testing.
 
-<a name="opencannabis.structs.labtesting.Cannabinoids"/>
+<a name="opencannabis.structs.labtesting.Cannabinoids"></a>
 
 ### Cannabinoids
 
@@ -269,8 +306,7 @@ testing, pesticide testing, moisture ratings, and subjective testing.
 | cbd | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
 | results | [Cannabinoids.Result](#opencannabis.structs.labtesting.Cannabinoids.Result) | repeated |  |
 
-
-<a name="opencannabis.structs.labtesting.Cannabinoids.Result"/>
+<a name="opencannabis.structs.labtesting.Cannabinoids.Result"></a>
 
 ### Cannabinoids.Result
 
@@ -280,29 +316,90 @@ testing, pesticide testing, moisture ratings, and subjective testing.
 | ratio | [CannabinoidRatio](#opencannabis.structs.labtesting.CannabinoidRatio) |  |  |
 | measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
 
+<a name="opencannabis.structs.labtesting.Contaminants"></a>
 
-<a name="opencannabis.structs.labtesting.Moisture"/>
+### Contaminants
+
+Test results for contaminants which indicate presense/absense of a compound along with a value (if available)
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| pesticides | [Pesticides](#opencannabis.structs.labtesting.Pesticides) |  | Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value. |
+| metals | [Metals](#opencannabis.structs.labtesting.Metals) |  | Heavy metal specific test results. Indicates a heavy metal reading, by chemical compound name, along with a reading value. |
+| mold | [Mold](#opencannabis.structs.labtesting.Mold) |  | Mold specific test results. Indicates a mold reading, by species name, along with a reading value. |
+| mildew | [Mildew](#opencannabis.structs.labtesting.Mildew) |  | Mildew specific test results. Indicates a mildew reading, by species name, along with a reading value. |
+
+<a name="opencannabis.structs.labtesting.Metals"></a>
+
+### Metals
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| metal_free | [bool](#bool) |  |  |
+| measurements | [Metals.MeasurementsEntry](#opencannabis.structs.labtesting.Metals.MeasurementsEntry) | repeated |  |
+
+<a name="opencannabis.structs.labtesting.Metals.MeasurementsEntry"></a>
+
+### Metals.MeasurementsEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
+<a name="opencannabis.structs.labtesting.Mildew"></a>
+
+### Mildew
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| mildew_free | [bool](#bool) |  |  |
+| measurements | [Mildew.MeasurementsEntry](#opencannabis.structs.labtesting.Mildew.MeasurementsEntry) | repeated |  |
+
+<a name="opencannabis.structs.labtesting.Mildew.MeasurementsEntry"></a>
+
+### Mildew.MeasurementsEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
+
+<a name="opencannabis.structs.labtesting.Moisture"></a>
 
 ### Moisture
--- Testing: Moisture
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
 
+<a name="opencannabis.structs.labtesting.Mold"></a>
 
-<a name="opencannabis.structs.labtesting.Pesticides"/>
+### Mold
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| mold_free | [bool](#bool) |  |  |
+| measurements | [Mold.MeasurementsEntry](#opencannabis.structs.labtesting.Mold.MeasurementsEntry) | repeated |  |
+
+<a name="opencannabis.structs.labtesting.Mold.MeasurementsEntry"></a>
+
+### Mold.MeasurementsEntry
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| key | [string](#string) |  |  |
+| value | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
+
+<a name="opencannabis.structs.labtesting.Pesticides"></a>
 
 ### Pesticides
--- Testing: Pesticides
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | pesticide_free | [bool](#bool) |  |  |
 | measurements | [Pesticides.MeasurementsEntry](#opencannabis.structs.labtesting.Pesticides.MeasurementsEntry) | repeated |  |
 
-
-<a name="opencannabis.structs.labtesting.Pesticides.MeasurementsEntry"/>
+<a name="opencannabis.structs.labtesting.Pesticides.MeasurementsEntry"></a>
 
 ### Pesticides.MeasurementsEntry
 
@@ -311,8 +408,7 @@ testing, pesticide testing, moisture ratings, and subjective testing.
 | key | [string](#string) |  |  |
 | value | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
 
-
-<a name="opencannabis.structs.labtesting.Subjective"/>
+<a name="opencannabis.structs.labtesting.Subjective"></a>
 
 ### Subjective
 
@@ -324,18 +420,16 @@ testing, pesticide testing, moisture ratings, and subjective testing.
 | feeling_tags | [Feeling](#opencannabis.structs.labtesting.Feeling) | repeated |  |
 | tasting_notes | [TasteNote](#opencannabis.structs.labtesting.TasteNote) | repeated |  |
 
-
-<a name="opencannabis.structs.labtesting.Terpenes"/>
+<a name="opencannabis.structs.labtesting.Terpenes"></a>
 
 ### Terpenes
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | available | [bool](#bool) |  |  |
-| terpenes | [Terpenes.Result](#opencannabis.structs.labtesting.Terpenes.Result) | repeated |  |
+| terpene | [Terpenes.Result](#opencannabis.structs.labtesting.Terpenes.Result) | repeated |  |
 
-
-<a name="opencannabis.structs.labtesting.Terpenes.Result"/>
+<a name="opencannabis.structs.labtesting.Terpenes.Result"></a>
 
 ### Terpenes.Result
 
@@ -343,23 +437,22 @@ testing, pesticide testing, moisture ratings, and subjective testing.
 | ----- | ---- | ----- | ----------- |
 | terpene | [Terpene](#opencannabis.structs.labtesting.Terpene) |  |  |
 | measurement | [TestValue](#opencannabis.structs.labtesting.TestValue) |  |  |
-
-
-<a name="opencannabis.structs.labtesting.TestCoordinates"/>
+<a name="opencannabis.structs.labtesting.TestCoordinates"></a>
 
 ### TestCoordinates
-Specifies coordinate values for a given lab testing result. This generally consists of a &#39;lot&#39; and &#39;batch&#39; value,
-which essentially correlate to a &#39;zone&#39; and &#39;group&#39;, which are expressed here.
+Specifies coordinate values for a given lab testing result. This consists of &#39;zones&#39; (i.e. floors, greenhouses),
+made up of &#39;batches&#39; (i.e. rooms, sections), containing &#39;lots&#39; (i.e. rows, trays) of individual plants or products.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| zone | [string](#string) |  | Specifies the &#39;zone,&#39; or &#39;lot,&#39; value for a set of test results. |
-| group | [string](#string) |  | Specifies the &#39;group,&#39; or &#39;batch,&#39; value for a set of test results. |
-
-
-<a name="opencannabis.structs.labtesting.TestResults"/>
+| zone | [string](#string) |  | Specifies the &#39;zone&#39; value for a set of test results. This is usually used as/by a floor or greenhouse ID. |
+| lot | [string](#string) |  | Specifies the &#39;lot&#39; value for a set of test results. This is usually used as/by a room or section ID. |
+| batch | [string](#string) |  | Specifies the &#39;batch&#39; value for a set of test results. This is usually used as/by a row or tray ID for individual plants or test sample products. |
+| sample_id | [string](#string) |  | Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or batches, or even random selections from entire zones. |
+<a name="opencannabis.structs.labtesting.TestResults"></a>
 
 ### TestResults
+
 Lab testing results for a given product. Includes cannabinoid, terpene, pesticide, moisture, and subjective testing
 properties. Only cannabinoid testing is considered required.
 
@@ -372,17 +465,28 @@ properties. Only cannabinoid testing is considered required.
 | coordinates | [TestCoordinates](#opencannabis.structs.labtesting.TestCoordinates) |  | Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests, indicates the coordinates for the active set of test results. |
 | cannabinoids | [Cannabinoids](#opencannabis.structs.labtesting.Cannabinoids) |  | Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid compounds. |
 | terpenes | [Terpenes](#opencannabis.structs.labtesting.Terpenes) |  | Testing for terpene volatiles, which might indicate aroma or flavor notes. |
-| pesticides | [Pesticides](#opencannabis.structs.labtesting.Pesticides) |  | Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value. |
+| contaminants | [Contaminants](#opencannabis.structs.labtesting.Contaminants) |  |  |
 | moisture | [Moisture](#opencannabis.structs.labtesting.Moisture) |  | Moisture rating and test results. |
 | subjective | [Subjective](#opencannabis.structs.labtesting.Subjective) |  | Results from subjective testing - i.e, opinionated human evaluation. |
 | aroma | [TasteNote](#opencannabis.structs.labtesting.TasteNote) | repeated | Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if available. |
 | data | [TestResults](#opencannabis.structs.labtesting.TestResults) | repeated | Raw test result data, stored under a master set of test results. Only one level of nesting is allowed. |
 
+<a name="opencannabis.structs.labtesting.TestSuite"></a>
 
-<a name="opencannabis.structs.labtesting.Cannabinoid"/>
+### TestSuite
+
+Structure for a test suite - which contains the item being tested for, the method used to produce the results,
+the value of the results, and any comments.
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| method | [TestMethod](#opencannabis.structs.labtesting.TestMethod) |  | Method used to obtain the test result. |
+| results | [TestResults](#opencannabis.structs.labtesting.TestResults) |  | Result of the test. |
+| comments | [string](#string) |  | String containing any comments about the test. |
+
+<a name="opencannabis.structs.labtesting.Cannabinoid"></a>
 
 ### Cannabinoid
--- Testing: Cannabinoids
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -400,7 +504,7 @@ properties. Only cannabinoid testing is considered required.
 | CBV | 50 |  |
 | CBV_A | 51 |  |
 
-<a name="opencannabis.structs.labtesting.CannabinoidRatio"/>
+<a name="opencannabis.structs.labtesting.CannabinoidRatio"></a>
 
 ### CannabinoidRatio
 
@@ -413,11 +517,9 @@ properties. Only cannabinoid testing is considered required.
 | CBD_OVER_THC | 4 |  |
 | CBD_ONLY | 5 |  |
 
-
-<a name="opencannabis.structs.labtesting.Feeling"/>
+<a name="opencannabis.structs.labtesting.Feeling"></a>
 
 ### Feeling
--- Testing: Subjective
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -430,8 +532,7 @@ properties. Only cannabinoid testing is considered required.
 | FOCUS | 6 |  |
 | PASSION | 7 |  |
 
-
-<a name="opencannabis.structs.labtesting.PotencyEstimate"/>
+<a name="opencannabis.structs.labtesting.PotencyEstimate"></a>
 
 ### PotencyEstimate
 
@@ -442,8 +543,7 @@ properties. Only cannabinoid testing is considered required.
 | HEAVY | 2 |  |
 | SUPER | 3 |  |
 
-
-<a name="opencannabis.structs.labtesting.TasteNote"/>
+<a name="opencannabis.structs.labtesting.TasteNote"></a>
 
 ### TasteNote
 
@@ -462,11 +562,9 @@ properties. Only cannabinoid testing is considered required.
 | HERB | 10 |  |
 | EARTH | 11 |  |
 
-
-<a name="opencannabis.structs.labtesting.Terpene"/>
+<a name="opencannabis.structs.labtesting.Terpene"></a>
 
 ### Terpene
--- Testing: Terpenes
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -489,3 +587,17 @@ properties. Only cannabinoid testing is considered required.
 | ALPHA_TERPININE | 16 |  |
 | GAMMA_TERPININE | 17 |  |
 | TERPINOLENE | 18 |  |
+
+<a name="opencannabis.structs.labtesting.TestMethod"></a>
+
+### TestMethod
+Specific test methods used to quantify or qualify certain properties or components of cannabis.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNSPECIFIED_METHOD | 0 | &#39;Unspecified&#39; test method, indicating that we don&#39;t know what method was used to test with, or it was left unspecified. This is the default value. |
+| GCMS | 1 | Gas Chromatography / Mass Spectrometry is used to identify specific compounds found within a sample. |
+| LCMS | 2 | Liquid Chromatography / Mass Spectrometry is used to identify specific compounds found within a sample. Recommended for the most volatile compounds. |
+| CLASSIC_PCR | 3 | Classic PCR is a qualitative and semi-quantitative genetic test that identifies the presense or absence of specific genes. |
+| qPCR | 4 | Quantitative PCR is a genetic test that quantifies the amount of specific genes within a sample. |
+| ELISA | 5 | ELISA, or enzyme-linked immunosorbent assay, is an antibody based test that is used to detect and quantify specific substances within the sample. |
