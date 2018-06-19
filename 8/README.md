@@ -8,7 +8,7 @@ contributors:
 - Sam Gammon <sam@bloombox.io>
 ---
 
-<a name="top"/>
+<a name="top"></a>
 
 # OpenCannabis: Proximity Extension
 - Version `1.0`
@@ -35,8 +35,7 @@ _"Proximity"_ in this context, refers to:
 
 ----
 
-<a name="proximity/BluetoothBeacon.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="proximity/BluetoothBeacon.proto"></a>
 
 ## Protocol Definition
 ### `opencannabis.proximity`
