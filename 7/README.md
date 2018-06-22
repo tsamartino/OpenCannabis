@@ -246,7 +246,6 @@ Specifies testing media, tested attributes, structure of results and so on.
 
 
 <a name="structs/labtesting/TestValue.proto"></a>
-<p align="right"><a href="#top">Top</a></p>
 
 ## structs/labtesting/TestValue.proto
 
@@ -290,7 +289,6 @@ Specifies testing media, tested attributes, structure of results and so on.
 | PRESENCE | 3 |  |
 
 <a name="structs/labtesting/TestResults.proto"></a>
-<p align="right"><a href="#top">Top</a></p>
 
 ## structs/labtesting/TestResults.proto
 Empirical laboratory product testing structures and definitions. Provides support for cannabinoid testing, terpene

@@ -1,6 +1,6 @@
 
 ## Section 1: Datamodel
-<a name="top"/>
+<a name="top"></a>
 
 Central to the OpenCannabis project's goals is a *unified datamodel* for use across functional boundaries. When
 cultivators talk about *flowers* with labs, and labs talk about *test results* with retailers, and so on, they are all
@@ -31,7 +31,7 @@ talking about the same thing - but in today's legal cannabis industry, they aren
         - `commerce`: Commercial ordering and fulfillment structures.
         - `accounting`: Bookkeeping, accounting, taxes, and so on.
 
-<a name="Toolchain"/>
+<a name="Toolchain"></a>
 
 ### i. Toolchain
 
@@ -49,14 +49,14 @@ support to spec adopters:
 * Compatibility with other Protobuf-authored models, such as [OpenRTB](https://openrtb.github.io/OpenRTB/) and
   [Google APIs](https://github.com/googleapis/googleapis/tree/master/google)
 
-<a name="Nomenclature"/>
+<a name="Nomenclature"></a>
 
 #### A. Nomenclature
 
 Models implemented in Protobuf are referred to as *Messages*. *Services*, which specify *Methods*, make use of
 *Messages* as input and output structures. 
 
-<a name="General-Guidelines"/>
+<a name="General-Guidelines"></a>
 
 ### ii. General Guidelines
 
@@ -119,7 +119,7 @@ These guidelines govern inline source comments on *Messages*, *Properties*, *Ser
 1. Comments **SHOULD** be complete sentences, in present-imperative form *(i.e., 'Specifies xyz, in abc
   circumstances.')*.
 
-<a name="Message-Categories"/>
+<a name="Message-Categories"></a>
 
 ### iii. Message Categories
 

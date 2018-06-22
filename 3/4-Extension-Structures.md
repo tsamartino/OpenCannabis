@@ -1,6 +1,6 @@
 
 # Extension Structures: Protocol Documentation
-<a name="top"/>
+<a name="top"></a>
 
 _"Extension structures"_ refer to messages and definitions that are _not_ included in the core _OpenCannabis_ spec, but
 are instead proposed via a _Specification Extension_.
@@ -160,8 +160,8 @@ Full menu structures and payloads.
 {% endnomnoml %}
 
 
-<a name="products/menu/Section.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="products/menu/Section.proto"></a>
+
 
 ### `CustomSection.Type`
 Custom configuration-based menu sections, usually via `FilteredSection`.
@@ -172,7 +172,7 @@ Custom configuration-based menu sections, usually via `FilteredSection`.
 | filter | [FilteredSection](#opencannabis.products.menu.section.FilteredSection) |  | Filtered section specification. |
 
 
-<a name="opencannabis.products.menu.section.SectionMedia"/>
+<a name="opencannabis.products.menu.section.SectionMedia"></a>
 
 ### `SectionMedia.Type`
 Specifies media for a section.
@@ -182,7 +182,7 @@ Specifies media for a section.
 | tablet_homescreen_media | [opencannabis.media.MediaItem](#opencannabis.media.MediaItem) |  | Specifies a media item to use as a tablet homescreen tile for this section. |
 
 
-<a name="opencannabis.products.menu.section.SectionSettings"/>
+<a name="opencannabis.products.menu.section.SectionSettings"></a>
 
 ### `SectionSettings.Type`
 Specifies settings that a menu section may consider.
@@ -193,7 +193,7 @@ Specifies settings that a menu section may consider.
 | media | [SectionMedia](#opencannabis.products.menu.section.SectionMedia) |  | Media to use when presenting this section. |
 
 
-<a name="opencannabis.products.menu.section.SectionSpec"/>
+<a name="opencannabis.products.menu.section.SectionSpec"></a>
 
 ### `SectionSpec.Type`
 Specifies a menu section, along with section configuration (settings and flags).
@@ -207,7 +207,7 @@ Specifies a menu section, along with section configuration (settings and flags).
 | flags | [SectionFlag](#opencannabis.products.menu.section.SectionFlag) | repeated | Current set of flags to apply to the subject section. |
 
 
-<a name="opencannabis.products.menu.section.FilteredSection"/>
+<a name="opencannabis.products.menu.section.FilteredSection"></a>
 
 ### `FilteredSection.Number`
 Special filtered sections - commonly used sections based on filters builtin to apps/sites.
@@ -219,7 +219,7 @@ Special filtered sections - commonly used sections based on filters builtin to a
 | CBD | 2 | Only presents products containing CBD. |
 
 
-<a name="opencannabis.products.menu.section.Section"/>
+<a name="opencannabis.products.menu.section.Section"></a>
 
 ### `Section.Number`
 Known sections, that are expected to be included with nearly every menu.
@@ -237,7 +237,7 @@ Known sections, that are expected to be included with nearly every menu.
 | MERCHANDISE | 8 | General merchandise. |
 
 
-<a name="opencannabis.products.menu.section.SectionFlag"/>
+<a name="opencannabis.products.menu.section.SectionFlag"></a>
 
 ### `SectionFlag.Number'
 Flags that may be applied to a section&#39;s configuration.
@@ -248,8 +248,7 @@ Flags that may be applied to a section&#39;s configuration.
 | FEATURED | 1 | This section should be promoted and/or presented with high priority. |
 
 
-<a name="products/menu/Menu.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="products/menu/Menu.proto"></a>
 
 ### `Menu.Type`
 Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
@@ -262,7 +261,7 @@ are filed in. Categories are enumerated in `menu.Section`.
 | menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
 
 
-<a name="opencannabis.products.menu.MenuProduct"/>
+<a name="opencannabis.products.menu.MenuProduct"></a>
 
 ### `MenuProduct.Type`
 Menu product payload stanza. Specifies a single product as a member of a menu section.
@@ -280,7 +279,7 @@ Menu product payload stanza. Specifies a single product as a member of a menu se
 | preroll | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  | Preroll product. |
 
 
-<a name="opencannabis.products.menu.MenuSettings"/>
+<a name="opencannabis.products.menu.MenuSettings"></a>
 
 ### `MenuSettings.Type`
 Specifies settings used to generate a menu, or used as input when generating menus.
@@ -294,7 +293,7 @@ Specifies settings used to generate a menu, or used as input when generating men
 | section | [section.Section](#opencannabis.products.menu.section.Section) | repeated | Sections to include in the menu. If unspecified, include all sections. |
 
 
-<a name="opencannabis.products.menu.Metadata"/>
+<a name="opencannabis.products.menu.Metadata"></a>
 
 ### `Metadata.Type`
 Specifies metadata for a package of menu data.
@@ -309,7 +308,7 @@ Specifies metadata for a package of menu data.
 | settings | [MenuSettings](#opencannabis.products.menu.MenuSettings) |  | Settings that produced this menu data. |
 
 
-<a name="opencannabis.products.menu.SectionData"/>
+<a name="opencannabis.products.menu.SectionData"></a>
 
 ### `SectionData.Type`
 Specifies an inner menu payload which contains menu data for a given menu section.
@@ -321,7 +320,7 @@ Specifies an inner menu payload which contains menu data for a given menu sectio
 | product | [MenuProduct](#opencannabis.products.menu.MenuProduct) | repeated | Menu products attached to this section. |
 
 
-<a name="opencannabis.products.menu.SectionedMenu"/>
+<a name="opencannabis.products.menu.SectionedMenu"></a>
 
 ### `SectionedMenu.Type`
 Specifies a menu split into section-level chunks.
@@ -332,7 +331,7 @@ Specifies a menu split into section-level chunks.
 | payload | [SectionData](#opencannabis.products.menu.SectionData) | repeated | Specifies a payload of sectioned menu data. |
 
 
-<a name="opencannabis.products.menu.StaticMenu"/>
+<a name="opencannabis.products.menu.StaticMenu"></a>
 
 ### `StaticMenu.Type`
 Specifies an inner menu payload which contains mapped data, where each map key is a section name, lowercased, and
@@ -350,7 +349,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | prerolls | [StaticMenu.PrerollsEntry](#opencannabis.products.menu.StaticMenu.PrerollsEntry) | repeated | Specifies PREROLL products attached to this menu. |
 
 
-<a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"></a>
 
 ### `StaticMenu.ApothecaryEntry.Type`
 
@@ -360,7 +359,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"></a>
 
 ### `StaticMenu.CartridgesEntry.type`
 
@@ -370,7 +369,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"></a>
 
 ### `StaticMenu.EdiblesEntry.Type`
 
@@ -380,7 +379,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Edible](#opencannabis.products.Edible) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"></a>
 
 ### `StaticMenu.ExtractsEntry.Type`
 
@@ -390,7 +389,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Extract](#opencannabis.products.Extract) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.FlowersEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.FlowersEntry"></a>
 
 ### `StaticMenu.FlowersEntry.Type`
 
@@ -400,7 +399,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Flower](#opencannabis.products.Flower) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"></a>
 
 ### `StaticMenu.MerchandiseEntry.Type`
 
@@ -411,7 +410,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.PlantsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.PlantsEntry"></a>
 
 ### `StaticMenu.PlantsEntry.Type`
 
@@ -421,7 +420,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Plant](#opencannabis.products.Plant) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"></a>
 
 ### `StaticMenu.PrerollsEntry.Type`
 
@@ -431,7 +430,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  |  |
 
 
-<a name="opencannabis.products.menu.Flag"/>
+<a name="opencannabis.products.menu.Flag"></a>
 
 ### `Flag.Number`
 Enumerates flags that can be set on a menu.
@@ -443,7 +442,7 @@ Enumerates flags that can be set on a menu.
 | OUT_OF_DATE | 2 | Indicates that the underlying menu data is known to be out-of-date. |
 
 
-<a name="opencannabis.products.menu.Status"/>
+<a name="opencannabis.products.menu.Status"></a>
 
 ### `Status.Number`
 Enumerates statuses a menu may assume.

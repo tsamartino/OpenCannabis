@@ -11,7 +11,7 @@ contributors:
 # OpenCannabis: Commerce Extension
 - Version `1.0`
 - Status: `RAW`
-<a name="top"/>
+<a name="top"></a>
 
 ### Status of this Memo
 
@@ -295,8 +295,7 @@ Specifies a commercial discount structure, order structure, product variance, cu
   | LOYALTY:3]
 {% endnomnoml %}
 
-<a name="commerce/Discounts.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Discounts.proto"></a>
 
 ### Discount
 Specifies a discount to be applied during a purchase or order.
@@ -312,8 +311,7 @@ Specifies a discount to be applied during a purchase or order.
 | created_at | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | When this discount was created. |
 
 
-<a name="opencannabis.commerce.DiscountSpec"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.DiscountSpec"></a>
 
 ### DiscountSpec
 Specifies the concept of a discount, and how it is set to behave.
@@ -326,8 +324,7 @@ Specifies the concept of a discount, and how it is set to behave.
 | static_value | [double](#double) |  | Flat rate for the discount. |
 
 
-<a name="opencannabis.commerce.DiscountBasis"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.DiscountBasis"></a>
 
 ### DiscountBasis
 Enumerates operational calculation modes for discounts.
@@ -339,8 +336,7 @@ Enumerates operational calculation modes for discounts.
 | ORDER_TOTAL | 2 | The discount is calculated from the order total, after tax. |
 
 
-<a name="opencannabis.commerce.DiscountType"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.DiscountType"></a>
 
 ### DiscountType
 Enumerates types of discounts that may be applied.
@@ -352,8 +348,7 @@ Enumerates types of discounts that may be applied.
 | COMMERCIAL | 2 | Commercial discount, for instance, for vendors, brand ambassadors, and staff. |
 
 
-<a name="commerce/Delivery.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Delivery.proto"></a>
 
 ### DeliveryDestination
 Specifies the location to deliver the order.
@@ -365,8 +360,7 @@ Specifies the location to deliver the order.
 | instructions | [string](#string) |  | Special delivery instructions |
 
 
-<a name="commerce/Customer.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Customer.proto"></a>
 
 ### Customer
 Customer identity.
@@ -379,8 +373,7 @@ Customer identity.
 | user_key | [string](#string) |  | Resolved subject user key. |
 
 
-<a name="commerce/Item.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Item.proto"></a>
 
 ### Item
 Specifies the Item via the product key as well as weight, and count of product ordered
@@ -392,7 +385,7 @@ Specifies the Item via the product key as well as weight, and count of product o
 | count | [uint32](#uint32) |  | Count of this item requested. |
 
 
-<a name="opencannabis.commerce.VariantSpec"/>
+<a name="opencannabis.commerce.VariantSpec"></a>
 
 ### VariantSpec
 Specifies if it is a weighted product or a unit priced product and attaches that to item.
@@ -405,7 +398,7 @@ Specifies if it is a weighted product or a unit priced product and attaches that
 | color | [string](#string) |  | Specifies a color option for the product. |
 
 
-<a name="opencannabis.commerce.ProductVariant"/>
+<a name="opencannabis.commerce.ProductVariant"></a>
 
 ### ProductVariant
 Specifies weight and price of  ordered product
@@ -417,8 +410,7 @@ Specifies weight and price of  ordered product
 | SIZE | 2 | Variance by product size. |
 
 
-<a name="commerce/Order.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Order.proto"></a>
 
 ### Order
 Represents a full order submitted to the server for fulfillment, from an end-user, for delivery or express pickup.
@@ -440,7 +432,7 @@ Represents a full order submitted to the server for fulfillment, from an end-use
 | sid | [string](#string) |  | Session ID that was active when this order was submitted. |
 
 
-<a name="opencannabis.commerce.OrderKey"/>
+<a name="opencannabis.commerce.OrderKey"></a>
 
 ### OrderKey
 Specifies a unique key for a commercial order.
@@ -450,7 +442,7 @@ Specifies a unique key for a commercial order.
 | id | [string](#string) |  | Order ID, assigned by the server upon creation. |
 
 
-<a name="opencannabis.commerce.OrderScheduling"/>
+<a name="opencannabis.commerce.OrderScheduling"></a>
 
 ### OrderScheduling
 Specifies the desired timing of the delivery order.
@@ -461,8 +453,7 @@ Specifies the desired timing of the delivery order.
 | desired_time | [opencannabis.temporal.Instant](#opencannabis.temporal.Instant) |  | Desired delivery time, if specified. |
 
 
-<a name="opencannabis.commerce.StatusCheckin"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.StatusCheckin"></a>
 
 ### StatusCheckin
 Specifies a moment at which an order changed status, when it happened, and, optionally, why.
@@ -474,8 +465,7 @@ Specifies a moment at which an order changed status, when it happened, and, opti
 | message | [string](#string) |  | Message or reason given for this status change, if any. |
 
 
-<a name="opencannabis.commerce.OrderStatus"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.OrderStatus"></a>
 
 ### OrderStatus
 Enumeration for current status of order
@@ -490,8 +480,7 @@ Enumeration for current status of order
 | FULFILLED | 5 | Order has been fulfilled and is considered complete. |
 
 
-<a name="opencannabis.commerce.OrderType"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.OrderType"></a>
 
 ### OrderType
 Specifies the type of order requested.
@@ -502,8 +491,7 @@ Specifies the type of order requested.
 | DELIVERY | 1 | Delivery order. |
 
 
-<a name="opencannabis.commerce.SchedulingType"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.SchedulingType"></a>
 
 ### SchedulingType
 Specifies the types of delivery timing.
@@ -514,8 +502,7 @@ Specifies the types of delivery timing.
 | TIMED | 1 | Desired time. |
 
 
-<a name="commerce/Currency.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="commerce/Currency.proto"></a>
 
 ### CurrencyValue
 Specifies a value, with a particular currency specification as the unit.
@@ -528,8 +515,7 @@ Specifies a value, with a particular currency specification as the unit.
 | custom | [string](#string) |  | Custom currency, by name or symbol, for a given currency value. |
 
 
-<a name="opencannabis.commerce.CurrencyType"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.CurrencyType"></a>
 
 ### CurrencyType
 Specifies known or explicitly supported currency types.
@@ -541,8 +527,7 @@ Specifies known or explicitly supported currency types.
 | CRYPTO | 2 | Crypto-currency, based on unique cryptographic signatures or proof-of-work. |
 
 
-<a name="opencannabis.commerce.FiatCurrency"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.commerce.FiatCurrency"></a>
 
 ### FiatCurrency
 Specifies known or explicitly supported fiat currencies.
@@ -563,7 +548,7 @@ in a given set of pricing tiers for a product.
 | weighted | [WeightedPricingDescriptor](#opencannabis.structs.pricing.WeightedPricingDescriptor) |  | Weight-based pricing information, with prices assgined to specific or known weights. |
 
 
-<a name="opencannabis.structs.pricing.PricingTierAvailability"/>
+<a name="opencannabis.structs.pricing.PricingTierAvailability"></a>
 
 ### PricingTierAvailability
 Specifies availability and stock status flags for a particular pricing tier.
@@ -574,7 +559,7 @@ Specifies availability and stock status flags for a particular pricing tier.
 | available | [bool](#bool) |  | Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a particular pricing tier is &#39;currently available,&#39; &#39;currently in stock,&#39; or &#39;currently offered.&#39; |
 
 
-<a name="opencannabis.structs.pricing.ProductPricing"/>
+<a name="opencannabis.structs.pricing.ProductPricing"></a>
 
 ### ProductPricing
 Pricing manifest for a product, with the combined tiers and top-level discounts that are currently configured for a
@@ -586,7 +571,7 @@ given sellable material or unit of merchandise.
 | manifest | [PricingDescriptor](#opencannabis.structs.pricing.PricingDescriptor) | repeated | Pricing tiers attached to this product pricing manifest. |
 
 
-<a name="opencannabis.structs.pricing.UnitPricingDescriptor"/>
+<a name="opencannabis.structs.pricing.UnitPricingDescriptor"></a>
 
 ### UnitPricingDescriptor
 Specifies pricing information for a unit-priced product, including the price value, tier status, and any discounts
@@ -599,7 +584,7 @@ that currently apply.
 | discounts | [SaleDescriptor](#opencannabis.structs.pricing.SaleDescriptor) | repeated | Discounts that should apply to this tier. |
 
 
-<a name="opencannabis.structs.pricing.WeightedPricingDescriptor"/>
+<a name="opencannabis.structs.pricing.WeightedPricingDescriptor"></a>
 
 ### WeightedPricingDescriptor
 Specifies pricing information for a weight-priced product, at a particular weight tier, including the price value,
@@ -613,7 +598,7 @@ tier status, and, optionally, a custom weight.
 | weight_in_grams | [float](#float) |  | Custom weight in grams, if any. |
 
 
-<a name="opencannabis.structs.pricing.PricingType"/>
+<a name="opencannabis.structs.pricing.PricingType"></a>
 
 ### PricingType
 Enumerates supported pricing schemes. Defaults to &#39;UNIT&#39;-based pricing.
@@ -624,7 +609,7 @@ Enumerates supported pricing schemes. Defaults to &#39;UNIT&#39;-based pricing.
 | WEIGHTED | 1 | Cost-by-weight pricing scheme, where each product has multiple weight tiers, each priced individually. For example, standard retail flower pricing is weighted at 1g (one gram), 3.5g, 7g, 14g and 28g (one ounce). |
 
 
-<a name="opencannabis.structs.pricing.PricingWeightTier"/>
+<a name="opencannabis.structs.pricing.PricingWeightTier"></a>
 
 ### PricingWeightTier
 Enumerates supported pricing tiers, when the &#39;WEIGHTED&#39; pricing scheme is in effect. Each known tier is enumerated,
@@ -647,13 +632,12 @@ property or metric.
 | TON | 11 | Pricing for &#39;ONE TON&#39; of subject material or merchandise. |
 
 
-<a name="structs/pricing/SaleDescriptor.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="structs/pricing/SaleDescriptor.proto"></a>
 
 ## structs/pricing/SaleDescriptor.proto
 
 
-<a name="opencannabis.structs.pricing.BOGODiscount"/>
+<a name="opencannabis.structs.pricing.BOGODiscount"></a>
 
 ### BOGODiscount
 
@@ -663,7 +647,7 @@ property or metric.
 | reward | [uint32](#uint32) |  |  |
 
 
-<a name="opencannabis.structs.pricing.LoyaltyDiscount"/>
+<a name="opencannabis.structs.pricing.LoyaltyDiscount"></a>
 
 ### LoyaltyDiscount
 
@@ -673,7 +657,7 @@ property or metric.
 | reward | [uint32](#uint32) |  |  |
 
 
-<a name="opencannabis.structs.pricing.PercentageDiscount"/>
+<a name="opencannabis.structs.pricing.PercentageDiscount"></a>
 
 ### PercentageDiscount
 
@@ -682,7 +666,7 @@ property or metric.
 | discount | [uint32](#uint32) |  |  |
 
 
-<a name="opencannabis.structs.pricing.SaleDescriptor"/>
+<a name="opencannabis.structs.pricing.SaleDescriptor"></a>
 
 ### SaleDescriptor
 
@@ -696,7 +680,7 @@ property or metric.
 | loyalty | [LoyaltyDiscount](#opencannabis.structs.pricing.LoyaltyDiscount) |  |  |
 
 
-<a name="opencannabis.structs.pricing.SaleType"/>
+<a name="opencannabis.structs.pricing.SaleType"></a>
 
 ### SaleType
 

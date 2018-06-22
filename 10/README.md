@@ -8,7 +8,7 @@ contributors:
 - Sam Gammon <sam@bloombox.io>
 ---
 
-<a name="top"/>
+<a name="top"></a>
 
 # OpenCannabis: Accounting Extension
 - Version `1.0`
@@ -100,7 +100,7 @@ _"Accounting"_ in this context, refers to:
 
 {% endnomnoml %}
 
-<a name="opencannabis.taxes.FederalTax"/>
+<a name="opencannabis.taxes.FederalTax"></a>
 
 ### FederalTax
 Specifies information about a federally-imposed tax.
@@ -110,8 +110,8 @@ Specifies information about a federally-imposed tax.
 | country | [opencannabis.geo.Country](#opencannabis.geo.Country) |  | Province the municipality is in. |
 
 
-<a name="opencannabis.taxes.LocalTax"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.taxes.LocalTax"></a>
+<a href="#top">Top</a></p>
 
 ### LocalTax
 Specifies information about a municipally- or locally-imposed tax.
@@ -123,7 +123,7 @@ Specifies information about a municipally- or locally-imposed tax.
 | country | [opencannabis.geo.Country](#opencannabis.geo.Country) |  | Country the province is in. |
 
 
-<a name="opencannabis.taxes.ProvincialTax"/>
+<a name="opencannabis.taxes.ProvincialTax"></a>
 
 ### ProvincialTax
 Specifies information about a provincially-imposed tax.
@@ -134,8 +134,7 @@ Specifies information about a provincially-imposed tax.
 | country | [opencannabis.geo.Country](#opencannabis.geo.Country) |  | Country the province is in. |
 
 
-<a name="opencannabis.taxes.Tax"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.taxes.Tax"></a>
 
 ### Tax
 Specifies a tax to be applied during a purchase.
@@ -149,7 +148,7 @@ Specifies a tax to be applied during a purchase.
 | description | [string](#string) |  | Narrative description for the tax, to be displayed to back-office and end-users in some special circumstances. |
 
 
-<a name="opencannabis.taxes.TaxJurisdiction"/>
+<a name="opencannabis.taxes.TaxJurisdiction"></a>
 
 ### TaxJurisdiction
 Specifies information about a particular tax jurisdiction.
@@ -162,7 +161,7 @@ Specifies information about a particular tax jurisdiction.
 | federal | [FederalTax](#opencannabis.taxes.FederalTax) |  | Federal tax jurisdiction information. |
 
 
-<a name="opencannabis.taxes.TaxSpec"/>
+<a name="opencannabis.taxes.TaxSpec"></a>
 
 ### TaxSpec
 Specification record for a type of taxes to apply.

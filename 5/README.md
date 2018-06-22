@@ -11,7 +11,7 @@ contributors:
 # OpenCannabis: Menu Extension
 - Version `1.0`
 - Status: `RAW`
-<a name="top"/>
+<a name="top"></a>
 
 ### Status of this Memo
 
@@ -173,8 +173,7 @@ Specifies a menu, menu data structure, contents, products and so on.
 
 {% endnomnoml %}
 
-<a name="products/menu/Menu.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="products/menu/Menu.proto"></a>
 
 ### Menu
 Holds a full specification for a revision of menu data, segmented into sections, by the categories member products
@@ -187,8 +186,7 @@ are filed in. Categories are enumerated in `menu.Section`.
 | menu | [StaticMenu](#opencannabis.products.menu.StaticMenu) |  | Specifies a static menu, where each section is specified as a typed map, with keys mapped to products. |
 
 
-<a name="opencannabis.products.menu.MenuSettings"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.MenuSettings"></a>
 
 ### MenuSettings
 Specifies settings used to generate a menu, or used as input when generating menus.
@@ -202,8 +200,7 @@ Specifies settings used to generate a menu, or used as input when generating men
 | section | [section.Section](#opencannabis.products.menu.section.Section) | repeated | Sections to include in the menu. If unspecified, include all sections. |
 
 
-<a name="opencannabis.products.menu.Metadata"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.Metadata"></a>
 
 ### Metadata
 Specifies metadata for a package of menu data.
@@ -218,8 +215,7 @@ Specifies metadata for a package of menu data.
 | settings | [MenuSettings](#opencannabis.products.menu.MenuSettings) |  | Settings that produced this menu data. |
 
 
-<a name="opencannabis.products.menu.SectionData"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.SectionData"></a>
 
 ### SectionData
 Specifies an inner menu payload which contains menu data for a given menu section.
@@ -231,8 +227,7 @@ Specifies an inner menu payload which contains menu data for a given menu sectio
 | product | [MenuProduct](#opencannabis.products.menu.MenuProduct) | repeated | Menu products attached to this section. |
 
 
-<a name="opencannabis.products.menu.SectionedMenu"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.SectionedMenu"></a>
 
 ### SectionedMenu
 Specifies a menu split into section-level chunks.
@@ -243,8 +238,7 @@ Specifies a menu split into section-level chunks.
 | payload | [SectionData](#opencannabis.products.menu.SectionData) | repeated | Specifies a payload of sectioned menu data. |
 
 
-<a name="opencannabis.products.menu.StaticMenu"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.StaticMenu"></a>
 
 ### StaticMenu
 Specifies an inner menu payload which contains mapped data, where each map key is a section name, lowercased, and
@@ -262,7 +256,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | prerolls | [StaticMenu.PrerollsEntry](#opencannabis.products.menu.StaticMenu.PrerollsEntry) | repeated | Specifies PREROLL products attached to this menu. |
 
 
-<a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.ApothecaryEntry"></a>
 
 ### StaticMenu.ApothecaryEntry
 
@@ -273,7 +267,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Apothecary](#opencannabis.products.Apothecary) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.CartridgesEntry"></a>
 
 ### StaticMenu.CartridgesEntry
 
@@ -284,7 +278,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Cartridge](#opencannabis.products.Cartridge) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.EdiblesEntry"></a>
 
 ### StaticMenu.EdiblesEntry
 
@@ -295,7 +289,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Edible](#opencannabis.products.Edible) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.ExtractsEntry"></a>
 
 ### StaticMenu.ExtractsEntry
 
@@ -305,7 +299,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Extract](#opencannabis.products.Extract) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.FlowersEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.FlowersEntry"></a>
 
 ### StaticMenu.FlowersEntry
 
@@ -316,7 +310,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Flower](#opencannabis.products.Flower) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.MerchandiseEntry"></a>
 
 ### StaticMenu.MerchandiseEntry
 
@@ -326,7 +320,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Merchandise](#opencannabis.products.Merchandise) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.PlantsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.PlantsEntry"></a>
 
 ### StaticMenu.PlantsEntry
 
@@ -336,7 +330,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Plant](#opencannabis.products.Plant) |  |  |
 
 
-<a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"/>
+<a name="opencannabis.products.menu.StaticMenu.PrerollsEntry"></a>
 
 ### StaticMenu.PrerollsEntry
 
@@ -346,8 +340,7 @@ each map value is itself a product, and each map is addressed at a typed propert
 | value | [opencannabis.products.Preroll](#opencannabis.products.Preroll) |  |  |
 
 
-<a name="opencannabis.products.menu.Flag"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.Flag"></a>
 
 ### Flag
 Enumerates flags that can be set on a menu.
@@ -358,8 +351,7 @@ Enumerates flags that can be set on a menu.
 | PRIVATE | 1 | Indicates that the underlying menu data is currently private and should not be exposed publicly. |
 | OUT_OF_DATE | 2 | Indicates that the underlying menu data is known to be out-of-date. |
 
-<a name="opencannabis.products.menu.Status"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="opencannabis.products.menu.Status"></a>
 
 ### Status
 Enumerates statuses a menu may assume.

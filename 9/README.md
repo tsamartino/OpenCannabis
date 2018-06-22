@@ -8,7 +8,7 @@ contributors:
 - Sam Gammon <sam@bloombox.io>
 ---
 
-<a name="top"/>
+<a name="top"></a>
 
 # OpenCannabis: Oauth Extension
 - Version `1.0`
@@ -56,8 +56,7 @@ _"Oauth"_ in this context, refers to:
 {% endnomnoml %}
 
 
-<a name="oauth/Client.proto"/>
-<p align="right"><a href="#top">Top</a></p>
+<a name="oauth/Client.proto"></a>
 
 ### Client
 Specifies an OAuth2-client that can perform authorization operations in certain circumstances.
@@ -75,7 +74,6 @@ Independent ID structure for an OAuth2 client.
 | ----- | ---- | ----- | ----------- |
 | id | [string](#string) |  | ID for the OAuth2 client. |
 
-<p align="right"><a href="#top">Top</a></p>
 
 ### ClientSecret
 Independent secret value structure for an OAuth2 client.
