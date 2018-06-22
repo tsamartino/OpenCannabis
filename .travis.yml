@@ -1,0 +1,13 @@
+language: node_js
+node_js: 8
+
+git:
+  depth: false
+  submodules: false
+
+cache: yarn
+
+before_install: yarn
+install: ./node_modules/gitbook-cli/bin/gitbook.js install
+script: ./node_modules/gitbook-cli/bin/gitbook.js build
+

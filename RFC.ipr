@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="sam">
+      <words>
+        <w>coss</w>
+        <w>datasets</w>
+        <w>digistan</w>
+        <w>porras</w>
+        <w>samartino</w>
+        <w>shortname</w>
+        <w>unprotocols</w>
+        <w>vendored</w>
+        <w>wikis</w>
+      </words>
+    </dictionary>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RFC.iml" filepath="$PROJECT_DIR$/RFC.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+</project>
