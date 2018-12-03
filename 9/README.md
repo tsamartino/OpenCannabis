@@ -1,7 +1,7 @@
 ---
 domain: rfc.opencannabis.info
 shortname: 9/OCS-O
-name: OpenCannabis Oauth Extension
+name: OpenCannabis OAuth Extension
 status: raw
 editor: Randal Stevens <randy@bloombox.io>
 contributors:
@@ -10,7 +10,7 @@ contributors:
 
 <a name="top"></a>
 
-# OpenCannabis: Oauth Extension
+# OpenCannabis: OAuth Extension
 - Version `1.0`
 - Status: `RAW`
 
@@ -23,7 +23,7 @@ This specification's current status is considered `RAW`, i.e. pre-`DRAFT`. Distr
 This document describes an extension to the _OpenCannabis Specification, version 1_, that introduces oauth-related
 definitions structures, and services that compose, create and reference oath.
 
-_"Oauth"_ in this context, refers to:
+_"OAuth"_ in this context, refers to:
 - The client who is authorizing the request I.E. Google
 - The scope of the authorization
 
