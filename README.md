@@ -25,25 +25,28 @@ An open specification, for cannabis data. For menus, transactions, customers, an
 isn't enough, or it's time to switch, or you want to write your own code - your data and your business aren't locked
 away.
 
+<div style="text-align:center;width:100%;">
+<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v4.png" alt="Spec Adopters">
+</div>
+
 ### Authors and backers
 
 OpenCannabis was conceived at [Bloombox](https://bloombox.io), but it's open and free to the world (under the GNU GPLv3
-license). Early adopters and collaborators include [Caliva](https://caliva.menu) and
+license). Early adopters and collaborators include industry players across the global cannabis supply chain, including
+[Caliva](https://caliva.menu), [Nabis](https://www.nabisholdings.com), [GLH](https://chalicefarms.com) and
 [Abatin Sacramento](https://abatinsacramento.com).
 
 If you'd like to adopt the spec, or list yourself as a backer, file a pull request and we'll get you added!
 
 
-| Contributor       | Website                                             | Category                                |
-|-------------------|-----------------------------------------------------|:----------------------------------------|
-| Bloombox          | [bloombox.io](https://bloombox.io)                  | Software Provider                       |
-| Caliva            | [caliva.menu](https://caliva.menu)                  | Cultivator, Retailer, Manufacturer, Lab |
-| Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                |
-| M3 Mobile Meds    | [m3meds.com](http://www.m3meds.com)                 | Distributor                             |
-
-<div style="text-align:center;width:100%;">
-<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v2.png" alt="Spec Adopters">
-</div>
+| Contributor       | Website                                             | Category                                                           | Location                  |
+|-------------------|-----------------------------------------------------|:-------------------------------------------------------------------|:--------------------------|
+| Bloombox          | [bloombox.io](https://bloombox.io)                  | Software Provider                                                  | San Francisco, California |
+| Caliva            | [caliva.menu](https://caliva.menu)                  | Cultivator, Retailer, Manufacturer                                 | San Jose, California      |
+| Chalice Farms/GLH | [chalice.menu](https://chalice.menu)                | Cultivator, Retailer, Manufacturer, Multi-Location                 | Portland, Oregon          |
+| Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                                           | Sacramento, California    |
+| M3 Mobile Meds    | [m3meds.com](http://www.m3meds.com)                 | Distributor                                                        | Sacramento, California    |
+| Nabis             | [nabisholdings.com](https://www.nabisholdings.com)  | Cultivator, Retailer, Manufacturer, Multi-Location, International  | Toronto, Ontario, CA      |
 
 ### Contributing
 
@@ -84,7 +87,7 @@ written in industrial circumstances have seen success with this exact model (see
 
 ## Copyright Notice
 
-Copyright (©) 2018, the OpenCannabis Editor and Contributors. All rights reserved.
+Copyright (©) 2019, the OpenCannabis Editor and Contributors. All rights reserved.
 
 ## License  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?longCache=true&style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 
