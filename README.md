@@ -25,6 +25,10 @@ An open specification, for cannabis data. For menus, transactions, customers, an
 isn't enough, or it's time to switch, or you want to write your own code - your data and your business aren't locked
 away.
 
+<div style="text-align:center;width:100%;">
+<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v4.png" alt="Spec Adopters">
+</div>
+
 ### Authors and backers
 
 OpenCannabis was conceived at [Bloombox](https://bloombox.io), but it's open and free to the world (under the GNU GPLv3
@@ -43,10 +47,6 @@ If you'd like to adopt the spec, or list yourself as a backer, file a pull reque
 | Abatin Sacramento | [abatinsacramento.com](http://abatinsacramento.com) | Retailer                                                           | Sacramento, California    |
 | M3 Mobile Meds    | [m3meds.com](http://www.m3meds.com)                 | Distributor                                                        | Sacramento, California    |
 | Nabis             | [nabisholdings.com](https://www.nabisholdings.com)  | Cultivator, Retailer, Manufacturer, Multi-Location, International  | Toronto, Ontario, CA      |
-
-<div style="text-align:center;width:100%;">
-<img align="center" src="https://storage.googleapis.com/ocs-media/backers-v4.png" alt="Spec Adopters">
-</div>
 
 ### Contributing
 
